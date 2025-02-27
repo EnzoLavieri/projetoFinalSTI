@@ -1,0 +1,40 @@
+inherited cadClientesF: TcadClientesF
+  Left = 868
+  Height = 642
+  Top = 701
+  Width = 770
+  Caption = 'Clientes'
+  ClientHeight = 642
+  ClientWidth = 770
+  inherited PageControl1: TPageControl
+    Width = 770
+    inherited TabSheet1: TTabSheet
+      ClientWidth = 762
+      inherited Panel1: TPanel
+        Width = 762
+        ClientWidth = 762
+        Color = clScrollBar
+        DockSite = False
+      end
+      inherited Panel2: TPanel
+        Width = 762
+        ClientWidth = 762
+        Color = clScrollBar
+        DockSite = False
+      end
+      inherited DBGrid1: TDBGrid
+        Width = 762
+      end
+    end
+    inherited TabSheet2: TTabSheet
+      ClientWidth = 762
+      inherited Panel4: TPanel
+        Width = 762
+        BevelColor = clScrollBar
+        ClientWidth = 762
+        Color = clScrollBar
+        DockSite = False
+      end
+    end
+  end
+end

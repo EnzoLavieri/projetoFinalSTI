@@ -1,0 +1,58 @@
+object menuF: TmenuF
+  Left = 1236
+  Height = 388
+  Top = 78
+  Width = 608
+  Caption = 'Menu Principal'
+  Menu = MainMenu1
+  LCLVersion = '3.8.0.0'
+  object MainMenu1: TMainMenu
+    Left = 480
+    Top = 72
+    object menuCad: TMenuItem
+      Caption = 'menuCad'
+      object menuCadCategoria: TMenuItem
+        Caption = 'menuCadCategoria'
+      end
+      object menuCadCliente: TMenuItem
+        Caption = 'menuCadCliente'
+      end
+      object menuCadProdutos: TMenuItem
+        Caption = 'menuCadProdutos'
+      end
+      object menuCadUsuarios: TMenuItem
+        Caption = 'menuCadUsuarios'
+      end
+    end
+    object menuVen: TMenuItem
+      Caption = 'menuVen'
+      object menuVenOrcamentos: TMenuItem
+        Caption = 'menuVenOrcamentos'
+      end
+    end
+    object menuRelat: TMenuItem
+      Caption = 'menuRelat'
+      object menuRelatClientes: TMenuItem
+        Caption = 'menuRelatClientes'
+      end
+      object menuRelatProdutos: TMenuItem
+        Caption = 'menuRelatProdutos'
+      end
+      object menuRelatOrcamentos: TMenuItem
+        Caption = 'menuRelatOrcamentos'
+      end
+      object menuRelatCategorias: TMenuItem
+        Caption = 'menuRelatCategorias'
+      end
+      object MenuItem1: TMenuItem
+        Caption = 'MenuItem1'
+      end
+    end
+    object MenuSobre: TMenuItem
+      Caption = 'MenuSobre'
+    end
+    object menuSair: TMenuItem
+      Caption = 'menuSair'
+    end
+  end
+end

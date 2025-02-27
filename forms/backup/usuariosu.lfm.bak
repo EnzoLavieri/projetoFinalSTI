@@ -1,0 +1,66 @@
+inherited cadUsuariosF: TcadUsuariosF
+  Left = 1133
+  Top = 49
+  Width = 773
+  Caption = 'Usuarios'
+  ClientWidth = 773
+  inherited PageControl1: TPageControl
+    Width = 773
+    inherited TabSheet1: TTabSheet
+      ClientWidth = 765
+      inherited Panel1: TPanel
+        Width = 765
+        ClientWidth = 765
+        Color = clScrollBar
+        DockSite = False
+      end
+      inherited Panel2: TPanel
+        Width = 765
+        ClientWidth = 765
+        Color = clScrollBar
+        DockSite = False
+      end
+      inherited DBGrid1: TDBGrid
+        Width = 765
+      end
+    end
+    inherited TabSheet2: TTabSheet
+      ClientWidth = 765
+      inherited Panel4: TPanel
+        Width = 765
+        BevelColor = clScrollBar
+        ClientWidth = 765
+        Color = clScrollBar
+        DockSite = False
+      end
+      object Label2: TLabel[1]
+        Left = 72
+        Height = 15
+        Top = 56
+        Width = 14
+        Caption = 'ID:'
+      end
+      object Label3: TLabel[2]
+        Left = 43
+        Height = 15
+        Top = 88
+        Width = 43
+        Caption = 'Usuario:'
+      end
+      object Label4: TLabel[3]
+        Left = 50
+        Height = 15
+        Top = 120
+        Width = 36
+        Caption = 'Nome:'
+      end
+      object Label5: TLabel[4]
+        Left = 50
+        Height = 15
+        Top = 152
+        Width = 35
+        Caption = 'Senha:'
+      end
+    end
+  end
+end

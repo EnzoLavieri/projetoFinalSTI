@@ -1,0 +1,107 @@
+inherited usuariosF: TusuariosF
+  Left = 1051
+  Height = 785
+  Top = 43
+  Caption = 'Usuarios'
+  ClientHeight = 785
+  inherited PageControl1: TPageControl
+    inherited TabSheet1: TTabSheet
+      inherited Panel1: TPanel
+        Color = clScrollBar
+        DockSite = False
+        inherited BitBtn5: TBitBtn
+          Left = 216
+        end
+        inherited Edit1: TEdit
+          Left = 96
+          Top = 31
+          Text = 'Edit1'
+        end
+        inherited Label1: TLabel
+          Left = 55
+          Width = 34
+          Caption = 'Label1'
+        end
+      end
+      inherited Panel2: TPanel
+        Color = clScrollBar
+        DockSite = False
+        inherited btnFechar: TBitBtn
+          Left = 608
+        end
+      end
+    end
+    inherited TabSheet2: TTabSheet
+      inherited Panel4: TPanel
+        BevelColor = clDefault
+        Color = clScrollBar
+        DockSite = False
+        inherited BitBtn1: TBitBtn
+          Caption = 'btnGravar'
+        end
+        inherited BitBtn4: TBitBtn
+          Caption = 'btnCancelar'
+        end
+        inherited BitBtn2: TBitBtn
+          Caption = 'btnExcluir'
+        end
+      end
+      object edtID: TEdit[1]
+        Left = 120
+        Height = 23
+        Top = 64
+        Width = 80
+        TabOrder = 1
+      end
+      object edtUsuario: TEdit[2]
+        Left = 120
+        Height = 23
+        Top = 104
+        Width = 80
+        TabOrder = 2
+      end
+      object edtNome: TEdit[3]
+        Left = 120
+        Height = 23
+        Top = 144
+        Width = 80
+        TabOrder = 3
+      end
+      object edtSenha: TEdit[4]
+        Left = 120
+        Height = 23
+        Top = 184
+        Width = 80
+        TabOrder = 4
+      end
+      object Label2: TLabel[5]
+        Left = 101
+        Height = 15
+        Top = 72
+        Width = 14
+        Caption = 'ID:'
+      end
+      object Label3: TLabel[6]
+        Left = 72
+        Height = 15
+        Top = 112
+        Width = 43
+        Caption = 'Usuario:'
+      end
+      object Label4: TLabel[7]
+        Left = 20
+        Height = 15
+        Top = 152
+        Width = 95
+        Caption = 'Nome do usuario:'
+      end
+      object Label5: TLabel[8]
+        Left = 21
+        Height = 15
+        Top = 192
+        Width = 94
+        Caption = 'Senha do usuario:'
+      end
+    end
+  end
+end

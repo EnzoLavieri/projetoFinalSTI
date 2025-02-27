@@ -1,0 +1,25 @@
+inherited xCadPaiF1: TxCadPaiF1
+  Left = 1101
+  Top = 258
+  Caption = 'Usuarios'
+  inherited PageControl1: TPageControl
+    ActivePage = TabSheet2
+    TabIndex = 1
+    inherited TabSheet1: TTabSheet
+      inherited Panel1: TPanel
+        Color = clScrollBar
+        DockSite = False
+      end
+      inherited Panel2: TPanel
+        Color = clScrollBar
+        DockSite = False
+      end
+    end
+    inherited TabSheet2: TTabSheet
+      inherited Panel4: TPanel
+        BevelColor = clDefault
+        ParentColor = True
+      end
+    end
+  end
+end
