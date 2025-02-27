@@ -1,6 +1,6 @@
 inherited cadUsuariosF: TcadUsuariosF
-  Left = 1133
-  Top = 49
+  Left = 1048
+  Top = 201
   Width = 773
   Caption = 'Usuarios'
   ClientWidth = 773
@@ -61,7 +61,7 @@ inherited cadUsuariosF: TcadUsuariosF
         Width = 35
         Caption = 'Senha:'
       end
-      object DBEdit1: TDBEdit[5]
+      object edtIdUsuario: TDBEdit[5]
         Left = 96
         Height = 23
         Top = 48
@@ -69,7 +69,7 @@ inherited cadUsuariosF: TcadUsuariosF
         MaxLength = 0
         TabOrder = 1
       end
-      object DBEdit2: TDBEdit[6]
+      object edtUsuario: TDBEdit[6]
         Left = 96
         Height = 23
         Top = 80
@@ -77,7 +77,7 @@ inherited cadUsuariosF: TcadUsuariosF
         MaxLength = 0
         TabOrder = 2
       end
-      object DBEdit3: TDBEdit[7]
+      object edtNomeUsuario: TDBEdit[7]
         Left = 96
         Height = 23
         Top = 112
@@ -85,7 +85,7 @@ inherited cadUsuariosF: TcadUsuariosF
         MaxLength = 0
         TabOrder = 3
       end
-      object DBEdit4: TDBEdit[8]
+      object edtSenhaUsuario: TDBEdit[8]
         Left = 96
         Height = 23
         Top = 144

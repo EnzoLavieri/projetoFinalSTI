@@ -1,0 +1,56 @@
+inherited cadCategProdutosF: TcadCategProdutosF
+  Left = 869
+  Top = 127
+  Caption = 'Categoria dos produtos'
+  inherited PageControl1: TPageControl
+    ActivePage = TabSheet1
+    TabIndex = 0
+    inherited TabSheet1: TTabSheet
+      inherited Panel1: TPanel
+        Color = clScrollBar
+        DockSite = False
+      end
+      inherited Panel2: TPanel
+        Color = clScrollBar
+        DockSite = False
+      end
+    end
+    inherited TabSheet2: TTabSheet
+      inherited Panel4: TPanel
+        BevelColor = clScrollBar
+        Color = clScrollBar
+        DockSite = False
+      end
+      object edtID: TDBEdit[1]
+        Left = 128
+        Height = 23
+        Top = 64
+        Width = 80
+        MaxLength = 0
+        TabOrder = 1
+      end
+      object edtDescCategoria: TDBEdit[2]
+        Left = 128
+        Height = 23
+        Top = 96
+        Width = 80
+        MaxLength = 0
+        TabOrder = 2
+      end
+      object Label2: TLabel[3]
+        Left = 104
+        Height = 15
+        Top = 72
+        Width = 14
+        Caption = 'ID:'
+      end
+      object Label3: TLabel[4]
+        Left = 68
+        Height = 15
+        Top = 104
+        Width = 50
+        Caption = 'Descicao:'
+      end
+    end
+  end
+end

@@ -74,10 +74,18 @@
       <Unit>
         <Filename Value="forms\categoriaprodutou.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="xCadPaiF1"/>
+        <ComponentName Value="cadCategProdutosF"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="categoriaProdutoU"/>
+      </Unit>
+      <Unit>
+        <Filename Value="forms\cadprodutou.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadProdutosF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cadProdutoU"/>
       </Unit>
     </Units>
   </ProjectOptions>

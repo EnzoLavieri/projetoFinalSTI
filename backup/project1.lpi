@@ -71,6 +71,22 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="clientesU"/>
       </Unit>
+      <Unit>
+        <Filename Value="forms\categoriaprodutou.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadCategProdutosF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="categoriaProdutoU"/>
+      </Unit>
+      <Unit>
+        <Filename Value="forms\cadprodutou.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadProdutosF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cadProdutoU"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

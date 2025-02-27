@@ -5,10 +5,17 @@ unit categoriaProdutoU;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, xCadPai;
-
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, DBCtrls, xCadPai,StdCtrls;
 type
-  TxCadPaiF1 = class(TxCadPaiF)
+
+  { TcadCategProdutosF }
+
+  TcadCategProdutosF = class(TxCadPaiF)
+    edtID: TDBEdit;
+    edtDescCategoria: TDBEdit;
+    Label2: TLabel;
+    Label3: TLabel;
+
   private
 
   public
@@ -16,11 +23,16 @@ type
   end;
 
 var
-  xCadPaiF1: TxCadPaiF1;
+  cadCategProdutosF: TcadCategProdutosF;
 
 implementation
 
 {$R *.lfm}
+
+{ TcadCategProdutosF }
+
+
+
 
 end.
 

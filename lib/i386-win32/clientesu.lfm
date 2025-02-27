@@ -1,0 +1,101 @@
+inherited cadClientesF: TcadClientesF
+  Left = 1125
+  Height = 595
+  Top = 86
+  Width = 770
+  Caption = 'Clientes'
+  ClientHeight = 595
+  ClientWidth = 770
+  OnCreate = FormCreate
+  inherited PageControl1: TPageControl
+    Width = 770
+    inherited TabSheet1: TTabSheet
+      ClientWidth = 762
+      inherited Panel1: TPanel
+        Width = 762
+        ClientWidth = 762
+        Color = clScrollBar
+        DockSite = False
+      end
+      inherited Panel2: TPanel
+        Width = 762
+        ClientWidth = 762
+        Color = clScrollBar
+        DockSite = False
+      end
+      inherited DBGrid1: TDBGrid
+        Width = 762
+      end
+    end
+    inherited TabSheet2: TTabSheet
+      ClientWidth = 762
+      inherited Panel4: TPanel
+        Width = 762
+        BevelColor = clScrollBar
+        ClientWidth = 762
+        Color = clScrollBar
+        DockSite = False
+      end
+      object edtIdCliente: TDBEdit[1]
+        Left = 112
+        Height = 23
+        Top = 48
+        Width = 80
+        MaxLength = 0
+        TabOrder = 1
+      end
+      object edtCpfCnpj: TDBEdit[2]
+        Left = 112
+        Height = 23
+        Top = 112
+        Width = 80
+        MaxLength = 0
+        TabOrder = 2
+      end
+      object edtNomeCliente: TDBEdit[3]
+        Left = 112
+        Height = 23
+        Top = 144
+        Width = 80
+        MaxLength = 0
+        TabOrder = 3
+      end
+      object edtTipoCliente: TDBEdit[4]
+        Left = 112
+        Height = 23
+        Top = 80
+        Width = 80
+        MaxLength = 0
+        TabOrder = 4
+      end
+      object Label2: TLabel[5]
+        Left = 88
+        Height = 15
+        Top = 56
+        Width = 14
+        Caption = 'ID:'
+      end
+      object Label3: TLabel[6]
+        Left = 20
+        Height = 15
+        Top = 88
+        Width = 82
+        Caption = 'Tipo do cliente:'
+      end
+      object Label4: TLabel[7]
+        Left = 46
+        Height = 15
+        Top = 120
+        Width = 56
+        Caption = 'CPF/CNPJ:'
+      end
+      object Label5: TLabel[8]
+        Left = 64
+        Height = 15
+        Top = 152
+        Width = 36
+        Caption = 'Nome:'
+      end
+    end
+  end
+end

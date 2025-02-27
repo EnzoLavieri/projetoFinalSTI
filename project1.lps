@@ -12,7 +12,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="22"/>
+        <UsageCount Value="25"/>
       </Unit>
       <Unit>
         <Filename Value="xcadpai.pas"/>
@@ -21,9 +21,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="xCadPai"/>
-        <CursorPos X="22" Y="33"/>
-        <UsageCount Value="22"/>
+        <TopLine Value="26"/>
+        <CursorPos X="32" Y="26"/>
+        <UsageCount Value="25"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="forms\menu.pas"/>
@@ -31,8 +33,63 @@
         <ComponentName Value="menuF"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <UsageCount Value="22"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="44"/>
+        <CursorPos Y="77"/>
+        <UsageCount Value="25"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="forms\usuariosu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadUsuariosF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="usuariosU"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="2"/>
+        <CursorPos X="18" Y="13"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="forms\clientesu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadClientesF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="clientesU"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="15"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="forms\categoriaprodutou.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadCategProdutosF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="categoriaProdutoU"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="2"/>
+        <CursorPos X="3" Y="26"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="forms\cadprodutou.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadProdutosF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cadProdutoU"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="13"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="forms\cadusuariosu.pas"/>
@@ -42,7 +99,7 @@
         <UnitName Value="cadUsuariosU"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="24" Y="30"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="20"/>
       </Unit>
       <Unit>
         <Filename Value="forms\cadclienteu.pas"/>
@@ -66,160 +123,140 @@
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
-        <Filename Value="forms\usuariosu.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="cadUsuariosF"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="usuariosU"/>
-        <EditorIndex Value="1"/>
-        <UsageCount Value="20"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <Filename Value="C:\lazarus\lcl\menus.pp"/>
+        <UnitName Value="Menus"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
-        <Filename Value="forms\clientesu.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="cadClientesF"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="clientesU"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="10"/>
-        <CursorPos X="3" Y="42"/>
-        <UsageCount Value="20"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="forms\categoriaprodutou.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="xCadPaiF1"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="categoriaProdutoU"/>
-        <EditorIndex Value="3"/>
-        <UsageCount Value="20"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <Filename Value="C:\lazarus\lcl\forms.pp"/>
+        <UnitName Value="Forms"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="881"/>
+        <CursorPos X="14" Y="897"/>
+        <UsageCount Value="10"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
       <Position>
-        <Filename Value="xcadpai.pas"/>
-        <Caret Line="56" Column="3" TopLine="23"/>
+        <Filename Value="forms\cadprodutou.pas"/>
+        <Caret Line="51" Column="21" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="xcadpai.pas"/>
-        <Caret Line="57" Column="3" TopLine="23"/>
+        <Caret Line="31" Column="45" TopLine="13"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\cadprodutou.pas"/>
+        <Caret Line="49" Column="31" TopLine="20"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\cadprodutou.pas"/>
+        <Caret Line="47" Column="6" TopLine="19"/>
       </Position>
       <Position>
         <Filename Value="xcadpai.pas"/>
-        <Caret Line="58" Column="3" TopLine="24"/>
+        <Caret Line="31" Column="45" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\cadprodutou.pas"/>
+        <Caret Line="44" Column="18" TopLine="8"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\cadprodutou.pas"/>
+        <Caret Line="29" Column="34" TopLine="13"/>
       </Position>
       <Position>
         <Filename Value="xcadpai.pas"/>
-        <Caret Line="59" Column="3" TopLine="24"/>
+        <Caret Line="11" Column="45"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\categoriaprodutou.pas"/>
+        <Caret Line="18" Column="5"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\categoriaprodutou.pas"/>
+        <Caret Line="8" Column="74"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\menu.pas"/>
+        <Caret Line="60" Column="4" TopLine="27"/>
       </Position>
       <Position>
         <Filename Value="xcadpai.pas"/>
-        <Caret Line="58" Column="3" TopLine="23"/>
+        <Caret Line="66" TopLine="30"/>
       </Position>
       <Position>
         <Filename Value="xcadpai.pas"/>
-        <Caret Line="57" Column="3" TopLine="23"/>
+        <Caret Line="62" Column="8" TopLine="30"/>
       </Position>
       <Position>
         <Filename Value="xcadpai.pas"/>
-        <Caret Line="63" Column="3" TopLine="27"/>
+        <Caret Line="55" Column="37" TopLine="30"/>
       </Position>
       <Position>
         <Filename Value="xcadpai.pas"/>
-        <Caret Line="53" Column="38" TopLine="23"/>
+        <Caret Line="62" Column="3" TopLine="30"/>
       </Position>
       <Position>
         <Filename Value="xcadpai.pas"/>
-        <Caret Line="34" Column="45" TopLine="15"/>
+        <Caret Line="57" Column="3" TopLine="30"/>
       </Position>
       <Position>
         <Filename Value="xcadpai.pas"/>
-        <Caret Line="57" Column="37" TopLine="26"/>
+        <Caret Line="56" Column="3" TopLine="29"/>
       </Position>
       <Position>
         <Filename Value="xcadpai.pas"/>
-        <Caret Line="58" Column="37" TopLine="26"/>
+        <Caret Line="51" Column="3" TopLine="29"/>
       </Position>
       <Position>
         <Filename Value="xcadpai.pas"/>
-        <Caret Line="59" Column="37" TopLine="26"/>
+        <Caret Line="61" Column="3" TopLine="29"/>
       </Position>
       <Position>
-        <Filename Value="xcadpai.pas"/>
-        <Caret Line="60" Column="37" TopLine="26"/>
+        <Filename Value="forms\menu.pas"/>
+        <Caret Line="61" Column="3" TopLine="28"/>
       </Position>
       <Position>
-        <Filename Value="xcadpai.pas"/>
-        <Caret Line="61" Column="37" TopLine="26"/>
+        <Filename Value="forms\menu.pas"/>
+        <Caret Line="66" Column="6" TopLine="34"/>
       </Position>
       <Position>
-        <Filename Value="xcadpai.pas"/>
-        <Caret Line="62" Column="37" TopLine="26"/>
+        <Filename Value="forms\menu.pas"/>
+        <Caret Line="67" Column="37" TopLine="35"/>
       </Position>
       <Position>
-        <Filename Value="xcadpai.pas"/>
-        <Caret Line="63" Column="37" TopLine="27"/>
+        <Filename Value="forms\menu.pas"/>
+        <Caret Line="10" Column="43" TopLine="35"/>
       </Position>
       <Position>
-        <Filename Value="xcadpai.pas"/>
-        <Caret Line="64" Column="37" TopLine="28"/>
+        <Filename Value="forms\menu.pas"/>
+        <Caret Line="68" Column="15" TopLine="35"/>
       </Position>
       <Position>
-        <Filename Value="xcadpai.pas"/>
-        <Caret Line="41" Column="22"/>
+        <Filename Value="forms\menu.pas"/>
+        <Caret Line="10" Column="58"/>
       </Position>
       <Position>
-        <Filename Value="xcadpai.pas"/>
-        <Caret Line="40" Column="22" TopLine="4"/>
+        <Filename Value="forms\menu.pas"/>
+        <Caret Line="9" Column="59"/>
       </Position>
       <Position>
-        <Filename Value="xcadpai.pas"/>
-        <Caret Line="39" Column="22" TopLine="4"/>
+        <Filename Value="forms\menu.pas"/>
+        <Caret Line="10" Column="55"/>
       </Position>
       <Position>
-        <Filename Value="xcadpai.pas"/>
-        <Caret Line="38" Column="22" TopLine="4"/>
+        <Filename Value="forms\menu.pas"/>
+        <Caret Line="75" Column="17" TopLine="46"/>
       </Position>
       <Position>
-        <Filename Value="xcadpai.pas"/>
-        <Caret Line="37" Column="22" TopLine="4"/>
+        <Filename Value="forms\menu.pas"/>
+        <Caret Line="73" Column="10" TopLine="43"/>
       </Position>
       <Position>
-        <Filename Value="xcadpai.pas"/>
-        <Caret Line="36" Column="22" TopLine="4"/>
-      </Position>
-      <Position>
-        <Filename Value="xcadpai.pas"/>
-        <Caret Line="35" Column="22" TopLine="4"/>
-      </Position>
-      <Position>
-        <Filename Value="xcadpai.pas"/>
-        <Caret Line="34" Column="22" TopLine="4"/>
-      </Position>
-      <Position>
-        <Filename Value="xcadpai.pas"/>
-        <Caret Line="33" Column="22" TopLine="9"/>
-      </Position>
-      <Position>
-        <Filename Value="forms\usuariosu.pas"/>
-      </Position>
-      <Position>
-        <Filename Value="forms\clientesu.pas"/>
-      </Position>
-      <Position>
-        <Filename Value="forms\usuariosu.pas"/>
-      </Position>
-      <Position>
-        <Filename Value="forms\clientesu.pas"/>
+        <Filename Value="forms\menu.pas"/>
+        <Caret Line="74" Column="15" TopLine="43"/>
       </Position>
     </JumpHistory>
     <RunParams>

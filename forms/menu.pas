@@ -5,7 +5,9 @@ unit menu;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ComCtrls, Menus;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ComCtrls,
+  Menus,
+  categoriaProdutoU, clientesU, cadProdutoU, usuariosU;
 
 type
 
@@ -28,6 +30,10 @@ type
     menuCadCategoria: TMenuItem;
     menuCadCliente: TMenuItem;
     menuCadProdutos: TMenuItem;
+    procedure menuCadCategoriaClick(Sender: TObject);
+    procedure menuCadClienteClick(Sender: TObject);
+    procedure menuCadProdutosClick(Sender: TObject);
+    procedure menuCadUsuariosClick(Sender: TObject);
   private
 
   public
@@ -40,6 +46,35 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TmenuF }
+
+procedure TmenuF.menuCadCategoriaClick(Sender: TObject);
+begin
+  cadCategProdutosF := TcadCategProdutosF.Create(Self);
+  cadCategProdutosF.Show;
+end;
+
+procedure TmenuF.menuCadClienteClick(Sender: TObject);
+begin
+  cadClientesF := TcadClientesF.Create(Self);
+  cadClientesF.ShowModal;
+
+end;
+
+procedure TmenuF.menuCadProdutosClick(Sender: TObject);
+begin
+  cadProdutosF := TcadProdutosF.Create(Self);
+  cadProdutosF.Show;
+end;
+
+procedure TmenuF.menuCadUsuariosClick(Sender: TObject);
+begin
+    cadUsuariosF := TcadUsuariosF.Create(Self);
+  cadUsuariosF.Show;
+  end;
+
+
 
 end.
 

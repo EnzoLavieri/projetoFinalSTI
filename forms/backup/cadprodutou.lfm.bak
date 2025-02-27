@@ -1,0 +1,148 @@
+inherited cadProdutosF: TcadProdutosF
+  Left = 1155
+  Height = 593
+  Top = 52
+  Width = 754
+  Caption = 'Produtos'
+  ClientHeight = 593
+  ClientWidth = 754
+  inherited PageControl1: TPageControl
+    Width = 754
+    inherited TabSheet1: TTabSheet
+      ClientWidth = 746
+      inherited Panel1: TPanel
+        Width = 746
+        ClientWidth = 746
+        Color = clScrollBar
+        DockSite = False
+      end
+      inherited Panel2: TPanel
+        Width = 746
+        ClientWidth = 746
+        Color = clScrollBar
+        DockSite = False
+        inherited btnFechar: TBitBtn
+          OnClick = btnFecharClick
+        end
+      end
+      inherited DBGrid1: TDBGrid
+        Width = 746
+      end
+    end
+    inherited TabSheet2: TTabSheet
+      ClientWidth = 746
+      inherited Panel4: TPanel
+        Width = 746
+        BevelColor = clScrollBar
+        ClientWidth = 746
+        Color = clScrollBar
+        DockSite = False
+      end
+      object edtIdProduto: TDBEdit[1]
+        Left = 112
+        Height = 23
+        Top = 48
+        Width = 80
+        MaxLength = 0
+        TabOrder = 1
+      end
+      object Label2: TLabel[2]
+        Left = 88
+        Height = 15
+        Top = 56
+        Width = 14
+        Caption = 'ID:'
+      end
+      object edtCategoria: TDBEdit[3]
+        Left = 112
+        Height = 23
+        Top = 80
+        Width = 80
+        MaxLength = 0
+        TabOrder = 2
+      end
+      object edtDescricao: TDBEdit[4]
+        Left = 112
+        Height = 23
+        Top = 112
+        Width = 80
+        MaxLength = 0
+        TabOrder = 3
+      end
+      object edtObservacao: TDBEdit[5]
+        Left = 112
+        Height = 23
+        Top = 144
+        Width = 80
+        MaxLength = 0
+        TabOrder = 4
+      end
+      object edtValor: TDBEdit[6]
+        Left = 112
+        Height = 23
+        Top = 176
+        Width = 80
+        MaxLength = 0
+        TabOrder = 5
+      end
+      object edtData: TDBEdit[7]
+        Left = 112
+        Height = 23
+        Top = 208
+        Width = 80
+        MaxLength = 0
+        TabOrder = 6
+      end
+      object edtStatus: TDBEdit[8]
+        Left = 104
+        Height = 23
+        Top = 240
+        Width = 80
+        MaxLength = 0
+        TabOrder = 7
+      end
+      object Label3: TLabel[9]
+        Left = 48
+        Height = 15
+        Top = 88
+        Width = 54
+        Caption = 'Categoria:'
+      end
+      object Label4: TLabel[10]
+        Left = 48
+        Height = 15
+        Top = 120
+        Width = 54
+        Caption = 'Descricao:'
+      end
+      object Label5: TLabel[11]
+        Left = 37
+        Height = 15
+        Top = 152
+        Width = 65
+        Caption = 'Observacao:'
+      end
+      object Label6: TLabel[12]
+        Left = 22
+        Height = 15
+        Top = 184
+        Width = 80
+        Caption = 'Valor de venda:'
+      end
+      object Label7: TLabel[13]
+        Left = 11
+        Height = 15
+        Top = 216
+        Width = 91
+        Caption = 'Data de cadastro:'
+      end
+      object Label8: TLabel[14]
+        Left = 67
+        Height = 15
+        Top = 248
+        Width = 35
+        Caption = 'Status:'
+      end
+    end
+  end
+end

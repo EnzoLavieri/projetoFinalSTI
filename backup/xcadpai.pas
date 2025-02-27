@@ -6,20 +6,17 @@ interface
 
 uses
   Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, ExtCtrls, Buttons,
-  StdCtrls, ComCtrls, DBGrids, AnchorDockPanel;
+  StdCtrls, ComCtrls, DBGrids;  // Remover menu da seção uses
 
 type
-
   { TxCadPaiF }
-
   TxCadPaiF = class(TForm)
-    BitBtn1: TBitBtn;
-    BitBtn2: TBitBtn;
+    btnGravar: TBitBtn;
+    btnExluir: TBitBtn;
     btnNovo: TBitBtn;
     btnFechar: TBitBtn;
-    BitBtn4: TBitBtn;
-    BitBtn5: TBitBtn;
-    btnNovo1: TBitBtn;
+    btnCancelar: TBitBtn;
+    edtPesq: TBitBtn;
     dsCadModelo: TDataSource;
     DBGrid1: TDBGrid;
     Edit1: TEdit;
@@ -30,12 +27,11 @@ type
     Panel4: TPanel;
     TabSheet1: TTabSheet;
     TabSheet2: TTabSheet;
-    procedure BitBtn4Click(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
+    procedure btnFecharClick(Sender: TObject);
     procedure btnNovoClick(Sender: TObject);
   private
-
   public
-
   end;
 
 var
@@ -45,19 +41,22 @@ implementation
 
 {$R *.lfm}
 
-{ TxCadPaiF }
+  { TxCadPaiF }
 
 procedure TxCadPaiF.btnNovoClick(Sender: TObject);
 begin
-      PageControl1.ActivePageIndex:=1;
+  PageControl1.ActivePageIndex := 1;
 end;
 
-procedure TxCadPaiF.BitBtn4Click(Sender: TObject);
+procedure TxCadPaiF.btnCancelarClick(Sender: TObject);
 begin
-     PageControl1.ActivePageIndex:=0;
+  PageControl1.ActivePageIndex := 0;
 end;
 
-
+procedure TxCadPaiF.btnFecharClick(Sender: TObject);
+begin
+  Close;
+end;
 
 end.
 

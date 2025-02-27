@@ -61,6 +61,38 @@ inherited cadUsuariosF: TcadUsuariosF
         Width = 35
         Caption = 'Senha:'
       end
+      object edtIdUsuario: TDBEdit[5]
+        Left = 96
+        Height = 23
+        Top = 48
+        Width = 80
+        MaxLength = 0
+        TabOrder = 1
+      end
+      object edtUsuario: TDBEdit[6]
+        Left = 96
+        Height = 23
+        Top = 80
+        Width = 80
+        MaxLength = 0
+        TabOrder = 2
+      end
+      object edtNomeUsuario: TDBEdit[7]
+        Left = 96
+        Height = 23
+        Top = 112
+        Width = 80
+        MaxLength = 0
+        TabOrder = 3
+      end
+      object edtSenhaUsuario: TDBEdit[8]
+        Left = 96
+        Height = 23
+        Top = 144
+        Width = 80
+        MaxLength = 0
+        TabOrder = 4
+      end
     end
   end
 end

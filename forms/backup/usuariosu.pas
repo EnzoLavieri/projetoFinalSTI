@@ -5,13 +5,18 @@ unit usuariosU;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, xCadPai;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, DBCtrls,
+  xCadPai;
 
 type
 
   { TcadUsuariosF }
 
   TcadUsuariosF = class(TxCadPaiF)
+    edtIdUsuario: TDBEdit;
+    edtUsuario: TDBEdit;
+    edtNomeUsuario: TDBEdit;
+    edtSenhaUsuario: TDBEdit;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
