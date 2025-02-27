@@ -10,8 +10,8 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, anchordockpkg, xCadPai, menu, usuariosU, clientesU, categoriaProdutoU,
-  cadProdutoU;
+  Forms, zcomponent, anchordockpkg, xCadPai, menu, usuariosU, clientesU,
+  categoriaProdutoU, cadProdutoU, dataModule;
 
 {$R *.res}
 
@@ -19,6 +19,7 @@ begin
   RequireDerivedFormResource:=True;
   Application.Scaled:=True;
   Application.Initialize;
+  Application.CreateForm(TDataModule1, DataModule1);
   Application.CreateForm(TmenuF, menuF);
   Application.CreateForm(TxCadPaiF, xCadPaiF);
   Application.CreateForm(TcadUsuariosF, cadUsuariosF);

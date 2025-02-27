@@ -1,11 +1,13 @@
 inherited cadUsuariosF: TcadUsuariosF
-  Left = 1133
-  Top = 49
+  Left = 981
+  Top = 205
   Width = 773
   Caption = 'Usuarios'
   ClientWidth = 773
   inherited PageControl1: TPageControl
     Width = 773
+    ActivePage = TabSheet1
+    TabIndex = 0
     inherited TabSheet1: TTabSheet
       ClientWidth = 765
       inherited Panel1: TPanel
@@ -22,6 +24,8 @@ inherited cadUsuariosF: TcadUsuariosF
       end
       inherited DBGrid1: TDBGrid
         Width = 765
+        AutoFillColumns = True
+        DataSource = dsCadModelo
       end
     end
     inherited TabSheet2: TTabSheet
@@ -94,5 +98,24 @@ inherited cadUsuariosF: TcadUsuariosF
         TabOrder = 4
       end
     end
+  end
+  inherited dsCadModelo: TDataSource
+    DataSet = ZQuery1
+    Left = 440
+    Top = 40
+  end
+  object ZUpdateSQL1: TZUpdateSQL[2]
+    UseSequenceFieldForRefreshSQL = False
+    Left = 664
+    Top = 40
+  end
+  object ZQuery1: TZQuery[3]
+    Connection = DataModule1.ZConnection1
+    SQL.Strings = (
+      'select * from USUARIOS'
+    )
+    Params = <>
+    Left = 544
+    Top = 40
   end
 end
