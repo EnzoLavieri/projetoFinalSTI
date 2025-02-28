@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, DBCtrls,
-  ZSqlUpdate, ZDataset, xCadPai;
+  DBGrids, ZSqlUpdate, ZDataset, ZAbstractRODataset, xCadPai;
 
 type
 
@@ -22,7 +22,16 @@ type
     Label4: TLabel;
     Label5: TLabel;
     ZQuery1: TZQuery;
+    ZQuery1id: TZIntegerField;
+    ZQuery1nome_completo: TZRawStringField;
+    ZQuery1senha: TZRawStringField;
+    ZQuery1usuario: TZRawStringField;
     ZUpdateSQL1: TZUpdateSQL;
+    procedure btnExluirClick(Sender: TObject);
+    procedure DBGrid1CellClick(Column: TColumn);
+    procedure edtPesqClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+
   private
 
   public
@@ -34,7 +43,49 @@ var
 
 implementation
 
+
 {$R *.lfm}
+
+{ TcadUsuariosF }
+
+
+procedure TcadUsuariosF.edtPesqClick(Sender: TObject);
+begin
+  ZQuery1.Close;
+  if Edit1.Text <> '' then
+    ZQuery1.SQL.Text := 'SELECT * FROM usuarios WHERE id = ' + Edit1.Text
+  else
+    ZQuery1.SQL.Text := 'SELECT * FROM usuarios';
+  ZQuery1.Open;
+end;
+
+
+
+
+procedure TcadUsuariosF.FormShow(Sender: TObject);
+begin
+  if dsCadModelo.DataSet.Active and (dsCadModelo.DataSet.RecordCount > 0) then
+    dsCadModelo.DataSet.Edit;
+end;
+
+
+procedure TcadUsuariosF.btnExluirClick(Sender: TObject);
+begin
+  if MessageDlg('Voce tem certeza que deseja excluir o registro ' +
+    edtIdUsuario.Text + '?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+  begin
+    dsCadModelo.DataSet.Delete;
+
+  end;
+end;
+
+procedure TcadUsuariosF.DBGrid1CellClick(Column: TColumn);
+begin
+  ZQuery1.Edit;
+  ZQuery1.FieldByName(Column.FieldName).AsString := DBGrid1.Cells[Column.Index, DBGrid1.Row];
+  ZQuery1.Post;
+end;
+
 
 end.
 

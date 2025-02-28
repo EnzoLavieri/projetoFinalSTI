@@ -1,7 +1,7 @@
 inherited cadClientesF: TcadClientesF
-  Left = 1125
+  Left = 1086
   Height = 595
-  Top = 86
+  Top = 273
   Width = 770
   Caption = 'Clientes'
   ClientHeight = 595
@@ -9,6 +9,8 @@ inherited cadClientesF: TcadClientesF
   OnCreate = FormCreate
   inherited PageControl1: TPageControl
     Width = 770
+    ActivePage = TabSheet2
+    TabIndex = 1
     inherited TabSheet1: TTabSheet
       ClientWidth = 762
       inherited Panel1: TPanel

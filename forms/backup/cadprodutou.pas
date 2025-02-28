@@ -27,7 +27,7 @@ type
     Label6: TLabel;
     Label7: TLabel;
     Label8: TLabel;
-    procedure btnFecharClick(Sender: TObject);
+
   private
 
   public
@@ -43,10 +43,7 @@ implementation
 
 { TcadProdutosF }
 
-procedure TcadProdutosF.btnFecharClick(Sender: TObject);
-begin
 
-end;
 
 end.
 

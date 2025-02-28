@@ -1,7 +1,7 @@
 inherited cadClientesF: TcadClientesF
-  Left = 1125
+  Left = 1086
   Height = 595
-  Top = 86
+  Top = 273
   Width = 770
   Caption = 'Clientes'
   ClientHeight = 595
@@ -9,6 +9,8 @@ inherited cadClientesF: TcadClientesF
   OnCreate = FormCreate
   inherited PageControl1: TPageControl
     Width = 770
+    ActivePage = TabSheet1
+    TabIndex = 0
     inherited TabSheet1: TTabSheet
       ClientWidth = 762
       inherited Panel1: TPanel
@@ -36,7 +38,7 @@ inherited cadClientesF: TcadClientesF
         Color = clScrollBar
         DockSite = False
       end
-      object DBEdit1: TDBEdit[1]
+      object edtIdCliente: TDBEdit[1]
         Left = 112
         Height = 23
         Top = 48
@@ -44,7 +46,7 @@ inherited cadClientesF: TcadClientesF
         MaxLength = 0
         TabOrder = 1
       end
-      object DBEdit2: TDBEdit[2]
+      object edtCpfCnpj: TDBEdit[2]
         Left = 112
         Height = 23
         Top = 112
@@ -52,7 +54,7 @@ inherited cadClientesF: TcadClientesF
         MaxLength = 0
         TabOrder = 2
       end
-      object DBEdit3: TDBEdit[3]
+      object edtNomeCliente: TDBEdit[3]
         Left = 112
         Height = 23
         Top = 144
@@ -60,7 +62,7 @@ inherited cadClientesF: TcadClientesF
         MaxLength = 0
         TabOrder = 3
       end
-      object DBEdit4: TDBEdit[4]
+      object edtTipoCliente: TDBEdit[4]
         Left = 112
         Height = 23
         Top = 80

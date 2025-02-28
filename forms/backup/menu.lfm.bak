@@ -1,7 +1,7 @@
 object menuF: TmenuF
-  Left = 1164
+  Left = 1146
   Height = 388
-  Top = 139
+  Top = 194
   Width = 608
   Caption = 'Menu Principal'
   Menu = MainMenu1
@@ -10,28 +10,28 @@ object menuF: TmenuF
     Left = 480
     Top = 72
     object menuCad: TMenuItem
-      Caption = 'menuCad'
+      Caption = 'Cadastrar'
       object menuCadCategoria: TMenuItem
-        Caption = 'menuCadCategoria'
+        Caption = 'Cadastrar categoria'
         OnClick = menuCadCategoriaClick
       end
       object menuCadCliente: TMenuItem
-        Caption = 'menuCadCliente'
+        Caption = 'Cadastrar cliente'
         OnClick = menuCadClienteClick
       end
       object menuCadProdutos: TMenuItem
-        Caption = 'menuCadProdutos'
+        Caption = 'Cadastrar produtos'
         OnClick = menuCadProdutosClick
       end
       object menuCadUsuarios: TMenuItem
-        Caption = 'menuCadUsuarios'
+        Caption = 'Cadastrar usuarios'
         OnClick = menuCadUsuariosClick
       end
     end
     object menuVen: TMenuItem
-      Caption = 'menuVen'
+      Caption = 'Vencimentos'
       object menuVenOrcamentos: TMenuItem
-        Caption = 'menuVenOrcamentos'
+        Caption = 'Orcamentos vencidos'
       end
     end
     object menuRelat: TMenuItem
@@ -57,6 +57,7 @@ object menuF: TmenuF
     end
     object menuSair: TMenuItem
       Caption = 'menuSair'
+      OnClick = menuSairClick
     end
   end
 end

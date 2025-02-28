@@ -34,6 +34,7 @@ type
     procedure menuCadClienteClick(Sender: TObject);
     procedure menuCadProdutosClick(Sender: TObject);
     procedure menuCadUsuariosClick(Sender: TObject);
+    procedure menuSairClick(Sender: TObject);
   private
 
   public
@@ -74,7 +75,12 @@ begin
   cadUsuariosF.Show;
   end;
 
+procedure TmenuF.menuSairClick(Sender: TObject);
+begin
+  Application.Terminate;
 end;
+
+
 
 end.
 

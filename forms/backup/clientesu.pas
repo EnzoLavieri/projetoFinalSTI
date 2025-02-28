@@ -13,10 +13,10 @@ type
   { TcadClientesF }
 
   TcadClientesF = class(TxCadPaiF)
-    DBEdit1: TDBEdit;
-    DBEdit2: TDBEdit;
-    DBEdit3: TDBEdit;
-    DBEdit4: TDBEdit;
+    edtIdCliente: TDBEdit;
+    edtCpfCnpj: TDBEdit;
+    edtNomeCliente: TDBEdit;
+    edtTipoCliente: TDBEdit;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;

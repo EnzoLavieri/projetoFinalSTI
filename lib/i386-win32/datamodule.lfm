@@ -1,8 +1,8 @@
 object DataModule1: TDataModule1
   OldCreateOrder = False
   Height = 417
-  HorizontalOffset = 604
-  VerticalOffset = 218
+  HorizontalOffset = 510
+  VerticalOffset = 288
   Width = 554
   object ZConnection1: TZConnection
     ControlsCodePage = cCP_UTF8
@@ -17,7 +17,7 @@ object DataModule1: TDataModule1
     User = 'postgres'
     Password = '12345'
     Protocol = 'postgresql'
-    Left = 142
-    Top = 85
+    Left = 144
+    Top = 88
   end
 end

@@ -8,6 +8,8 @@ inherited cadProdutosF: TcadProdutosF
   ClientWidth = 754
   inherited PageControl1: TPageControl
     Width = 754
+    ActivePage = TabSheet1
+    TabIndex = 0
     inherited TabSheet1: TTabSheet
       ClientWidth = 746
       inherited Panel1: TPanel
@@ -21,9 +23,6 @@ inherited cadProdutosF: TcadProdutosF
         ClientWidth = 746
         Color = clScrollBar
         DockSite = False
-        inherited btnFechar: TBitBtn
-          OnClick = btnFecharClick
-        end
       end
       inherited DBGrid1: TDBGrid
         Width = 746

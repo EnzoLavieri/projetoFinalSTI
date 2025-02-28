@@ -1,41 +1,76 @@
 inherited cadUsuariosF: TcadUsuariosF
-  Left = 981
-  Top = 205
-  Width = 773
+  Left = 1093
+  Height = 607
+  Top = 31
+  Width = 813
   Caption = 'Usuarios'
-  ClientWidth = 773
+  ClientHeight = 607
+  ClientWidth = 813
+  OnShow = FormShow
   inherited PageControl1: TPageControl
-    Width = 773
+    Width = 813
     ActivePage = TabSheet1
     TabIndex = 0
     inherited TabSheet1: TTabSheet
-      ClientWidth = 765
+      ClientWidth = 805
       inherited Panel1: TPanel
-        Width = 765
-        ClientWidth = 765
+        Width = 805
+        ClientWidth = 805
         Color = clScrollBar
         DockSite = False
+        inherited edtPesq: TBitBtn
+          OnClick = edtPesqClick
+        end
       end
       inherited Panel2: TPanel
-        Width = 765
-        ClientWidth = 765
+        Width = 805
+        ClientWidth = 805
         Color = clScrollBar
         DockSite = False
       end
       inherited DBGrid1: TDBGrid
-        Width = 765
+        Width = 805
         AutoFillColumns = True
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'id'
+            Width = 193
+            FieldName = 'ID'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'usuario'
+            Width = 193
+            FieldName = 'usuario'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'nome_completo'
+            Width = 193
+            FieldName = 'nome_completo'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'senha'
+            Width = 193
+            FieldName = 'senha'
+          end>
         DataSource = dsCadModelo
+        OnCellClick = DBGrid1CellClick
       end
     end
     inherited TabSheet2: TTabSheet
-      ClientWidth = 765
+      ClientWidth = 805
       inherited Panel4: TPanel
-        Width = 765
+        Width = 805
         BevelColor = clScrollBar
-        ClientWidth = 765
+        ClientWidth = 805
         Color = clScrollBar
         DockSite = False
+        inherited btnExluir: TBitBtn
+          OnClick = btnExluirClick
+        end
       end
       object Label2: TLabel[1]
         Left = 72
@@ -70,6 +105,10 @@ inherited cadUsuariosF: TcadUsuariosF
         Height = 23
         Top = 48
         Width = 80
+        CustomEditMask = True
+        DataField = 'ID'
+        DataSource = dsCadModelo
+        Alignment = taRightJustify
         MaxLength = 0
         TabOrder = 1
       end
@@ -78,7 +117,9 @@ inherited cadUsuariosF: TcadUsuariosF
         Height = 23
         Top = 80
         Width = 80
-        MaxLength = 0
+        DataField = 'usuario'
+        DataSource = dsCadModelo
+        MaxLength = 30
         TabOrder = 2
       end
       object edtNomeUsuario: TDBEdit[7]
@@ -86,7 +127,9 @@ inherited cadUsuariosF: TcadUsuariosF
         Height = 23
         Top = 112
         Width = 80
-        MaxLength = 0
+        DataField = 'nome_completo'
+        DataSource = dsCadModelo
+        MaxLength = 60
         TabOrder = 3
       end
       object edtSenhaUsuario: TDBEdit[8]
@@ -94,20 +137,45 @@ inherited cadUsuariosF: TcadUsuariosF
         Height = 23
         Top = 144
         Width = 80
-        MaxLength = 0
+        DataField = 'senha'
+        DataSource = dsCadModelo
+        MaxLength = 50
         TabOrder = 4
       end
     end
   end
   inherited dsCadModelo: TDataSource
+    AutoEdit = False
     DataSet = ZQuery1
     Left = 440
     Top = 40
   end
   object ZUpdateSQL1: TZUpdateSQL[2]
+    DeleteSQL.Strings = (
+      'DELETE FROM usuarios WHERE id = + edtIdUsuario.Text  ;'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO usuarios (nome_completo, usuario, senha) VALUES (:nome_completo, :usuario, :senha)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE usuarios SET nome_completo = :nome_completo, usuario = :usuario, senha = :senha WHERE id = :id'
+    )
     UseSequenceFieldForRefreshSQL = False
     Left = 664
     Top = 40
+    ParamData = <    
+      item
+        Name = 'nome_completo'
+      end    
+      item
+        Name = 'usuario'
+      end    
+      item
+        Name = 'senha'
+      end    
+      item
+        Name = 'id'
+      end>
   end
   object ZQuery1: TZQuery[3]
     Connection = DataModule1.ZConnection1
@@ -118,5 +186,45 @@ inherited cadUsuariosF: TcadUsuariosF
     Params = <>
     Left = 544
     Top = 40
+    object ZQuery1id: TZIntegerField
+      DisplayLabel = 'id'
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ZQuery1usuario: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'usuario'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object ZQuery1nome_completo: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'nome_completo'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object ZQuery1senha: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'senha'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
   end
 end

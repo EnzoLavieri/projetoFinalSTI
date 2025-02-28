@@ -28,8 +28,10 @@ type
     TabSheet1: TTabSheet;
     TabSheet2: TTabSheet;
     procedure btnCancelarClick(Sender: TObject);
+    procedure btnExluirClick(Sender: TObject);
     procedure btnFecharClick(Sender: TObject);
     procedure btnNovoClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
   public
   end;
@@ -48,9 +50,21 @@ begin
   PageControl1.ActivePageIndex := 1;
 end;
 
+procedure TxCadPaiF.FormShow(Sender: TObject);
+begin
+  // Verifica se o dataset não está aberto e abre
+  if not xCadPaiF.Dataset.Active then
+    xCadPaiF.Dataset.Open;
+end;
+
 procedure TxCadPaiF.btnCancelarClick(Sender: TObject);
 begin
   PageControl1.ActivePageIndex := 0;
+end;
+
+procedure TxCadPaiF.btnExluirClick(Sender: TObject);
+begin
+
 end;
 
 procedure TxCadPaiF.btnFecharClick(Sender: TObject);
