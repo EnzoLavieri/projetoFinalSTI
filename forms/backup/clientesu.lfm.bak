@@ -6,11 +6,10 @@ inherited cadClientesF: TcadClientesF
   Caption = 'Clientes'
   ClientHeight = 595
   ClientWidth = 770
-  OnCreate = FormCreate
   inherited PageControl1: TPageControl
     Width = 770
-    ActivePage = TabSheet1
-    TabIndex = 0
+    ActivePage = TabSheet2
+    TabIndex = 1
     inherited TabSheet1: TTabSheet
       ClientWidth = 762
       inherited Panel1: TPanel
@@ -18,6 +17,9 @@ inherited cadClientesF: TcadClientesF
         ClientWidth = 762
         Color = clScrollBar
         DockSite = False
+        inherited edtPesq: TBitBtn
+          OnClick = edtPesqClick
+        end
       end
       inherited Panel2: TPanel
         Width = 762
@@ -27,6 +29,7 @@ inherited cadClientesF: TcadClientesF
       end
       inherited DBGrid1: TDBGrid
         Width = 762
+        DataSource = dsCadModelo
       end
     end
     inherited TabSheet2: TTabSheet
@@ -37,6 +40,9 @@ inherited cadClientesF: TcadClientesF
         ClientWidth = 762
         Color = clScrollBar
         DockSite = False
+        inherited btnExluir: TBitBtn
+          OnClick = btnExluirClick
+        end
       end
       object edtIdCliente: TDBEdit[1]
         Left = 112
@@ -99,5 +105,20 @@ inherited cadClientesF: TcadClientesF
         Caption = 'Nome:'
       end
     end
+  end
+  inherited dsCadModelo: TDataSource
+    DataSet = ZQuery1
+    Left = 440
+    Top = 40
+  end
+  object ZQuery1: TZQuery[2]
+    Connection = DataModule1.ZConnection1
+    Active = True
+    SQL.Strings = (
+      'select  *  from cliente'
+    )
+    Params = <>
+    Left = 520
+    Top = 40
   end
 end

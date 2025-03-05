@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, DBCtrls, StdCtrls,
-  xCadPai;
+  LR_Class, ZDataset, ZSqlUpdate, ZAbstractRODataset, xCadPai, DB;
 
 type
 
@@ -27,6 +27,17 @@ type
     Label6: TLabel;
     Label7: TLabel;
     Label8: TLabel;
+    ZQuery1: TZQuery;
+    ZQuery1categoriaprodutoid: TZIntegerField;
+    ZQuery1ds_produto: TZRawStringField;
+    ZQuery1dt_cadastro_produto: TZDateTimeField;
+    ZQuery1obs_produto: TZRawStringField;
+    ZQuery1produtoid: TZIntegerField;
+    ZQuery1status_produto: TZRawStringField;
+    ZQuery1vl_venda_produto: TZBCDField;
+    ZUpdateSQL1: TZUpdateSQL;
+    procedure btnExluirClick(Sender: TObject);
+    procedure edtPesqClick(Sender: TObject);
 
   private
 
@@ -44,6 +55,27 @@ implementation
 { TcadProdutosF }
 
 
+
+procedure TcadProdutosF.edtPesqClick(Sender: TObject);
+begin
+    ZQuery1.Close;
+  if Edit1.Text <> '' then
+    ZQuery1.SQL.Text := 'SELECT * FROM produto WHERE PRODUTOID = ' + Edit1.Text
+  else
+    ZQuery1.SQL.Text := 'SELECT * FROM produto';
+  ZQuery1.Open;
+end;
+
+procedure TcadProdutosF.btnExluirClick(Sender: TObject);
+begin
+  inherited;
+    if MessageDlg('Voce tem certeza que deseja excluir o registro ' +
+    edtIdProduto.Text + '?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+  begin
+    edtIdProduto.DataSet.Delete;
+
+  end;
+end;
 
 end.
 

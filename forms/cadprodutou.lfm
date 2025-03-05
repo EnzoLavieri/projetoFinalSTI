@@ -1,47 +1,58 @@
 inherited cadProdutosF: TcadProdutosF
-  Left = 1129
+  Left = 1090
   Height = 593
-  Top = 81
-  Width = 754
+  Top = 116
+  Width = 745
   Caption = 'Produtos'
   ClientHeight = 593
-  ClientWidth = 754
+  ClientWidth = 745
   inherited PageControl1: TPageControl
-    Width = 754
-    ActivePage = TabSheet1
-    TabIndex = 0
+    Width = 745
+    ActivePage = TabSheet2
+    TabIndex = 1
     inherited TabSheet1: TTabSheet
-      ClientWidth = 746
+      ClientWidth = 737
       inherited Panel1: TPanel
-        Width = 746
-        ClientWidth = 746
+        Width = 737
+        ClientWidth = 737
         Color = clScrollBar
         DockSite = False
+        inherited edtPesq: TBitBtn
+          OnClick = edtPesqClick
+        end
       end
       inherited Panel2: TPanel
-        Width = 746
-        ClientWidth = 746
+        Width = 737
+        ClientWidth = 737
         Color = clScrollBar
         DockSite = False
       end
       inherited DBGrid1: TDBGrid
-        Width = 746
+        Width = 737
+        AutoFillColumns = True
+        DataSource = dsCadModelo
       end
     end
     inherited TabSheet2: TTabSheet
-      ClientWidth = 746
+      ClientWidth = 737
       inherited Panel4: TPanel
-        Width = 746
+        Width = 737
         BevelColor = clScrollBar
-        ClientWidth = 746
+        ClientWidth = 737
         Color = clScrollBar
         DockSite = False
+        inherited btnExluir: TBitBtn
+          OnClick = btnExluirClick
+        end
       end
       object edtIdProduto: TDBEdit[1]
         Left = 112
         Height = 23
         Top = 48
         Width = 80
+        DataField = 'produtoid'
+        DataSource = dsCadModelo
+        Alignment = taRightJustify
         MaxLength = 0
         TabOrder = 1
       end
@@ -57,6 +68,9 @@ inherited cadProdutosF: TcadProdutosF
         Height = 23
         Top = 80
         Width = 80
+        DataField = 'categoriaprodutoid'
+        DataSource = dsCadModelo
+        Alignment = taRightJustify
         MaxLength = 0
         TabOrder = 2
       end
@@ -65,7 +79,9 @@ inherited cadProdutosF: TcadProdutosF
         Height = 23
         Top = 112
         Width = 80
-        MaxLength = 0
+        DataField = 'ds_produto'
+        DataSource = dsCadModelo
+        MaxLength = 50
         TabOrder = 3
       end
       object edtObservacao: TDBEdit[5]
@@ -73,7 +89,9 @@ inherited cadProdutosF: TcadProdutosF
         Height = 23
         Top = 144
         Width = 80
-        MaxLength = 0
+        DataField = 'obs_produto'
+        DataSource = dsCadModelo
+        MaxLength = 300
         TabOrder = 4
       end
       object edtValor: TDBEdit[6]
@@ -81,6 +99,9 @@ inherited cadProdutosF: TcadProdutosF
         Height = 23
         Top = 176
         Width = 80
+        DataField = 'vl_venda_produto'
+        DataSource = dsCadModelo
+        Alignment = taRightJustify
         MaxLength = 0
         TabOrder = 5
       end
@@ -89,6 +110,8 @@ inherited cadProdutosF: TcadProdutosF
         Height = 23
         Top = 208
         Width = 80
+        DataField = 'dt_cadastro_produto'
+        DataSource = dsCadModelo
         MaxLength = 0
         TabOrder = 6
       end
@@ -97,7 +120,9 @@ inherited cadProdutosF: TcadProdutosF
         Height = 23
         Top = 240
         Width = 80
-        MaxLength = 0
+        DataField = 'status_produto'
+        DataSource = dsCadModelo
+        MaxLength = 10
         TabOrder = 7
       end
       object Label3: TLabel[9]
@@ -143,5 +168,99 @@ inherited cadProdutosF: TcadProdutosF
         Caption = 'Status:'
       end
     end
+  end
+  inherited dsCadModelo: TDataSource
+    DataSet = ZQuery1
+    Left = 472
+  end
+  object ZQuery1: TZQuery[2]
+    Connection = DataModule1.ZConnection1
+    Active = True
+    SQL.Strings = (
+      'select * from produto'
+      ''
+    )
+    Params = <>
+    Left = 544
+    Top = 48
+    object ZQuery1produtoid: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'produtoid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object ZQuery1categoriaprodutoid: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'categoriaprodutoid'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object ZQuery1ds_produto: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'ds_produto'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+    object ZQuery1obs_produto: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'obs_produto'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 300
+    end
+    object ZQuery1vl_venda_produto: TZBCDField
+      FieldKind = fkData
+      FieldName = 'vl_venda_produto'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Precision = 15
+      Currency = False
+      MaxValue = 0
+      MinValue = 0
+      Size = 2
+    end
+    object ZQuery1dt_cadastro_produto: TZDateTimeField
+      FieldKind = fkData
+      FieldName = 'dt_cadastro_produto'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object ZQuery1status_produto: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'status_produto'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 10
+    end
+  end
+  object ZUpdateSQL1: TZUpdateSQL[3]
+    DeleteSQL.Strings = (
+      'DELETE FROM produto WHERE id = + edtIdProduto.Text  ;'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    Left = 608
+    Top = 48
   end
 end

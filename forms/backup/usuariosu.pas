@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, DBCtrls,
-  DBGrids, ZSqlUpdate, ZDataset, ZAbstractRODataset, xCadPai;
+  DBGrids, ZSqlUpdate, ZDataset, ZAbstractRODataset, xCadPai, DB;
 
 type
 
@@ -28,10 +28,9 @@ type
     ZQuery1usuario: TZRawStringField;
     ZUpdateSQL1: TZUpdateSQL;
     procedure btnExluirClick(Sender: TObject);
-    procedure DBGrid1CellClick(Column: TColumn);
-    procedure edtPesqClick(Sender: TObject);
-    procedure FormShow(Sender: TObject);
 
+
+    procedure edtPesqClick(Sender: TObject);
   private
 
   public
@@ -59,16 +58,6 @@ begin
   ZQuery1.Open;
 end;
 
-
-
-
-procedure TcadUsuariosF.FormShow(Sender: TObject);
-begin
-  if dsCadModelo.DataSet.Active and (dsCadModelo.DataSet.RecordCount > 0) then
-    dsCadModelo.DataSet.Edit;
-end;
-
-
 procedure TcadUsuariosF.btnExluirClick(Sender: TObject);
 begin
   if MessageDlg('Voce tem certeza que deseja excluir o registro ' +
@@ -78,14 +67,6 @@ begin
 
   end;
 end;
-
-procedure TcadUsuariosF.DBGrid1CellClick(Column: TColumn);
-begin
-  ZQuery1.Edit;
-  ZEQuery1.FieldByName(Column.FieldName).AsString := DBGrid1.Cells[Column.Index, DBGrid1.Row];
-  ZEQuery1.Post;
-end;
-
 
 end.
 

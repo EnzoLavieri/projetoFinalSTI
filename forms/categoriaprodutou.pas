@@ -5,16 +5,20 @@ unit categoriaProdutoU;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, DBCtrls, xCadPai,StdCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, DBCtrls, xCadPai,
+  StdCtrls, ZDataset;
 type
 
   { TcadCategProdutosF }
 
   TcadCategProdutosF = class(TxCadPaiF)
-    edtID: TDBEdit;
+    edtIDCatProdutos: TDBEdit;
     edtDescCategoria: TDBEdit;
     Label2: TLabel;
     Label3: TLabel;
+    ZQuery1: TZQuery;
+    procedure btnExluirClick(Sender: TObject);
+    procedure edtPesqClick(Sender: TObject);
 
   private
 
@@ -33,6 +37,27 @@ implementation
 
 
 
+
+procedure TcadCategProdutosF.edtPesqClick(Sender: TObject);
+begin
+    ZQuery1.Close;
+  if Edit1.Text <> '' then
+    ZQuery1.SQL.Text := 'SELECT * FROM CATEGORIA_PRODUTO WHERE CATEGORIAPRODUTOID = ' + Edit1.Text
+  else
+    ZQuery1.SQL.Text := 'SELECT * FROM CATEGORIA_PRODUTO';
+  ZQuery1.Open;
+end;
+
+procedure TcadCategProdutosF.btnExluirClick(Sender: TObject);
+begin
+  inherited;
+    if MessageDlg('Voce tem certeza que deseja excluir o registro ' +
+    edtIDCatProdutos.Text + '?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+  begin
+    dsCadModelo.DataSet.Delete;
+
+  end;
+end;
 
 end.
 

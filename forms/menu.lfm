@@ -1,7 +1,7 @@
 object menuF: TmenuF
-  Left = 1088
-  Height = 388
-  Top = 210
+  Left = 1133
+  Height = 389
+  Top = 225
   Width = 608
   Caption = 'Menu Principal'
   Menu = MainMenu1
@@ -38,6 +38,7 @@ object menuF: TmenuF
       Caption = 'Relatorios'
       object menuRelatClientes: TMenuItem
         Caption = 'Relatorios clientes'
+        OnClick = menuRelatClientesClick
       end
       object menuRelatProdutos: TMenuItem
         Caption = 'Relatorio produtos'

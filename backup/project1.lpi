@@ -26,6 +26,9 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="lazreport"/>
+      </Item>
+      <Item>
         <PackageName Value="zcomponentdesign"/>
       </Item>
       <Item>
@@ -100,6 +103,14 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dataModule"/>
+      </Unit>
+      <Unit>
+        <Filename Value="relatoriodeclientesu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="relClientes"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="relatorioDeClientesU"/>
       </Unit>
     </Units>
   </ProjectOptions>

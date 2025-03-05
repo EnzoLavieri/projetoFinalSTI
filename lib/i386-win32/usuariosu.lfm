@@ -1,16 +1,15 @@
 inherited cadUsuariosF: TcadUsuariosF
-  Left = 1093
+  Left = 1096
   Height = 607
-  Top = 31
+  Top = 21
   Width = 813
   Caption = 'Usuarios'
   ClientHeight = 607
   ClientWidth = 813
-  OnShow = FormShow
   inherited PageControl1: TPageControl
     Width = 813
-    ActivePage = TabSheet1
-    TabIndex = 0
+    ActivePage = TabSheet2
+    TabIndex = 1
     inherited TabSheet1: TTabSheet
       ClientWidth = 805
       inherited Panel1: TPanel
@@ -57,7 +56,7 @@ inherited cadUsuariosF: TcadUsuariosF
             FieldName = 'senha'
           end>
         DataSource = dsCadModelo
-        OnCellClick = DBGrid1CellClick
+        OnDblClick = DBGrid1DblClick
       end
     end
     inherited TabSheet2: TTabSheet
@@ -109,7 +108,7 @@ inherited cadUsuariosF: TcadUsuariosF
         DataField = 'ID'
         DataSource = dsCadModelo
         Alignment = taRightJustify
-        MaxLength = 60
+        MaxLength = 0
         TabOrder = 1
       end
       object edtUsuario: TDBEdit[6]
@@ -119,7 +118,7 @@ inherited cadUsuariosF: TcadUsuariosF
         Width = 80
         DataField = 'usuario'
         DataSource = dsCadModelo
-        MaxLength = 50
+        MaxLength = 30
         TabOrder = 2
       end
       object edtNomeUsuario: TDBEdit[7]
@@ -129,7 +128,7 @@ inherited cadUsuariosF: TcadUsuariosF
         Width = 80
         DataField = 'nome_completo'
         DataSource = dsCadModelo
-        MaxLength = 50
+        MaxLength = 60
         TabOrder = 3
       end
       object edtSenhaUsuario: TDBEdit[8]

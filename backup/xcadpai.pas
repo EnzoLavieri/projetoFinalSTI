@@ -31,7 +31,7 @@ type
     procedure btnExluirClick(Sender: TObject);
     procedure btnFecharClick(Sender: TObject);
     procedure btnNovoClick(Sender: TObject);
-    procedure FormShow(Sender: TObject);
+    procedure DBGrid1DblClick(Sender: TObject);
   private
   public
   end;
@@ -50,12 +50,12 @@ begin
   PageControl1.ActivePageIndex := 1;
 end;
 
-procedure TxCadPaiF.FormShow(Sender: TObject);
+procedure TxCadPaiF.DBGrid1DblClick(Sender: TObject);
 begin
-  // Verifica se o dataset não está aberto e abre
-  if not xCadPaiF.Dataset.Active then
-    xCadPaiF.Dataset.Open;
+  dsCadModelo.DataSet.edit;
 end;
+
+
 
 procedure TxCadPaiF.btnCancelarClick(Sender: TObject);
 begin

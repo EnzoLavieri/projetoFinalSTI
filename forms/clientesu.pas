@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, DBCtrls,
-  xCadPai;
+  ZDataset, xCadPai;
 
 type
 
@@ -21,7 +21,10 @@ type
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
-    procedure FormCreate(Sender: TObject);
+    ZQuery1: TZQuery;
+    procedure btnExluirClick(Sender: TObject);
+    procedure edtPesqClick(Sender: TObject);
+
   private
 
   public
@@ -37,9 +40,25 @@ implementation
 
 { TcadClientesF }
 
-procedure TcadClientesF.FormCreate(Sender: TObject);
+procedure TcadClientesF.edtPesqClick(Sender: TObject);
 begin
+     ZQuery1.Close;
+  if Edit1.Text <> '' then
+    ZQuery1.SQL.Text := 'SELECT * FROM cliente WHERE CLIENTEID = ' + Edit1.Text
+  else
+    ZQuery1.SQL.Text := 'SELECT * FROM clienteS';
+  ZQuery1.Open;
+end;
 
+procedure TcadClientesF.btnExluirClick(Sender: TObject);
+begin
+  inherited;
+    if MessageDlg('Voce tem certeza que deseja excluir o registro ' +
+    edtIdCliente.Text + '?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+  begin
+    dsCadModelo.DataSet.Delete;
+
+  end;
 end;
 
 end.
