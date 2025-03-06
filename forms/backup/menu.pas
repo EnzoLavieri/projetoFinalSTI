@@ -85,8 +85,8 @@ end;
 
 procedure TmenuF.menuRelatProdutosClick(Sender: TObject);
 begin
-  relProdutos := TrelProdutos.Create(Self);
-  relClientes.Show;
+  relDeProdutosF := TrelDeProdutosF.Create(Self);
+  relDeProdutosF.Show;
 end;
 
 procedure TmenuF.menuSairClick(Sender: TObject);

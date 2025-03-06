@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ComCtrls,
   Menus,
-  categoriaProdutoU, clientesU, cadProdutoU, usuariosU, relatorioDeClientesU, relDeProdutosU;
+  categoriaProdutoU, clientesU, cadProdutoU, usuariosU, relatorioDeClientesU, relDeProdutosU,sobreU;
 
 type
 
@@ -37,6 +37,7 @@ type
     procedure menuRelatClientesClick(Sender: TObject);
     procedure menuRelatProdutosClick(Sender: TObject);
     procedure menuSairClick(Sender: TObject);
+    procedure MenuSobreClick(Sender: TObject);
   private
 
   public
@@ -92,6 +93,12 @@ end;
 procedure TmenuF.menuSairClick(Sender: TObject);
 begin
   Application.Terminate;
+end;
+
+procedure TmenuF.MenuSobreClick(Sender: TObject);
+begin
+     sobreF := TsobreF.Create(Self);
+  sobreF.ShowModal;
 end;
 
 

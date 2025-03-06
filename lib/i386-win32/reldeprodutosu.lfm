@@ -1,0 +1,44 @@
+object relDeProdutosF: TrelDeProdutosF
+  Left = 977
+  Height = 275
+  Top = 247
+  Width = 320
+  Caption = 'relDeProdutosF'
+  ClientHeight = 275
+  ClientWidth = 320
+  OnCreate = FormCreate
+  LCLVersion = '3.8.0.0'
+  object btnRelProdutos: TBitBtn
+    Left = 40
+    Height = 94
+    Top = 8
+    Width = 215
+    Caption = 'Imprimir relatorio de produtos'
+    OnClick = btnRelProdutosClick
+    TabOrder = 0
+  end
+  object frProdutos: TfrReport
+    Dataset = frDBDSRelProdutos
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit, pbSettings, pbPageSetup]
+    DataType = dtDataSet
+    Left = 136
+    Top = 104
+  end
+  object frDBDSRelProdutos: TfrDBDataSet
+    DataSet = qryRelProdutos
+    Left = 136
+    Top = 152
+  end
+  object qryRelProdutos: TZQuery
+    Connection = DataModule1.ZConnection1
+    Active = True
+    SQL.Strings = (
+      'select * from produto'
+    )
+    Params = <>
+    Left = 136
+    Top = 200
+  end
+end

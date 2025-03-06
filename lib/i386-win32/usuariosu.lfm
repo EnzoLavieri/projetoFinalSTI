@@ -1,7 +1,7 @@
 inherited cadUsuariosF: TcadUsuariosF
-  Left = 1096
+  Left = 1018
   Height = 607
-  Top = 21
+  Top = 79
   Width = 813
   Caption = 'Usuarios'
   ClientHeight = 607
@@ -178,7 +178,6 @@ inherited cadUsuariosF: TcadUsuariosF
   end
   object ZQuery1: TZQuery[3]
     Connection = DataModule1.ZConnection1
-    Active = True
     SQL.Strings = (
       'select * from USUARIOS'
     )
