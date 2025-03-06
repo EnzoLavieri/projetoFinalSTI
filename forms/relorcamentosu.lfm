@@ -1,0 +1,9 @@
+object relOrcamentosF: TrelOrcamentosF
+  Left = 305
+  Height = 240
+  Top = 145
+  Width = 320
+  Caption = 'relOrcamentosF'
+  OnCreate = FormCreate
+  LCLVersion = '3.8.0.0'
+end

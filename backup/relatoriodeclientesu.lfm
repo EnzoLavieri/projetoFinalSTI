@@ -10,7 +10,7 @@ object relClientes: TrelClientes
   LCLVersion = '3.8.0.0'
   object btnRelClientes: TBitBtn
     Left = 40
-    Height = 90
+    Height = 64
     Top = 64
     Width = 199
     Caption = 'Imprimir relatorio de clientes'
@@ -65,7 +65,6 @@ object relClientes: TrelClientes
   end
   object qryClientes: TZQuery
     Connection = DataModule1.ZConnection1
-    Active = True
     SQL.Strings = (
       'select  *  from cliente'
       ''

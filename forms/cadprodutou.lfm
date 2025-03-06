@@ -175,7 +175,6 @@ inherited cadProdutosF: TcadProdutosF
   end
   object ZQuery1: TZQuery[2]
     Connection = DataModule1.ZConnection1
-    Active = True
     SQL.Strings = (
       'select * from produto'
       ''

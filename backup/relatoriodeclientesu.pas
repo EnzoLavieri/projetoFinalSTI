@@ -35,9 +35,9 @@ implementation
 
 procedure TrelClientes.btnRelClientesClick(Sender: TObject);
 begin
-     frClientes.LoadFromFile('relatorios/relClientes.lrf');
-   frClientes.PrepareReport;
-   frClientes.ShowReport;
+  frClientes.LoadFromFile('relatorios/relClientes.lrf');
+  frClientes.PrepareReport;
+  frClientes.ShowReport;
 end;
 
 end.

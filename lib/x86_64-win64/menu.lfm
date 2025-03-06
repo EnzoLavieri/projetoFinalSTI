@@ -1,0 +1,65 @@
+object menuF: TmenuF
+  Left = 975
+  Height = 389
+  Top = 243
+  Width = 608
+  Caption = 'Menu Principal'
+  Menu = MainMenu1
+  LCLVersion = '3.8.0.0'
+  object MainMenu1: TMainMenu
+    Left = 480
+    Top = 72
+    object menuCad: TMenuItem
+      Caption = 'Cadastrar'
+      object menuCadCategoria: TMenuItem
+        Caption = 'Cadastrar categoria'
+        OnClick = menuCadCategoriaClick
+      end
+      object menuCadCliente: TMenuItem
+        Caption = 'Cadastrar cliente'
+        OnClick = menuCadClienteClick
+      end
+      object menuCadProdutos: TMenuItem
+        Caption = 'Cadastrar produtos'
+        OnClick = menuCadProdutosClick
+      end
+      object menuCadUsuarios: TMenuItem
+        Caption = 'Cadastrar usuarios'
+        OnClick = menuCadUsuariosClick
+      end
+    end
+    object menuVen: TMenuItem
+      Caption = 'Vencimentos'
+      object menuVenOrcamentos: TMenuItem
+        Caption = 'Orcamentos vencidos'
+      end
+    end
+    object menuRelat: TMenuItem
+      Caption = 'Relatorios'
+      object menuRelatClientes: TMenuItem
+        Caption = 'Relatorios clientes'
+        OnClick = menuRelatClientesClick
+      end
+      object menuRelatProdutos: TMenuItem
+        Caption = 'Relatorio produtos'
+        OnClick = menuRelatProdutosClick
+      end
+      object menuRelatOrcamentos: TMenuItem
+        Caption = 'Relatorio orcamentos'
+      end
+      object menuRelatCategorias: TMenuItem
+        Caption = 'Relatorio categorias'
+      end
+      object MenuItem1: TMenuItem
+        Caption = 'MenuItem1'
+      end
+    end
+    object MenuSobre: TMenuItem
+      Caption = 'Sobre'
+    end
+    object menuSair: TMenuItem
+      Caption = 'Sair'
+      OnClick = menuSairClick
+    end
+  end
+end

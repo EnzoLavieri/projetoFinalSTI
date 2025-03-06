@@ -112,6 +112,20 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="relatorioDeClientesU"/>
       </Unit>
+      <Unit>
+        <Filename Value="forms\reldeprodutosu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="relDeProdutosF"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="relDeProdutosU"/>
+      </Unit>
+      <Unit>
+        <Filename Value="forms\relorcamentosu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="relOrcamentosF"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="relOrcamentosU"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

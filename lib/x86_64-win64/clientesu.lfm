@@ -1,0 +1,133 @@
+inherited cadClientesF: TcadClientesF
+  Left = 1086
+  Height = 595
+  Top = 273
+  Width = 770
+  Caption = 'Clientes'
+  ClientHeight = 595
+  ClientWidth = 770
+  inherited PageControl1: TPageControl
+    Width = 770
+    ActivePage = TabSheet2
+    TabIndex = 1
+    inherited TabSheet1: TTabSheet
+      ClientWidth = 762
+      inherited Panel1: TPanel
+        Width = 762
+        ClientWidth = 762
+        Color = clScrollBar
+        DockSite = False
+        inherited edtPesq: TBitBtn
+          OnClick = edtPesqClick
+        end
+      end
+      inherited Panel2: TPanel
+        Width = 762
+        ClientWidth = 762
+        Color = clScrollBar
+        DockSite = False
+      end
+      inherited DBGrid1: TDBGrid
+        Width = 762
+        DataSource = dsCadModelo
+      end
+    end
+    inherited TabSheet2: TTabSheet
+      ClientWidth = 762
+      inherited Panel4: TPanel
+        Width = 762
+        BevelColor = clScrollBar
+        ClientWidth = 762
+        Color = clScrollBar
+        DockSite = False
+        inherited btnExluir: TBitBtn
+          OnClick = btnExluirClick
+        end
+      end
+      object edtIdCliente: TDBEdit[1]
+        Left = 112
+        Height = 23
+        Top = 48
+        Width = 80
+        DataField = 'clienteid'
+        DataSource = dsCadModelo
+        Alignment = taRightJustify
+        MaxLength = 0
+        TabOrder = 1
+      end
+      object edtCpfCnpj: TDBEdit[2]
+        Left = 112
+        Height = 23
+        Top = 112
+        Width = 80
+        DataField = 'cpf_cnpj_cliente'
+        DataSource = dsCadModelo
+        MaxLength = 18
+        TabOrder = 2
+      end
+      object edtNomeCliente: TDBEdit[3]
+        Left = 112
+        Height = 23
+        Top = 144
+        Width = 80
+        DataField = 'nome_cliente'
+        DataSource = dsCadModelo
+        MaxLength = 100
+        TabOrder = 3
+      end
+      object edtTipoCliente: TDBEdit[4]
+        Left = 112
+        Height = 23
+        Top = 80
+        Width = 80
+        DataField = 'tipo_cliente'
+        DataSource = dsCadModelo
+        MaxLength = 1
+        TabOrder = 4
+      end
+      object Label2: TLabel[5]
+        Left = 88
+        Height = 15
+        Top = 56
+        Width = 14
+        Caption = 'ID:'
+      end
+      object Label3: TLabel[6]
+        Left = 20
+        Height = 15
+        Top = 88
+        Width = 82
+        Caption = 'Tipo do cliente:'
+      end
+      object Label4: TLabel[7]
+        Left = 46
+        Height = 15
+        Top = 120
+        Width = 56
+        Caption = 'CPF/CNPJ:'
+      end
+      object Label5: TLabel[8]
+        Left = 64
+        Height = 15
+        Top = 152
+        Width = 36
+        Caption = 'Nome:'
+      end
+    end
+  end
+  inherited dsCadModelo: TDataSource
+    DataSet = ZQuery1
+    Left = 440
+    Top = 40
+  end
+  object ZQuery1: TZQuery[2]
+    Connection = DataModule1.ZConnection1
+    Active = True
+    SQL.Strings = (
+      'select  *  from cliente'
+    )
+    Params = <>
+    Left = 520
+    Top = 40
+  end
+end

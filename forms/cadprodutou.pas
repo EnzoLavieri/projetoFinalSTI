@@ -72,7 +72,7 @@ begin
     if MessageDlg('Voce tem certeza que deseja excluir o registro ' +
     edtIdProduto.Text + '?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
   begin
-    edtIdProduto.DataSet.Delete;
+    dsCadModelo.DataSet.Delete;
 
   end;
 end;
