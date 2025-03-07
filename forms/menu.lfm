@@ -28,6 +28,10 @@ object menuF: TmenuF
         Caption = 'Cadastrar usuarios'
         OnClick = menuCadUsuariosClick
       end
+      object menuCadOrcamentos: TMenuItem
+        Caption = 'Cadastrar orcamentos'
+        OnClick = menuCadOrcamentosClick
+      end
     end
     object menuVen: TMenuItem
       Caption = 'Vencimentos'

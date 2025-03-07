@@ -8,7 +8,7 @@ uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ComCtrls,
   Menus,
   categoriaProdutoU, clientesU, cadProdutoU, usuariosU, relatorioDeClientesU,
-  relDeProdutosU, sobreU, relOrcamentosU, relCategoriaU;
+  relDeProdutosU, sobreU, relOrcamentosU, relCategoriaU, orcamentoU;
 
 type
 
@@ -18,6 +18,7 @@ type
     MainMenu1: TMainMenu;
     menuCad: TMenuItem;
     menuCadUsuarios: TMenuItem;
+    menuCadOrcamentos: TMenuItem;
     menuRelatCategorias: TMenuItem;
     menuRelatOrcamentos: TMenuItem;
     menuRelatProdutos: TMenuItem;
@@ -32,6 +33,7 @@ type
     menuCadProdutos: TMenuItem;
     procedure menuCadCategoriaClick(Sender: TObject);
     procedure menuCadClienteClick(Sender: TObject);
+    procedure menuCadOrcamentosClick(Sender: TObject);
     procedure menuCadProdutosClick(Sender: TObject);
     procedure menuCadUsuariosClick(Sender: TObject);
     procedure menuRelatCategoriasClick(Sender: TObject);
@@ -66,6 +68,12 @@ begin
   cadClientesF := TcadClientesF.Create(Self);
   cadClientesF.ShowModal;
 
+end;
+
+procedure TmenuF.menuCadOrcamentosClick(Sender: TObject);
+begin
+     orcamentoF := TorcamentoF.Create(Self);
+  orcamentoF.ShowModal;
 end;
 
 procedure TmenuF.menuCadProdutosClick(Sender: TObject);

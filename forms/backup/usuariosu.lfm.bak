@@ -7,6 +7,7 @@ inherited cadUsuariosF: TcadUsuariosF
   ClientHeight = 445
   ClientWidth = 638
   OnCreate = FormCreate
+  WindowState = wsMaximized
   inherited PageControl1: TPageControl
     Height = 445
     Width = 638

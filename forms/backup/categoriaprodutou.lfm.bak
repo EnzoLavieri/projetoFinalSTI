@@ -1,22 +1,22 @@
 inherited cadCategProdutosF: TcadCategProdutosF
-  Left = 716
-  Height = 460
-  Top = 162
-  Width = 632
+  Left = 840
+  Height = 350
+  Top = 272
+  Width = 508
   Caption = 'Categoria dos produtos'
-  ClientHeight = 460
-  ClientWidth = 632
+  ClientHeight = 350
+  ClientWidth = 508
   OnCreate = FormCreate
+  WindowState = wsMaximized
   inherited PageControl1: TPageControl
-    Height = 460
-    Width = 632
-    Align = alClient
+    Height = 350
+    Width = 508
     inherited TabSheet1: TTabSheet
-      ClientHeight = 432
-      ClientWidth = 624
+      ClientHeight = 322
+      ClientWidth = 500
       inherited Panel1: TPanel
-        Width = 624
-        ClientWidth = 624
+        Width = 500
+        ClientWidth = 500
         Color = clScrollBar
         DockSite = False
         inherited edtPesq: TBitBtn
@@ -24,27 +24,27 @@ inherited cadCategProdutosF: TcadCategProdutosF
         end
       end
       inherited Panel2: TPanel
-        Top = 368
-        Width = 624
-        ClientWidth = 624
+        Top = 258
+        Width = 500
+        ClientWidth = 500
         Color = clScrollBar
         DockSite = False
       end
       inherited DBGrid1: TDBGrid
-        Height = 298
-        Width = 624
+        Height = 188
+        Width = 500
         AutoFillColumns = True
         DataSource = dsCadModelo
       end
     end
     inherited TabSheet2: TTabSheet
-      ClientHeight = 432
-      ClientWidth = 624
+      ClientHeight = 322
+      ClientWidth = 500
       inherited Panel4: TPanel
-        Top = 362
-        Width = 624
+        Top = 252
+        Width = 500
         BevelColor = clScrollBar
-        ClientWidth = 624
+        ClientWidth = 500
         Color = clScrollBar
         DockSite = False
         inherited btnExluir: TBitBtn

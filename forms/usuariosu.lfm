@@ -11,7 +11,8 @@ inherited cadUsuariosF: TcadUsuariosF
   inherited PageControl1: TPageControl
     Height = 445
     Width = 638
-    Align = alClient
+    ActivePage = TabSheet2
+    TabIndex = 1
     inherited TabSheet1: TTabSheet
       ClientHeight = 417
       ClientWidth = 630

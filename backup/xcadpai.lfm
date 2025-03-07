@@ -1,7 +1,7 @@
 object xCadPaiF: TxCadPaiF
-  Left = 914
+  Left = 605
   Height = 598
-  Top = 90
+  Top = 38
   Width = 994
   Caption = 'xCadPai'
   ClientHeight = 598
@@ -9,16 +9,16 @@ object xCadPaiF: TxCadPaiF
   LCLVersion = '3.8.0.0'
   object PageControl1: TPageControl
     Left = 0
-    Height = 600
+    Height = 598
     Top = 0
     Width = 994
     ActivePage = TabSheet1
-    Align = alTop
+    Align = alClient
     TabIndex = 0
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = 'Pesquisa'
-      ClientHeight = 572
+      ClientHeight = 570
       ClientWidth = 986
       object Panel1: TPanel
         Left = 0
@@ -58,7 +58,7 @@ object xCadPaiF: TxCadPaiF
       object Panel2: TPanel
         Left = 0
         Height = 64
-        Top = 508
+        Top = 506
         Width = 986
         Align = alBottom
         ClientHeight = 64
@@ -88,7 +88,7 @@ object xCadPaiF: TxCadPaiF
       end
       object DBGrid1: TDBGrid
         Left = 0
-        Height = 438
+        Height = 436
         Top = 70
         Width = 986
         Align = alClient
@@ -100,12 +100,12 @@ object xCadPaiF: TxCadPaiF
     end
     object TabSheet2: TTabSheet
       Caption = 'Cadastro'
-      ClientHeight = 572
+      ClientHeight = 570
       ClientWidth = 986
       object Panel4: TPanel
         Left = 0
         Height = 70
-        Top = 502
+        Top = 500
         Width = 986
         Align = alBottom
         BevelColor = clScrollBar

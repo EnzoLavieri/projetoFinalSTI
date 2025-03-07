@@ -1,0 +1,8 @@
+object orcamentoItemF: TorcamentoItemF
+  Left = 696
+  Height = 240
+  Top = 238
+  Width = 320
+  Caption = 'orcamentoItemF'
+  LCLVersion = '3.8.0.0'
+end

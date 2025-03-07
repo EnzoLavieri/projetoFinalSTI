@@ -1,0 +1,44 @@
+object relCategoriaF: TrelCategoriaF
+  Left = 1211
+  Height = 240
+  Top = 529
+  Width = 320
+  AutoSize = True
+  Caption = 'relCategoriaF'
+  ClientHeight = 240
+  ClientWidth = 320
+  Position = poScreenCenter
+  LCLVersion = '3.8.0.0'
+  object btnRelCategoria: TBitBtn
+    Left = 8
+    Height = 64
+    Top = 8
+    Width = 187
+    Caption = 'Imprimir relatorio de categoria'
+    OnClick = btnRelCategoriaClick
+    TabOrder = 0
+  end
+  object qryRelCategoria: TZQuery
+    Connection = DataModule1.ZConnection1
+    SQL.Strings = (
+      'select * from categoria_produto '
+    )
+    Params = <>
+    Left = 112
+    Top = 176
+  end
+  object frDBDSRelCategoria: TfrDBDataSet
+    DataSet = qryRelCategoria
+    Left = 112
+    Top = 128
+  end
+  object frRelCategoria: TfrReport
+    Dataset = frDBDSRelCategoria
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit, pbSettings, pbPageSetup]
+    DataType = dtDataSet
+    Left = 112
+    Top = 72
+  end
+end

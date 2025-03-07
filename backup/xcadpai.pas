@@ -52,7 +52,7 @@ end;
 
 procedure TxCadPaiF.DBGrid1DblClick(Sender: TObject);
 begin
-  dsCadModelo.DataSet.edit;
+  //dsCadModelo.DataSet.edit;
 end;
 
 

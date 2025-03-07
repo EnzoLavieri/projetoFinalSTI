@@ -1,7 +1,7 @@
 inherited cadClientesF: TcadClientesF
-  Left = 715
+  Left = 926
   Height = 455
-  Top = 163
+  Top = 160
   Width = 634
   Caption = 'Clientes'
   ClientHeight = 455
@@ -11,7 +11,6 @@ inherited cadClientesF: TcadClientesF
   inherited PageControl1: TPageControl
     Height = 455
     Width = 634
-    Align = alClient
     inherited TabSheet1: TTabSheet
       ClientHeight = 427
       ClientWidth = 626
@@ -103,7 +102,7 @@ inherited cadClientesF: TcadClientesF
         Left = 20
         Height = 15
         Top = 88
-        Width = 81
+        Width = 82
         Caption = 'Tipo do cliente:'
       end
       object Label4: TLabel[7]
