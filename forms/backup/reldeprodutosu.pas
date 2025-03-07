@@ -17,6 +17,7 @@ type
     frDBDSRelProdutos: TfrDBDataSet;
     frProdutos: TfrReport;
     qryRelProdutos: TZQuery;
+    procedure btnRelProdutosClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
 
@@ -36,6 +37,13 @@ implementation
 procedure TrelDeProdutosF.FormCreate(Sender: TObject);
 begin
 
+end;
+
+procedure TrelDeProdutosF.btnRelProdutosClick(Sender: TObject);
+begin
+  frProdutos.LoadFromFile('relatorios/relProdutos.lrf');
+  frProdutos.PrepareReport;
+  frProdutos.ShowReport;
 end;
 
 end.

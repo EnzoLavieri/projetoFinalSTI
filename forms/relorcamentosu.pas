@@ -5,14 +5,20 @@ unit relOrcamentosU;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Buttons, LR_DBSet,
+  LR_Class, ZDataset;
 
 type
 
   { TrelOrcamentosF }
 
   TrelOrcamentosF = class(TForm)
-    procedure FormCreate(Sender: TObject);
+    btnRelOrcamentos: TBitBtn;
+    frDBDSRelOrcamentos: TfrDBDataSet;
+    frRelOrcamentos: TfrReport;
+    qryRelOrcamentos: TZQuery;
+    procedure btnRelOrcamentosClick(Sender: TObject);
+
   private
 
   public
@@ -28,9 +34,11 @@ implementation
 
 { TrelOrcamentosF }
 
-procedure TrelOrcamentosF.FormCreate(Sender: TObject);
+procedure TrelOrcamentosF.btnRelOrcamentosClick(Sender: TObject);
 begin
-
+  frRelOrcamentos.LoadFromFile('relatorios/relOrcamentos.lrf');
+  frRelOrcamentos.PrepareReport;
+  frRelOrcamentos.ShowReport;
 end;
 
 end.

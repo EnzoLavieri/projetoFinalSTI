@@ -3,6 +3,7 @@ object relDeProdutosF: TrelDeProdutosF
   Height = 275
   Top = 247
   Width = 320
+  AutoSize = True
   Caption = 'relDeProdutosF'
   ClientHeight = 275
   ClientWidth = 320
@@ -33,7 +34,6 @@ object relDeProdutosF: TrelDeProdutosF
   end
   object qryRelProdutos: TZQuery
     Connection = DataModule1.ZConnection1
-    Active = True
     SQL.Strings = (
       'select * from produto'
     )

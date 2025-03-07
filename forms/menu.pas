@@ -7,7 +7,8 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ComCtrls,
   Menus,
-  categoriaProdutoU, clientesU, cadProdutoU, usuariosU, relatorioDeClientesU, relDeProdutosU,sobreU;
+  categoriaProdutoU, clientesU, cadProdutoU, usuariosU, relatorioDeClientesU,
+  relDeProdutosU, sobreU, relOrcamentosU, relCategoriaU;
 
 type
 
@@ -17,7 +18,6 @@ type
     MainMenu1: TMainMenu;
     menuCad: TMenuItem;
     menuCadUsuarios: TMenuItem;
-    MenuItem1: TMenuItem;
     menuRelatCategorias: TMenuItem;
     menuRelatOrcamentos: TMenuItem;
     menuRelatProdutos: TMenuItem;
@@ -34,7 +34,9 @@ type
     procedure menuCadClienteClick(Sender: TObject);
     procedure menuCadProdutosClick(Sender: TObject);
     procedure menuCadUsuariosClick(Sender: TObject);
+    procedure menuRelatCategoriasClick(Sender: TObject);
     procedure menuRelatClientesClick(Sender: TObject);
+    procedure menuRelatOrcamentosClick(Sender: TObject);
     procedure menuRelatProdutosClick(Sender: TObject);
     procedure menuSairClick(Sender: TObject);
     procedure MenuSobreClick(Sender: TObject);
@@ -78,10 +80,22 @@ begin
   cadUsuariosF.Show;
 end;
 
+procedure TmenuF.menuRelatCategoriasClick(Sender: TObject);
+begin
+  relCategoriaF := TrelCategoriaF.Create(Self);
+  relCategoriaF.Show;
+end;
+
 procedure TmenuF.menuRelatClientesClick(Sender: TObject);
 begin
   relClientes := TrelClientes.Create(Self);
   relClientes.Show;
+end;
+
+procedure TmenuF.menuRelatOrcamentosClick(Sender: TObject);
+begin
+  relOrcamentosF := TrelOrcamentosF.Create(Self);
+  relOrcamentosF.Show;
 end;
 
 procedure TmenuF.menuRelatProdutosClick(Sender: TObject);
@@ -97,7 +111,7 @@ end;
 
 procedure TmenuF.MenuSobreClick(Sender: TObject);
 begin
-     sobreF := TsobreF.Create(Self);
+  sobreF := TsobreF.Create(Self);
   sobreF.ShowModal;
 end;
 

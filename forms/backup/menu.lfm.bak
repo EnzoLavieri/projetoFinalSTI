@@ -46,16 +46,16 @@ object menuF: TmenuF
       end
       object menuRelatOrcamentos: TMenuItem
         Caption = 'Relatorio orcamentos'
+        OnClick = menuRelatOrcamentosClick
       end
       object menuRelatCategorias: TMenuItem
         Caption = 'Relatorio categorias'
-      end
-      object MenuItem1: TMenuItem
-        Caption = 'MenuItem1'
+        OnClick = menuRelatCategoriasClick
       end
     end
     object MenuSobre: TMenuItem
       Caption = 'Sobre'
+      OnClick = MenuSobreClick
     end
     object menuSair: TMenuItem
       Caption = 'Sair'

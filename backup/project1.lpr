@@ -12,7 +12,7 @@ uses
   Interfaces, // this includes the LCL widgetset
   Forms, zcomponent, anchordockpkg, xCadPai, menu, usuariosU, clientesU,
   categoriaProdutoU, cadProdutoU, dataModule, relatorioDeClientesU, 
-relDeProdutosU, relOrcamentosU;
+relDeProdutosU, relOrcamentosU, sobreU;
 
 {$R *.res}
 
@@ -30,6 +30,7 @@ begin
   Application.CreateForm(TrelClientes,relClientes);
   Application.CreateForm(TrelDeProdutosF, relDeProdutosF);
   Application.CreateForm(TrelOrcamentosF, relOrcamentosF);
+  Application.CreateForm(TsobreF, sobreF);
   Application.Run;
 end.
 

@@ -116,6 +116,7 @@
         <Filename Value="forms\reldeprodutosu.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="relDeProdutosF"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="relDeProdutosU"/>
       </Unit>
@@ -126,6 +127,21 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="relOrcamentosU"/>
+      </Unit>
+      <Unit>
+        <Filename Value="forms\sobreu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="sobreF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="sobreU"/>
+      </Unit>
+      <Unit>
+        <Filename Value="forms\relcategoriau.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="relCategoriaF"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="relCategoriaU"/>
       </Unit>
     </Units>
   </ProjectOptions>
