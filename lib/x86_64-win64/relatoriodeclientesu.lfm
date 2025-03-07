@@ -7,6 +7,7 @@ object relClientes: TrelClientes
   Caption = 'Relatorio de clientes'
   ClientHeight = 240
   ClientWidth = 487
+  Position = poScreenCenter
   LCLVersion = '3.8.0.0'
   object btnRelClientes: TBitBtn
     Left = 40

@@ -38,6 +38,7 @@ type
     ZUpdateSQL1: TZUpdateSQL;
     procedure btnExluirClick(Sender: TObject);
     procedure edtPesqClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
 
   private
 
@@ -66,13 +67,18 @@ begin
   ZQuery1.Open;
 end;
 
+procedure TcadProdutosF.FormCreate(Sender: TObject);
+begin
+  ZQuery1.Active := True;
+end;
+
 procedure TcadProdutosF.btnExluirClick(Sender: TObject);
 begin
   inherited;
     if MessageDlg('Voce tem certeza que deseja excluir o registro ' +
     edtIdProduto.Text + '?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
   begin
-    edtIdProduto.DataSet.Delete;
+    dsCadModelo.DataSet.Delete;
 
   end;
 end;

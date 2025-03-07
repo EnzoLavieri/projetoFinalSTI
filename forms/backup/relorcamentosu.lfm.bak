@@ -7,7 +7,6 @@ object relOrcamentosF: TrelOrcamentosF
   Caption = 'relOrcamentosF'
   ClientHeight = 240
   ClientWidth = 320
-  OnCreate = FormCreate
   LCLVersion = '3.8.0.0'
   object btnRelOrcamentos: TBitBtn
     Left = 8

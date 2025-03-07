@@ -19,6 +19,7 @@ type
     ZQuery1: TZQuery;
     procedure btnExluirClick(Sender: TObject);
     procedure edtPesqClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
 
   private
 
@@ -46,6 +47,11 @@ begin
   else
     ZQuery1.SQL.Text := 'SELECT * FROM CATEGORIA_PRODUTO';
   ZQuery1.Open;
+end;
+
+procedure TcadCategProdutosF.FormCreate(Sender: TObject);
+begin
+  ZQuery1.Active := True;
 end;
 
 procedure TcadCategProdutosF.btnExluirClick(Sender: TObject);

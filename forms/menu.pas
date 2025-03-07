@@ -58,7 +58,7 @@ implementation
 procedure TmenuF.menuCadCategoriaClick(Sender: TObject);
 begin
   cadCategProdutosF := TcadCategProdutosF.Create(Self);
-  cadCategProdutosF.Show;
+  cadCategProdutosF.ShowModal;
 end;
 
 procedure TmenuF.menuCadClienteClick(Sender: TObject);
@@ -71,37 +71,37 @@ end;
 procedure TmenuF.menuCadProdutosClick(Sender: TObject);
 begin
   cadProdutosF := TcadProdutosF.Create(Self);
-  cadProdutosF.Show;
+  cadProdutosF.ShowModal;
 end;
 
 procedure TmenuF.menuCadUsuariosClick(Sender: TObject);
 begin
   cadUsuariosF := TcadUsuariosF.Create(Self);
-  cadUsuariosF.Show;
+  cadUsuariosF.ShowModal;
 end;
 
 procedure TmenuF.menuRelatCategoriasClick(Sender: TObject);
 begin
   relCategoriaF := TrelCategoriaF.Create(Self);
-  relCategoriaF.Show;
+  relCategoriaF.ShowModal;
 end;
 
 procedure TmenuF.menuRelatClientesClick(Sender: TObject);
 begin
   relClientes := TrelClientes.Create(Self);
-  relClientes.Show;
+  relClientes.ShowModal;
 end;
 
 procedure TmenuF.menuRelatOrcamentosClick(Sender: TObject);
 begin
   relOrcamentosF := TrelOrcamentosF.Create(Self);
-  relOrcamentosF.Show;
+  relOrcamentosF.ShowModal;
 end;
 
 procedure TmenuF.menuRelatProdutosClick(Sender: TObject);
 begin
   relDeProdutosF := TrelDeProdutosF.Create(Self);
-  relDeProdutosF.Show;
+  relDeProdutosF.ShowModal;
 end;
 
 procedure TmenuF.menuSairClick(Sender: TObject);

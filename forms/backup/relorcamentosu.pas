@@ -18,7 +18,7 @@ type
     frRelOrcamentos: TfrReport;
     qryRelOrcamentos: TZQuery;
     procedure btnRelOrcamentosClick(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
+
   private
 
   public

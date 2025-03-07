@@ -1,20 +1,22 @@
 inherited cadClientesF: TcadClientesF
-  Left = 1086
-  Height = 595
-  Top = 273
-  Width = 770
+  Left = 715
+  Height = 455
+  Top = 163
+  Width = 634
   Caption = 'Clientes'
-  ClientHeight = 595
-  ClientWidth = 770
+  ClientHeight = 455
+  ClientWidth = 634
+  OnCreate = FormCreate
   inherited PageControl1: TPageControl
-    Width = 770
-    ActivePage = TabSheet2
-    TabIndex = 1
+    Height = 455
+    Width = 634
+    Align = alClient
     inherited TabSheet1: TTabSheet
-      ClientWidth = 762
+      ClientHeight = 427
+      ClientWidth = 626
       inherited Panel1: TPanel
-        Width = 762
-        ClientWidth = 762
+        Width = 626
+        ClientWidth = 626
         Color = clScrollBar
         DockSite = False
         inherited edtPesq: TBitBtn
@@ -22,22 +24,26 @@ inherited cadClientesF: TcadClientesF
         end
       end
       inherited Panel2: TPanel
-        Width = 762
-        ClientWidth = 762
+        Top = 363
+        Width = 626
+        ClientWidth = 626
         Color = clScrollBar
         DockSite = False
       end
       inherited DBGrid1: TDBGrid
-        Width = 762
+        Height = 293
+        Width = 626
         DataSource = dsCadModelo
       end
     end
     inherited TabSheet2: TTabSheet
-      ClientWidth = 762
+      ClientHeight = 427
+      ClientWidth = 626
       inherited Panel4: TPanel
-        Width = 762
+        Top = 357
+        Width = 626
         BevelColor = clScrollBar
-        ClientWidth = 762
+        ClientWidth = 626
         Color = clScrollBar
         DockSite = False
         inherited btnExluir: TBitBtn
@@ -49,6 +55,9 @@ inherited cadClientesF: TcadClientesF
         Height = 23
         Top = 48
         Width = 80
+        DataField = 'clienteid'
+        DataSource = dsCadModelo
+        Alignment = taRightJustify
         MaxLength = 0
         TabOrder = 1
       end
@@ -57,7 +66,9 @@ inherited cadClientesF: TcadClientesF
         Height = 23
         Top = 112
         Width = 80
-        MaxLength = 0
+        DataField = 'cpf_cnpj_cliente'
+        DataSource = dsCadModelo
+        MaxLength = 18
         TabOrder = 2
       end
       object edtNomeCliente: TDBEdit[3]
@@ -65,7 +76,9 @@ inherited cadClientesF: TcadClientesF
         Height = 23
         Top = 144
         Width = 80
-        MaxLength = 0
+        DataField = 'nome_cliente'
+        DataSource = dsCadModelo
+        MaxLength = 100
         TabOrder = 3
       end
       object edtTipoCliente: TDBEdit[4]
@@ -73,7 +86,9 @@ inherited cadClientesF: TcadClientesF
         Height = 23
         Top = 80
         Width = 80
-        MaxLength = 0
+        DataField = 'tipo_cliente'
+        DataSource = dsCadModelo
+        MaxLength = 1
         TabOrder = 4
       end
       object Label2: TLabel[5]
@@ -87,7 +102,7 @@ inherited cadClientesF: TcadClientesF
         Left = 20
         Height = 15
         Top = 88
-        Width = 82
+        Width = 81
         Caption = 'Tipo do cliente:'
       end
       object Label4: TLabel[7]
@@ -113,7 +128,6 @@ inherited cadClientesF: TcadClientesF
   end
   object ZQuery1: TZQuery[2]
     Connection = DataModule1.ZConnection1
-    Active = True
     SQL.Strings = (
       'select  *  from cliente'
     )

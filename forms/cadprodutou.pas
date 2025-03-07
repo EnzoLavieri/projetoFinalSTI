@@ -38,6 +38,7 @@ type
     ZUpdateSQL1: TZUpdateSQL;
     procedure btnExluirClick(Sender: TObject);
     procedure edtPesqClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
 
   private
 
@@ -64,6 +65,11 @@ begin
   else
     ZQuery1.SQL.Text := 'SELECT * FROM produto';
   ZQuery1.Open;
+end;
+
+procedure TcadProdutosF.FormCreate(Sender: TObject);
+begin
+  ZQuery1.Active := True;
 end;
 
 procedure TcadProdutosF.btnExluirClick(Sender: TObject);

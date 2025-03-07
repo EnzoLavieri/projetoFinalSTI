@@ -31,6 +31,7 @@ type
 
 
     procedure edtPesqClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
 
   public
@@ -56,6 +57,11 @@ begin
   else
     ZQuery1.SQL.Text := 'SELECT * FROM usuarios';
   ZQuery1.Open;
+end;
+
+procedure TcadUsuariosF.FormCreate(Sender: TObject);
+begin
+  ZQuery1.Active := True;
 end;
 
 procedure TcadUsuariosF.btnExluirClick(Sender: TObject);

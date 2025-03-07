@@ -1,12 +1,13 @@
 object relOrcamentosF: TrelOrcamentosF
-  Left = 544
+  Left = 1221
   Height = 240
-  Top = 187
+  Top = 518
   Width = 320
   AutoSize = True
   Caption = 'relOrcamentosF'
   ClientHeight = 240
   ClientWidth = 320
+  Position = poScreenCenter
   LCLVersion = '3.8.0.0'
   object btnRelOrcamentos: TBitBtn
     Left = 8

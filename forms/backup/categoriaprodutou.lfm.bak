@@ -1,15 +1,22 @@
 inherited cadCategProdutosF: TcadCategProdutosF
-  Top = 40
-  Width = 797
+  Left = 716
+  Height = 460
+  Top = 162
+  Width = 632
   Caption = 'Categoria dos produtos'
-  ClientWidth = 797
+  ClientHeight = 460
+  ClientWidth = 632
+  OnCreate = FormCreate
   inherited PageControl1: TPageControl
-    Width = 797
+    Height = 460
+    Width = 632
+    Align = alClient
     inherited TabSheet1: TTabSheet
-      ClientWidth = 789
+      ClientHeight = 432
+      ClientWidth = 624
       inherited Panel1: TPanel
-        Width = 789
-        ClientWidth = 789
+        Width = 624
+        ClientWidth = 624
         Color = clScrollBar
         DockSite = False
         inherited edtPesq: TBitBtn
@@ -17,23 +24,27 @@ inherited cadCategProdutosF: TcadCategProdutosF
         end
       end
       inherited Panel2: TPanel
-        Width = 789
-        ClientWidth = 789
+        Top = 368
+        Width = 624
+        ClientWidth = 624
         Color = clScrollBar
         DockSite = False
       end
       inherited DBGrid1: TDBGrid
-        Width = 789
+        Height = 298
+        Width = 624
         AutoFillColumns = True
         DataSource = dsCadModelo
       end
     end
     inherited TabSheet2: TTabSheet
-      ClientWidth = 789
+      ClientHeight = 432
+      ClientWidth = 624
       inherited Panel4: TPanel
-        Width = 789
+        Top = 362
+        Width = 624
         BevelColor = clScrollBar
-        ClientWidth = 789
+        ClientWidth = 624
         Color = clScrollBar
         DockSite = False
         inherited btnExluir: TBitBtn
@@ -83,7 +94,6 @@ inherited cadCategProdutosF: TcadCategProdutosF
   end
   object ZQuery1: TZQuery[2]
     Connection = DataModule1.ZConnection1
-    Active = True
     SQL.Strings = (
       'select * from CATEGORIA_PRODUTO'
     )

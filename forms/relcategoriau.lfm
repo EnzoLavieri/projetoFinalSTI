@@ -1,12 +1,13 @@
 object relCategoriaF: TrelCategoriaF
-  Left = 533
+  Left = 1211
   Height = 240
-  Top = 210
+  Top = 529
   Width = 320
   AutoSize = True
   Caption = 'relCategoriaF'
   ClientHeight = 240
   ClientWidth = 320
+  Position = poScreenCenter
   LCLVersion = '3.8.0.0'
   object btnRelCategoria: TBitBtn
     Left = 8
@@ -19,7 +20,6 @@ object relCategoriaF: TrelCategoriaF
   end
   object qryRelCategoria: TZQuery
     Connection = DataModule1.ZConnection1
-    Active = True
     SQL.Strings = (
       'select * from categoria_produto '
     )

@@ -82,7 +82,7 @@ end;
 
 procedure TmenuF.menuRelatCategoriasClick(Sender: TObject);
 begin
-     relCategoriaF := TrelCategoriaF.Create(Self);
+  relCategoriaF := TrelCategoriaF.Create(Self);
   relCategoriaF.Show;
 end;
 

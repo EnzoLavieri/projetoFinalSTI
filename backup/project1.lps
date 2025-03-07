@@ -8,10 +8,10 @@
       <Unit>
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="6"/>
         <TopLine Value="5"/>
         <CursorPos X="31" Y="23"/>
-        <UsageCount Value="44"/>
+        <UsageCount Value="45"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -24,7 +24,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="46"/>
         <CursorPos X="9" Y="46"/>
-        <UsageCount Value="44"/>
+        <UsageCount Value="45"/>
       </Unit>
       <Unit>
         <Filename Value="forms\menu.pas"/>
@@ -32,10 +32,10 @@
         <ComponentName Value="menuF"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="7"/>
-        <TopLine Value="81"/>
-        <CursorPos Y="121"/>
-        <UsageCount Value="44"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="96"/>
+        <CursorPos X="27" Y="104"/>
+        <UsageCount Value="45"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -46,11 +46,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="usuariosU"/>
-        <TopLine Value="41"/>
-        <CursorPos Y="67"/>
-        <UsageCount Value="42"/>
+        <TopLine Value="48"/>
+        <CursorPos X="26" Y="64"/>
+        <UsageCount Value="43"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="forms\clientesu.pas"/>
@@ -59,9 +58,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="clientesU"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="17" Y="57"/>
-        <UsageCount Value="42"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="43"/>
+        <CursorPos X="3" Y="56"/>
+        <UsageCount Value="43"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="forms\categoriaprodutou.pas"/>
@@ -70,10 +71,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="categoriaProdutoU"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="1"/>
         <TopLine Value="38"/>
-        <CursorPos X="24" Y="57"/>
-        <UsageCount Value="42"/>
+        <CursorPos X="26" Y="54"/>
+        <UsageCount Value="43"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="forms\cadprodutou.pas"/>
@@ -82,10 +84,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="cadProdutoU"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="56"/>
-        <CursorPos X="16" Y="75"/>
-        <UsageCount Value="42"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="57"/>
+        <CursorPos X="26" Y="72"/>
+        <UsageCount Value="43"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="forms\datamodule.pas"/>
@@ -94,10 +97,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dataModule"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="7"/>
         <TopLine Value="8"/>
         <CursorPos X="3" Y="34"/>
-        <UsageCount Value="38"/>
+        <UsageCount Value="39"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -107,10 +110,12 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="relatorioDeClientesU"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="11"/>
         <TopLine Value="15"/>
         <CursorPos X="3" Y="28"/>
-        <UsageCount Value="27"/>
+        <UsageCount Value="28"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="forms\reldeprodutosu.pas"/>
@@ -119,12 +124,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="relDeProdutosU"/>
-        <EditorIndex Value="5"/>
-        <TopLine Value="25"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="22"/>
         <CursorPos Y="44"/>
-        <UsageCount Value="24"/>
+        <UsageCount Value="25"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="forms\relorcamentosu.pas"/>
@@ -133,12 +137,12 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="relOrcamentosU"/>
-        <EditorIndex Value="1"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
         <TopLine Value="20"/>
         <CursorPos Y="39"/>
-        <UsageCount Value="22"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="forms\sobreu.pas"/>
@@ -147,10 +151,22 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="sobreU"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="9"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="forms\relcategoriau.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="relCategoriaF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="relCategoriaU"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="16"/>
+        <CursorPos X="53" Y="38"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="forms\cadusuariosu.pas"/>
@@ -214,40 +230,15 @@
         <UsageCount Value="10"/>
       </Unit>
       <Unit>
-        <Filename Value="forms\relcategoriau.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="relCategoriaF"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="relCategoriaU"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="18"/>
-        <CursorPos X="5" Y="18"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <Filename Value="C:\Softwares\lazarus\components\lazreport\source\lr_class.pas"/>
+        <UnitName Value="LR_Class"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="10412"/>
+        <CursorPos X="39" Y="10427"/>
+        <UsageCount Value="10"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="26">
-      <Position>
-        <Filename Value="forms\usuariosu.pas"/>
-        <Caret Line="69" Column="5" TopLine="42"/>
-      </Position>
-      <Position>
-        <Filename Value="forms\usuariosu.pas"/>
-        <Caret Line="64" Column="13" TopLine="42"/>
-      </Position>
-      <Position>
-        <Filename Value="forms\usuariosu.pas"/>
-        <Caret Line="63" TopLine="42"/>
-      </Position>
-      <Position>
-        <Filename Value="forms\usuariosu.pas"/>
-        <Caret Line="62" Column="18" TopLine="42"/>
-      </Position>
-      <Position>
-        <Filename Value="forms\relorcamentosu.pas"/>
-      </Position>
+    <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="forms\relorcamentosu.pas"/>
         <Caret Line="33" Column="3" TopLine="7"/>
@@ -332,6 +323,38 @@
       <Position>
         <Filename Value="forms\relcategoriau.pas"/>
         <Caret Line="40" Column="17" TopLine="17"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\relcategoriau.pas"/>
+        <Caret Line="18" Column="5" TopLine="18"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\menu.pas"/>
+        <Caret Line="121" TopLine="81"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\cadprodutou.pas"/>
+        <Caret Line="81" Column="16" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\usuariosu.pas"/>
+        <Caret Line="73" TopLine="48"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\clientesu.pas"/>
+        <Caret Line="63" Column="17" TopLine="38"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\clientesu.pas"/>
+        <Caret Line="56" Column="26" TopLine="38"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\categoriaprodutou.pas"/>
+        <Caret Line="63" Column="24" TopLine="38"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\menu.pas"/>
+        <Caret Line="86" Column="3" TopLine="86"/>
       </Position>
     </JumpHistory>
     <RunParams>

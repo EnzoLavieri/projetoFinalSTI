@@ -1,11 +1,12 @@
 object menuF: TmenuF
-  Left = 975
+  Left = 575
   Height = 389
-  Top = 243
+  Top = 230
   Width = 608
   Caption = 'Menu Principal'
   Menu = MainMenu1
   LCLVersion = '3.8.0.0'
+  WindowState = wsMaximized
   object MainMenu1: TMainMenu
     Left = 480
     Top = 72

@@ -1,20 +1,22 @@
 inherited cadUsuariosF: TcadUsuariosF
-  Left = 1096
-  Height = 607
-  Top = 21
-  Width = 813
+  Left = 715
+  Height = 445
+  Top = 163
+  Width = 638
   Caption = 'Usuarios'
-  ClientHeight = 607
-  ClientWidth = 813
+  ClientHeight = 445
+  ClientWidth = 638
+  OnCreate = FormCreate
   inherited PageControl1: TPageControl
-    Width = 813
-    ActivePage = TabSheet2
-    TabIndex = 1
+    Height = 445
+    Width = 638
+    Align = alClient
     inherited TabSheet1: TTabSheet
-      ClientWidth = 805
+      ClientHeight = 417
+      ClientWidth = 630
       inherited Panel1: TPanel
-        Width = 805
-        ClientWidth = 805
+        Width = 630
+        ClientWidth = 630
         Color = clScrollBar
         DockSite = False
         inherited edtPesq: TBitBtn
@@ -22,37 +24,39 @@ inherited cadUsuariosF: TcadUsuariosF
         end
       end
       inherited Panel2: TPanel
-        Width = 805
-        ClientWidth = 805
+        Top = 353
+        Width = 630
+        ClientWidth = 630
         Color = clScrollBar
         DockSite = False
       end
       inherited DBGrid1: TDBGrid
-        Width = 805
+        Height = 283
+        Width = 630
         AutoFillColumns = True
         Columns = <        
           item
             PickList.Strings = (            )
             Title.Caption = 'id'
-            Width = 193
+            Width = 150
             FieldName = 'ID'
           end        
           item
             PickList.Strings = (            )
             Title.Caption = 'usuario'
-            Width = 193
+            Width = 149
             FieldName = 'usuario'
           end        
           item
             PickList.Strings = (            )
             Title.Caption = 'nome_completo'
-            Width = 193
+            Width = 149
             FieldName = 'nome_completo'
           end        
           item
             PickList.Strings = (            )
             Title.Caption = 'senha'
-            Width = 193
+            Width = 149
             FieldName = 'senha'
           end>
         DataSource = dsCadModelo
@@ -60,11 +64,13 @@ inherited cadUsuariosF: TcadUsuariosF
       end
     end
     inherited TabSheet2: TTabSheet
-      ClientWidth = 805
+      ClientHeight = 417
+      ClientWidth = 630
       inherited Panel4: TPanel
-        Width = 805
+        Top = 347
+        Width = 630
         BevelColor = clScrollBar
-        ClientWidth = 805
+        ClientWidth = 630
         Color = clScrollBar
         DockSite = False
         inherited btnExluir: TBitBtn
@@ -178,7 +184,6 @@ inherited cadUsuariosF: TcadUsuariosF
   end
   object ZQuery1: TZQuery[3]
     Connection = DataModule1.ZConnection1
-    Active = True
     SQL.Strings = (
       'select * from USUARIOS'
     )

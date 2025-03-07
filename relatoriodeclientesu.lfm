@@ -1,12 +1,13 @@
 object relClientes: TrelClientes
-  Left = 1281
+  Left = 952
   Height = 240
-  Top = 245
-  Width = 487
+  Top = 242
+  Width = 314
   AutoSize = True
   Caption = 'Relatorio de clientes'
   ClientHeight = 240
-  ClientWidth = 487
+  ClientWidth = 314
+  Position = poScreenCenter
   LCLVersion = '3.8.0.0'
   object btnRelClientes: TBitBtn
     Left = 40

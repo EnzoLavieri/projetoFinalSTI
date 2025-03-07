@@ -140,6 +140,7 @@
         <Filename Value="forms\relcategoriau.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="relCategoriaF"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="relCategoriaU"/>
       </Unit>

@@ -35,7 +35,7 @@ implementation
 
 procedure TrelCategoriaF.btnRelCategoriaClick(Sender: TObject);
 begin
-frRelCategoria.LoadFromFile('relatorios/relOrcamentos.lrf');
+frRelCategoria.LoadFromFile('relatorios/relCategoria.lrf');
   frRelCategoria.PrepareReport;
   frRelCategoria.ShowReport;
 end;
