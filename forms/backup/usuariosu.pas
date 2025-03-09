@@ -6,7 +6,8 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, DBCtrls,
-  DBGrids, ZSqlUpdate, ZDataset, ZAbstractRODataset, xCadPai, DB, Types;
+  DBGrids, Buttons, ZSqlUpdate, ZDataset, ZAbstractRODataset, xCadPai, DB,
+  Types;
 
 type
 
@@ -21,11 +22,11 @@ type
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
-    ZQuery1: TZQuery;
-    ZQuery1id: TZIntegerField;
-    ZQuery1nome_completo: TZRawStringField;
-    ZQuery1senha: TZRawStringField;
-    ZQuery1usuario: TZRawStringField;
+    qryUsuarios: TZQuery;
+    qryUsuariosID: TZIntegerField;
+    qryUsuariosNomecompleto: TZRawStringField;
+    qryUsuariosNomedousuario: TZRawStringField;
+    qryUsuariosSenha: TZRawStringField;
     ZUpdateSQL1: TZUpdateSQL;
     procedure btnExluirClick(Sender: TObject);
     procedure btnGravarClick(Sender: TObject);
@@ -33,6 +34,7 @@ type
 
     procedure edtPesqClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
     procedure TabSheet2ContextPopup(Sender: TObject; MousePos: TPoint;
       var Handled: Boolean);
   private
@@ -54,17 +56,27 @@ implementation
 
 procedure TcadUsuariosF.edtPesqClick(Sender: TObject);
 begin
-  ZQuery1.Close;
+  qryUsuarios.Close;
   if Edit1.Text <> '' then
-    ZQuery1.SQL.Text := 'SELECT * FROM usuarios WHERE id = ' + Edit1.Text
+    qryUsuarios.SQL.Text := 'SELECT * FROM usuarios WHERE id = ' + Edit1.Text
   else
-    ZQuery1.SQL.Text := 'SELECT * FROM usuarios';
-  ZQuery1.Open;
+    qryUsuarios.SQL.Text := 'SELECT * FROM usuarios';
+  qryUsuarios.Open;
 end;
 
 procedure TcadUsuariosF.FormCreate(Sender: TObject);
 begin
-  ZQuery1.Active := True;
+  qryUsuarios.Active := True;
+end;
+
+procedure TcadUsuariosF.SpeedButton1Click(Sender: TObject);
+begin
+     qryUsuarios.Close;
+  if Edit1.Text <> '' then
+    qryUsuarios.SQL.Text := 'SELECT * FROM usuarios WHERE id = ' + Edit1.Text
+  else
+    qryUsuarios.SQL.Text := 'SELECT * FROM usuarios';
+  qryUsuarios.Open;
 end;
 
 procedure TcadUsuariosF.TabSheet2ContextPopup(Sender: TObject;

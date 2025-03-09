@@ -19,8 +19,8 @@ inherited cadCategProdutosF: TcadCategProdutosF
         ClientWidth = 1093
         Color = clScrollBar
         DockSite = False
-        inherited edtPesq: TBitBtn
-          OnClick = edtPesqClick
+        inherited SpeedButton1: TSpeedButton
+          OnClick = SpeedButton1Click
         end
       end
       inherited Panel2: TPanel
@@ -464,7 +464,7 @@ inherited cadCategProdutosF: TcadCategProdutosF
         Height = 23
         Top = 64
         Width = 40
-        DataField = 'categoriaprodutoid'
+        DataField = 'Id da Categoria do Produto'
         DataSource = dsCadModelo
         Alignment = taRightJustify
         MaxLength = 0
@@ -475,7 +475,7 @@ inherited cadCategProdutosF: TcadCategProdutosF
         Height = 23
         Top = 96
         Width = 80
-        DataField = 'ds_categoria_produto'
+        DataField = 'Categoria'
         DataSource = dsCadModelo
         MaxLength = 50
         TabOrder = 2
@@ -497,21 +497,22 @@ inherited cadCategProdutosF: TcadCategProdutosF
     end
   end
   inherited dsCadModelo: TDataSource
-    DataSet = ZQuery1
+    DataSet = qryCetegProdutos
     Left = 304
   end
-  object ZQuery1: TZQuery[2]
+  object qryCetegProdutos: TZQuery[2]
     Connection = DataModule1.ZConnection1
     SQL.Strings = (
-      'select * from CATEGORIA_PRODUTO'
+      'select CATEGORIAPRODUTOID as "Id da Categoria do Produto", DS_CATEGORIA_PRODUTO as "Categoria" from categoria_produto '
     )
     Params = <>
-    Left = 368
-    Top = 48
+    Left = 400
+    Top = 49
   end
   object ZUpdateSQL1: TZUpdateSQL[3]
     DeleteSQL.Strings = (
-      'DELETE FROM CATEGORIA_PRODUTO WHERE id = + edtIDCatProdutos.Text  ;'
+      'delete * from categoria_produto where + edtIDCatProdutos.text'
+      ''
     )
     ModifySQL.Strings = (
       'UPDATE CATEGORIA_PRODUTO '
@@ -519,8 +520,8 @@ inherited cadCategProdutosF: TcadCategProdutosF
       'WHERE CATEGORIAPRODUTOID = :OLD_CATEGORIAPRODUTOID;'
     )
     UseSequenceFieldForRefreshSQL = False
-    Left = 440
-    Top = 48
+    Left = 480
+    Top = 49
     ParamData = <    
       item
         Name = 'DS_CATEGORIA_PRODUTO'

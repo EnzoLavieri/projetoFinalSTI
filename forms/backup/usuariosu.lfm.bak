@@ -1,7 +1,7 @@
 inherited cadUsuariosF: TcadUsuariosF
-  Left = 366
+  Left = 445
   Height = 588
-  Top = 170
+  Top = 133
   Width = 960
   Caption = 'Usuarios'
   ClientHeight = 588
@@ -19,8 +19,8 @@ inherited cadUsuariosF: TcadUsuariosF
         ClientWidth = 952
         Color = clScrollBar
         DockSite = False
-        inherited edtPesq: TBitBtn
-          OnClick = edtPesqClick
+        inherited SpeedButton1: TSpeedButton
+          OnClick = SpeedButton1Click
         end
       end
       inherited Panel2: TPanel
@@ -203,27 +203,27 @@ inherited cadUsuariosF: TcadUsuariosF
         Columns = <        
           item
             PickList.Strings = (            )
-            Title.Caption = 'id'
+            Title.Caption = 'ID'
             Width = 230
             FieldName = 'ID'
           end        
           item
             PickList.Strings = (            )
-            Title.Caption = 'usuario'
+            Title.Caption = 'Nome do usuario'
             Width = 230
-            FieldName = 'usuario'
+            FieldName = 'Nome do usuario'
           end        
           item
             PickList.Strings = (            )
-            Title.Caption = 'nome_completo'
+            Title.Caption = 'Nome completo'
             Width = 230
-            FieldName = 'nome_completo'
+            FieldName = 'Nome completo'
           end        
           item
             PickList.Strings = (            )
-            Title.Caption = 'senha'
+            Title.Caption = 'Senha'
             Width = 229
-            FieldName = 'senha'
+            FieldName = 'Senha'
           end>
         DataSource = dsCadModelo
         OnDblClick = DBGrid1DblClick
@@ -534,7 +534,7 @@ inherited cadUsuariosF: TcadUsuariosF
         Height = 23
         Top = 80
         Width = 80
-        DataField = 'usuario'
+        DataField = 'Nome do usuario'
         DataSource = dsCadModelo
         MaxLength = 30
         TabOrder = 2
@@ -544,7 +544,7 @@ inherited cadUsuariosF: TcadUsuariosF
         Height = 23
         Top = 144
         Width = 200
-        DataField = 'nome_completo'
+        DataField = 'Nome completo'
         DataSource = dsCadModelo
         MaxLength = 60
         TabOrder = 3
@@ -554,7 +554,7 @@ inherited cadUsuariosF: TcadUsuariosF
         Height = 23
         Top = 112
         Width = 136
-        DataField = 'senha'
+        DataField = 'Senha'
         DataSource = dsCadModelo
         MaxLength = 50
         TabOrder = 4
@@ -563,7 +563,7 @@ inherited cadUsuariosF: TcadUsuariosF
   end
   inherited dsCadModelo: TDataSource
     AutoEdit = False
-    DataSet = ZQuery1
+    DataSet = qryUsuarios
     Left = 440
     Top = 40
   end
@@ -594,16 +594,16 @@ inherited cadUsuariosF: TcadUsuariosF
         Name = 'id'
       end>
   end
-  object ZQuery1: TZQuery[3]
+  object qryUsuarios: TZQuery[3]
     Connection = DataModule1.ZConnection1
+    Active = True
     SQL.Strings = (
-      'select * from USUARIOS'
+      'select id as "ID", usuario as "Nome do usuario", nome_completo as "Nome completo", senha as "Senha" from USUARIOS;'
     )
     Params = <>
-    Left = 544
+    Left = 536
     Top = 40
-    object ZQuery1id: TZIntegerField
-      DisplayLabel = 'id'
+    object qryUsuariosID: TZIntegerField
       FieldKind = fkData
       FieldName = 'ID'
       Index = 0
@@ -612,9 +612,9 @@ inherited cadUsuariosF: TcadUsuariosF
       ReadOnly = False
       Required = False
     end
-    object ZQuery1usuario: TZRawStringField
+    object qryUsuariosNomedousuario: TZRawStringField
       FieldKind = fkData
-      FieldName = 'usuario'
+      FieldName = 'Nome do usuario'
       Index = 1
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
@@ -622,9 +622,9 @@ inherited cadUsuariosF: TcadUsuariosF
       Required = False
       Size = 30
     end
-    object ZQuery1nome_completo: TZRawStringField
+    object qryUsuariosNomecompleto: TZRawStringField
       FieldKind = fkData
-      FieldName = 'nome_completo'
+      FieldName = 'Nome completo'
       Index = 2
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
@@ -632,9 +632,9 @@ inherited cadUsuariosF: TcadUsuariosF
       Required = False
       Size = 60
     end
-    object ZQuery1senha: TZRawStringField
+    object qryUsuariosSenha: TZRawStringField
       FieldKind = fkData
-      FieldName = 'senha'
+      FieldName = 'Senha'
       Index = 3
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]

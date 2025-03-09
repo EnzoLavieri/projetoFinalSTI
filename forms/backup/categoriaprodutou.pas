@@ -5,8 +5,9 @@ unit categoriaProdutoU;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, DBCtrls, xCadPai,
-  StdCtrls, ZDataset, ZSqlUpdate;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, DBCtrls, xCadPai, DB,
+  StdCtrls, Buttons, DBGrids, ZDataset, ZSqlUpdate, ZAbstractRODataset;
+
 type
 
   { TcadCategProdutosF }
@@ -16,11 +17,11 @@ type
     edtDescCategoria: TDBEdit;
     Label2: TLabel;
     Label3: TLabel;
-    ZQuery1: TZQuery;
+    qryCetegProdutos: TZQuery;
     ZUpdateSQL1: TZUpdateSQL;
     procedure btnExluirClick(Sender: TObject);
-    procedure edtPesqClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
 
   private
 
@@ -37,28 +38,26 @@ implementation
 
 { TcadCategProdutosF }
 
-
-
-
-procedure TcadCategProdutosF.edtPesqClick(Sender: TObject);
-begin
-    ZQuery1.Close;
-  if Edit1.Text <> '' then
-    ZQuery1.SQL.Text := 'SELECT * FROM CATEGORIA_PRODUTO WHERE CATEGORIAPRODUTOID = ' + Edit1.Text
-  else
-    ZQuery1.SQL.Text := 'SELECT * FROM CATEGORIA_PRODUTO';
-  ZQuery1.Open;
-end;
-
 procedure TcadCategProdutosF.FormCreate(Sender: TObject);
 begin
-  ZQuery1.Active := True;
+  qryCetegProdutos.Active := True;
+end;
+
+procedure TcadCategProdutosF.SpeedButton1Click(Sender: TObject);
+begin
+  qryCetegProdutos.Close;
+  if Edit1.Text <> '' then
+    qryCetegProdutos.SQL.Text := 'SELECT * FROM CATEGORIA_PRODUTO WHERE CATEGORIAPRODUTOID = ' +
+      Edit1.Text
+  else
+    qryCetegProdutos.SQL.Text := 'SELECT * FROM CATEGORIA_PRODUTO';
+  qryCetegProdutos.Open;
 end;
 
 procedure TcadCategProdutosF.btnExluirClick(Sender: TObject);
 begin
   inherited;
-    if MessageDlg('Voce tem certeza que deseja excluir o registro ' +
+  if MessageDlg('Voce tem certeza que deseja excluir o registro ' +
     edtIDCatProdutos.Text + '?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
   begin
     dsCadModelo.DataSet.Delete;

@@ -1,7 +1,7 @@
 inherited cadClientesF: TcadClientesF
-  Left = 369
+  Left = 392
   Height = 455
-  Top = 248
+  Top = 197
   Width = 1024
   Caption = 'Clientes'
   ClientHeight = 455
@@ -19,8 +19,8 @@ inherited cadClientesF: TcadClientesF
         ClientWidth = 1016
         Color = clScrollBar
         DockSite = False
-        inherited edtPesq: TBitBtn
-          OnClick = edtPesqClick
+        inherited SpeedButton1: TSpeedButton
+          OnClick = SpeedButton1Click
         end
       end
       inherited Panel2: TPanel
@@ -199,6 +199,7 @@ inherited cadClientesF: TcadClientesF
       inherited DBGrid1: TDBGrid
         Height = 287
         Width = 1016
+        AutoFillColumns = True
         DataSource = dsCadModelo
       end
     end
@@ -465,7 +466,7 @@ inherited cadClientesF: TcadClientesF
         Height = 23
         Top = 80
         Width = 32
-        DataField = 'clienteid'
+        DataField = 'ID'
         DataSource = dsCadModelo
         Alignment = taRightJustify
         MaxLength = 0
@@ -476,7 +477,7 @@ inherited cadClientesF: TcadClientesF
         Height = 23
         Top = 112
         Width = 88
-        DataField = 'cpf_cnpj_cliente'
+        DataField = 'CPF | CNPJ'
         DataSource = dsCadModelo
         MaxLength = 18
         TabOrder = 2
@@ -486,7 +487,7 @@ inherited cadClientesF: TcadClientesF
         Height = 23
         Top = 144
         Width = 144
-        DataField = 'nome_cliente'
+        DataField = 'Nome'
         DataSource = dsCadModelo
         MaxLength = 100
         TabOrder = 3
@@ -496,7 +497,7 @@ inherited cadClientesF: TcadClientesF
         Height = 23
         Top = 48
         Width = 16
-        DataField = 'tipo_cliente'
+        DataField = 'Tipo do cliente'
         DataSource = dsCadModelo
         MaxLength = 1
         TabOrder = 4
@@ -532,14 +533,15 @@ inherited cadClientesF: TcadClientesF
     end
   end
   inherited dsCadModelo: TDataSource
-    DataSet = ZQuery1
+    DataSet = qryClientes
     Left = 440
     Top = 40
   end
-  object ZQuery1: TZQuery[2]
+  object qryClientes: TZQuery[2]
     Connection = DataModule1.ZConnection1
+    Active = True
     SQL.Strings = (
-      'select  *  from cliente'
+      'select CLIENTEID as "ID", TIPO_CLIENTE as "Tipo do cliente", CPF_CNPJ_CLIENTE as "CPF | CNPJ", NOME_CLIENTE as "Nome"from cliente'
     )
     Params = <>
     Left = 520

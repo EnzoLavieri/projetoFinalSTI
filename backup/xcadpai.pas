@@ -16,7 +16,6 @@ type
     btnNovo: TBitBtn;
     btnFechar: TBitBtn;
     btnCancelar: TBitBtn;
-    edtPesq: TBitBtn;
     dsCadModelo: TDataSource;
     DBGrid1: TDBGrid;
     Edit1: TEdit;
@@ -25,10 +24,10 @@ type
     Panel1: TPanel;
     Panel2: TPanel;
     Panel4: TPanel;
+    SpeedButton1: TSpeedButton;
     TabSheet1: TTabSheet;
     TabSheet2: TTabSheet;
     procedure btnCancelarClick(Sender: TObject);
-    procedure btnExluirClick(Sender: TObject);
     procedure btnFecharClick(Sender: TObject);
     procedure btnGravarClick(Sender: TObject);
     procedure btnNovoClick(Sender: TObject);

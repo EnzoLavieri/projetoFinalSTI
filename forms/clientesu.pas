@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, DBCtrls,
-  ZDataset, ZSqlUpdate, xCadPai;
+  Buttons, ZDataset, ZSqlUpdate, xCadPai;
 
 type
 
@@ -21,11 +21,11 @@ type
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
-    ZQuery1: TZQuery;
+    qryClientes: TZQuery;
     ZUpdateSQL1: TZUpdateSQL;
     procedure btnExluirClick(Sender: TObject);
-    procedure edtPesqClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
 
   private
 
@@ -42,19 +42,19 @@ implementation
 
 { TcadClientesF }
 
-procedure TcadClientesF.edtPesqClick(Sender: TObject);
-begin
-     ZQuery1.Close;
-  if Edit1.Text <> '' then
-    ZQuery1.SQL.Text := 'SELECT * FROM cliente WHERE CLIENTEID = ' + Edit1.Text
-  else
-    ZQuery1.SQL.Text := 'SELECT * FROM clienteS';
-  ZQuery1.Open;
-end;
-
 procedure TcadClientesF.FormCreate(Sender: TObject);
 begin
-  ZQuery1.Active := True;
+  qryClientes.Active := True;
+end;
+
+procedure TcadClientesF.SpeedButton1Click(Sender: TObject);
+begin
+         qryClientes.Close;
+  if Edit1.Text <> '' then
+    qryClientes.SQL.Text := 'SELECT * FROM cliente WHERE CLIENTEID = ' + Edit1.Text
+  else
+    qryClientes.SQL.Text := 'SELECT * FROM clienteS';
+  qryClientes.Open;
 end;
 
 procedure TcadClientesF.btnExluirClick(Sender: TObject);

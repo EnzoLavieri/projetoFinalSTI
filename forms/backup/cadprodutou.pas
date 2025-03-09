@@ -28,17 +28,18 @@ type
     Label7: TLabel;
     Label8: TLabel;
     ZQuery1: TZQuery;
-    ZQuery1categoriaprodutoid: TZIntegerField;
-    ZQuery1ds_produto: TZRawStringField;
-    ZQuery1dt_cadastro_produto: TZDateTimeField;
-    ZQuery1obs_produto: TZRawStringField;
-    ZQuery1produtoid: TZIntegerField;
-    ZQuery1status_produto: TZRawStringField;
-    ZQuery1vl_venda_produto: TZBCDField;
+    ZQuery1Datadecadastro: TZDateTimeField;
+    ZQuery1Descicao: TZRawStringField;
+    ZQuery1ID: TZIntegerField;
+    ZQuery1IDdacategoria: TZIntegerField;
+    ZQuery1Observacao: TZRawStringField;
+    ZQuery1Preco: TZBCDField;
+    ZQuery1Status: TZRawStringField;
     ZUpdateSQL1: TZUpdateSQL;
     procedure btnExluirClick(Sender: TObject);
-    procedure edtPesqClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure Label6Click(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
 
   private
 
@@ -55,11 +56,14 @@ implementation
 
 { TcadProdutosF }
 
-
-
-procedure TcadProdutosF.edtPesqClick(Sender: TObject);
+procedure TcadProdutosF.FormCreate(Sender: TObject);
 begin
-    ZQuery1.Close;
+  ZQuery1.Active := True;
+end;
+
+procedure TcadProdutosF.SpeedButton1Click(Sender: TObject);
+begin
+  ZQuery1.Close;
   if Edit1.Text <> '' then
     ZQuery1.SQL.Text := 'SELECT * FROM produto WHERE PRODUTOID = ' + Edit1.Text
   else
@@ -67,21 +71,16 @@ begin
   ZQuery1.Open;
 end;
 
-procedure TcadProdutosF.FormCreate(Sender: TObject);
-begin
-  ZQuery1.Active := True;
-end;
-
 procedure TcadProdutosF.btnExluirClick(Sender: TObject);
 begin
   inherited;
-    if MessageDlg('Voce tem certeza que deseja excluir o registro ' +
+  if MessageDlg('Voce tem certeza que deseja excluir o registro ' +
     edtIdProduto.Text + '?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
   begin
     dsCadModelo.DataSet.Delete;
-
   end;
 end;
+
 
 end.
 
