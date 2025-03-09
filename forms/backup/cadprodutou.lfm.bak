@@ -1,23 +1,24 @@
 inherited cadProdutosF: TcadProdutosF
-  Left = 716
+  Left = 299
   Height = 455
-  Top = 163
-  Width = 635
+  Top = 237
+  Width = 1200
   Caption = 'Produtos'
   ClientHeight = 455
-  ClientWidth = 635
+  ClientWidth = 1200
   OnCreate = FormCreate
   WindowState = wsMaximized
   inherited PageControl1: TPageControl
     Height = 455
-    Width = 635
-    Align = alClient
+    Width = 1200
+    ActivePage = TabSheet2
+    TabIndex = 1
     inherited TabSheet1: TTabSheet
       ClientHeight = 427
-      ClientWidth = 627
+      ClientWidth = 1192
       inherited Panel1: TPanel
-        Width = 627
-        ClientWidth = 627
+        Width = 1192
+        ClientWidth = 1192
         Color = clScrollBar
         DockSite = False
         inherited edtPesq: TBitBtn
@@ -25,30 +26,56 @@ inherited cadProdutosF: TcadProdutosF
         end
       end
       inherited Panel2: TPanel
-        Top = 363
-        Width = 627
-        ClientWidth = 627
+        Height = 70
+        Top = 357
+        Width = 1192
+        ClientHeight = 70
+        ClientWidth = 1192
         Color = clScrollBar
         DockSite = False
+        inherited btnNovo: TBitBtn
+          Left = 656
+          Height = 40
+          Width = 88
+        end
+        inherited btnFechar: TBitBtn
+          Left = 848
+          Height = 40
+          Width = 88
+        end
       end
       inherited DBGrid1: TDBGrid
-        Height = 293
-        Width = 627
+        Height = 287
+        Width = 1192
         AutoFillColumns = True
         DataSource = dsCadModelo
       end
     end
     inherited TabSheet2: TTabSheet
       ClientHeight = 427
-      ClientWidth = 627
+      ClientWidth = 1192
       inherited Panel4: TPanel
         Top = 357
-        Width = 627
+        Width = 1192
         BevelColor = clScrollBar
-        ClientWidth = 627
+        ClientWidth = 1192
         Color = clScrollBar
         DockSite = False
+        inherited btnGravar: TBitBtn
+          Left = 88
+          Height = 40
+          Width = 88
+          OnClick = nil
+        end
+        inherited btnCancelar: TBitBtn
+          Left = 848
+          Height = 40
+          Width = 88
+        end
         inherited btnExluir: TBitBtn
+          Left = 272
+          Height = 40
+          Width = 88
           OnClick = btnExluirClick
         end
       end
@@ -56,7 +83,7 @@ inherited cadProdutosF: TcadProdutosF
         Left = 112
         Height = 23
         Top = 48
-        Width = 80
+        Width = 24
         DataField = 'produtoid'
         DataSource = dsCadModelo
         Alignment = taRightJustify
@@ -74,7 +101,7 @@ inherited cadProdutosF: TcadProdutosF
         Left = 112
         Height = 23
         Top = 80
-        Width = 80
+        Width = 24
         DataField = 'categoriaprodutoid'
         DataSource = dsCadModelo
         Alignment = taRightJustify
@@ -84,8 +111,8 @@ inherited cadProdutosF: TcadProdutosF
       object edtDescricao: TDBEdit[4]
         Left = 112
         Height = 23
-        Top = 112
-        Width = 80
+        Top = 208
+        Width = 120
         DataField = 'ds_produto'
         DataSource = dsCadModelo
         MaxLength = 50
@@ -94,8 +121,8 @@ inherited cadProdutosF: TcadProdutosF
       object edtObservacao: TDBEdit[5]
         Left = 112
         Height = 23
-        Top = 144
-        Width = 80
+        Top = 240
+        Width = 120
         DataField = 'obs_produto'
         DataSource = dsCadModelo
         MaxLength = 300
@@ -104,8 +131,8 @@ inherited cadProdutosF: TcadProdutosF
       object edtValor: TDBEdit[6]
         Left = 112
         Height = 23
-        Top = 176
-        Width = 80
+        Top = 112
+        Width = 48
         DataField = 'vl_venda_produto'
         DataSource = dsCadModelo
         Alignment = taRightJustify
@@ -115,8 +142,8 @@ inherited cadProdutosF: TcadProdutosF
       object edtData: TDBEdit[7]
         Left = 112
         Height = 23
-        Top = 208
-        Width = 80
+        Top = 176
+        Width = 72
         DataField = 'dt_cadastro_produto'
         DataSource = dsCadModelo
         MaxLength = 0
@@ -125,8 +152,8 @@ inherited cadProdutosF: TcadProdutosF
       object edtStatus: TDBEdit[8]
         Left = 112
         Height = 23
-        Top = 240
-        Width = 80
+        Top = 144
+        Width = 56
         DataField = 'status_produto'
         DataSource = dsCadModelo
         MaxLength = 10
@@ -142,35 +169,35 @@ inherited cadProdutosF: TcadProdutosF
       object Label4: TLabel[10]
         Left = 48
         Height = 15
-        Top = 120
+        Top = 216
         Width = 54
         Caption = 'Descricao:'
       end
       object Label5: TLabel[11]
         Left = 37
         Height = 15
-        Top = 152
+        Top = 248
         Width = 65
         Caption = 'Observacao:'
       end
       object Label6: TLabel[12]
         Left = 22
         Height = 15
-        Top = 184
+        Top = 120
         Width = 80
         Caption = 'Valor de venda:'
       end
       object Label7: TLabel[13]
         Left = 11
         Height = 15
-        Top = 216
+        Top = 184
         Width = 91
         Caption = 'Data de cadastro:'
       end
       object Label8: TLabel[14]
         Left = 67
         Height = 15
-        Top = 248
+        Top = 152
         Width = 35
         Caption = 'Status:'
       end
@@ -182,6 +209,7 @@ inherited cadProdutosF: TcadProdutosF
   end
   object ZQuery1: TZQuery[2]
     Connection = DataModule1.ZConnection1
+    Active = True
     SQL.Strings = (
       'select * from produto'
       ''
@@ -265,8 +293,40 @@ inherited cadProdutosF: TcadProdutosF
     DeleteSQL.Strings = (
       'DELETE FROM produto WHERE id = + edtIdProduto.Text  ;'
     )
+    ModifySQL.Strings = (
+      'UPDATE PRODUTO '
+      'SET CATEGORIAPRODUTOID = :CATEGORIAPRODUTOID,'
+      '    DS_PRODUTO = :DS_PRODUTO,'
+      '    OBS_PRODUTO = :OBS_PRODUTO,'
+      '    VL_VENDA_PRODUTO = :VL_VENDA_PRODUTO,'
+      '    DT_CADASTRO_PRODUTO = :DT_CADASTRO_PRODUTO,'
+      '    STATUS_PRODUTO = :STATUS_PRODUTO'
+      'WHERE PRODUTOID = :OLD_PRODUTOID;'
+    )
     UseSequenceFieldForRefreshSQL = False
     Left = 608
     Top = 48
+    ParamData = <    
+      item
+        Name = 'CATEGORIAPRODUTOID'
+      end    
+      item
+        Name = 'DS_PRODUTO'
+      end    
+      item
+        Name = 'OBS_PRODUTO'
+      end    
+      item
+        Name = 'VL_VENDA_PRODUTO'
+      end    
+      item
+        Name = 'DT_CADASTRO_PRODUTO'
+      end    
+      item
+        Name = 'STATUS_PRODUTO'
+      end    
+      item
+        Name = 'OLD_PRODUTOID'
+      end>
   end
 end

@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, DBCtrls,
-  DBGrids, ZSqlUpdate, ZDataset, ZAbstractRODataset, xCadPai, DB;
+  DBGrids, ZSqlUpdate, ZDataset, ZAbstractRODataset, xCadPai, DB, Types;
 
 type
 
@@ -28,10 +28,13 @@ type
     ZQuery1usuario: TZRawStringField;
     ZUpdateSQL1: TZUpdateSQL;
     procedure btnExluirClick(Sender: TObject);
+    procedure btnGravarClick(Sender: TObject);
 
 
     procedure edtPesqClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure TabSheet2ContextPopup(Sender: TObject; MousePos: TPoint;
+      var Handled: Boolean);
   private
 
   public
@@ -64,14 +67,24 @@ begin
   ZQuery1.Active := True;
 end;
 
+procedure TcadUsuariosF.TabSheet2ContextPopup(Sender: TObject;
+  MousePos: TPoint; var Handled: Boolean);
+begin
+
+end;
+
 procedure TcadUsuariosF.btnExluirClick(Sender: TObject);
 begin
-  if MessageDlg('Voce tem certeza que deseja excluir o registro ' +
-    edtIdUsuario.Text + '?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+  if MessageDlg('Voce tem certeza que deseja excluir o usuario ' + edtIdUsuario.Text +'?',
+  mtConfirmation, [mbYes, mbNo], 0) = mrYes then
   begin
     dsCadModelo.DataSet.Delete;
-
   end;
+end;
+
+procedure TcadUsuariosF.btnGravarClick(Sender: TObject);
+begin
+  PageControl1.ActivePageIndex := 0;
 end;
 
 end.

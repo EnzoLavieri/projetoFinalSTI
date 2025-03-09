@@ -5,10 +5,14 @@ unit sobreU;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls;
 
 type
-  TForm1 = class(TForm)
+
+  { TsobreF }
+
+  TsobreF = class(TForm)
+    Memo1: TMemo;
   private
 
   public
@@ -16,7 +20,7 @@ type
   end;
 
 var
-  Form1: TForm1;
+  sobreF: TsobreF;
 
 implementation
 

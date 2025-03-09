@@ -1,8 +1,43 @@
-object Form1: TForm1
-  Left = 409
-  Height = 240
-  Top = 250
-  Width = 320
-  Caption = 'Form1'
+object sobreF: TsobreF
+  Left = 844
+  Height = 376
+  Top = 272
+  Width = 426
+  Caption = 'sobreF'
+  ClientHeight = 376
+  ClientWidth = 426
+  Position = poScreenCenter
   LCLVersion = '3.8.0.0'
+  object Memo1: TMemo
+    Left = 0
+    Height = 376
+    Top = 0
+    Width = 426
+    Align = alClient
+    Lines.Strings = (
+      'Nome do Software: SGGB (Sistema Gerenciador Geral Basico)'
+      'Versão: 1.1.14'
+      'Plataforma: Windows e Linux'
+      'Desenvolvedor: Enzo D Andrey Lavieri Yarid'
+      ''
+      ''
+      'Descrição: Esse software foi desenvolvido para que seja possivel realizar o rastreio mais efetivo dos dados mais importantes '
+      'di seu comercio.'
+      ''
+      'Principais Funcionalidades:'
+      '- Cadastro de produtos, clientes, orcamentos, itens, categorias dos produtos;'
+      '- Criacao de reletorios'
+      ''
+      'Requisitos do Sistema:'
+      'Requisitos mínimos: Windows 10, 2GB de RAM, 1GB de espaço em disco'
+      ''
+      'Licença:'
+      'Software opensource.'
+      ''
+      'Contato:'
+      'devenzolavieri@gmail.com | (44) 99159-9057'
+      '                                                                                                                                                                                      =)'
+    )
+    TabOrder = 0
+  end
 end

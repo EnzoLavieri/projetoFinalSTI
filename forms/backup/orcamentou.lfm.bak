@@ -1,13 +1,21 @@
 inherited orcamentoF: TorcamentoF
-  Left = 773
-  Top = 131
+  Left = 298
+  Height = 485
+  Top = 165
   Width = 1137
   Caption = 'Orcamentos'
+  ClientHeight = 485
   ClientWidth = 1137
+  OnCreate = FormCreate
   WindowState = wsMaximized
   inherited PageControl1: TPageControl
+    Height = 485
     Width = 1137
+    ActivePage = TabSheet2
+    TabIndex = 1
+    OnChange = PageControl1Change
     inherited TabSheet1: TTabSheet
+      ClientHeight = 457
       ClientWidth = 1129
       inherited Panel1: TPanel
         Width = 1129
@@ -16,12 +24,14 @@ inherited orcamentoF: TorcamentoF
         DockSite = False
       end
       inherited Panel2: TPanel
+        Top = 393
         Width = 1129
         ClientWidth = 1129
         Color = clScrollBar
         DockSite = False
       end
       inherited DBGrid1: TDBGrid
+        Height = 323
         Width = 1129
         AutoFillColumns = True
         DataSource = dsCadModelo
@@ -29,8 +39,10 @@ inherited orcamentoF: TorcamentoF
       end
     end
     inherited TabSheet2: TTabSheet
+      ClientHeight = 457
       ClientWidth = 1129
       inherited Panel4: TPanel
+        Top = 387
         Width = 1129
         BevelColor = clScrollBar
         ClientWidth = 1129
@@ -63,6 +75,8 @@ inherited orcamentoF: TorcamentoF
           Height = 23
           Top = 72
           Width = 101
+          DataField = 'dt_orcamento'
+          DataSource = dsCadModelo
           MaxLength = 0
           TabOrder = 1
         end
@@ -93,6 +107,8 @@ inherited orcamentoF: TorcamentoF
           Height = 23
           Top = 72
           Width = 101
+          DataField = 'dt_validade_orcamento'
+          DataSource = dsCadModelo
           MaxLength = 0
           TabOrder = 3
         end
@@ -138,6 +154,14 @@ inherited orcamentoF: TorcamentoF
           Font.Quality = fqDraft
           ParentFont = False
         end
+        object BitBtn3: TBitBtn
+          Left = 248
+          Height = 22
+          Top = 73
+          Width = 32
+          Caption = 'BitBtn3'
+          TabOrder = 6
+        end
       end
       object DBEdit1: TDBEdit[2]
         Left = 136
@@ -153,13 +177,14 @@ inherited orcamentoF: TorcamentoF
       end
       object DBGrid2: TDBGrid[3]
         Left = 0
-        Height = 372
+        Height = 259
         Top = 128
         Width = 1129
         Align = alClient
         AutoFillColumns = True
         Color = clWindow
         Columns = <>
+        DataSource = DataSource1
         TabOrder = 3
         OnDblClick = DBGrid2DblClick
       end
@@ -167,8 +192,8 @@ inherited orcamentoF: TorcamentoF
   end
   inherited dsCadModelo: TDataSource
     DataSet = qryOrcamentos
-    Left = 752
-    Top = 56
+    Left = 680
+    Top = 32
   end
   object qryOrcamentos: TZQuery[2]
     Connection = DataModule1.ZConnection1
@@ -177,8 +202,8 @@ inherited orcamentoF: TorcamentoF
       'select * from orcamento'
     )
     Params = <>
-    Left = 984
-    Top = 56
+    Left = 776
+    Top = 32
     object qryOrcamentosorcamentoid: TZIntegerField
       FieldKind = fkData
       FieldName = 'orcamentoid'
@@ -234,11 +259,11 @@ inherited orcamentoF: TorcamentoF
     Connection = DataModule1.ZConnection1
     Active = True
     SQL.Strings = (
-      'select * from ORCAMENTO_ITEM '
+      'select * from ORCAMENTO_ITEM'
     )
     Params = <>
-    Left = 872
-    Top = 56
+    Left = 784
+    Top = 80
     object qryOrcamentoItemorcamentoitemid: TZIntegerField
       FieldKind = fkData
       FieldName = 'orcamentoitemid'
@@ -248,37 +273,33 @@ inherited orcamentoF: TorcamentoF
       ReadOnly = False
       Required = True
     end
-    object qryOrcamentoItemorcamentoid: TZIntegerField
+    object qryOrcamentoItemprodutoid: TZIntegerField
       FieldKind = fkData
-      FieldName = 'orcamentoid'
+      FieldName = 'produtoid'
       Index = 1
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
     end
-    object qryOrcamentoItemprodutoid: TZIntegerField
+    object qryOrcamentoItemqt_produto: TZBCDField
       FieldKind = fkData
-      FieldName = 'produtoid'
+      FieldName = 'qt_produto'
       Index = 2
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
-    end
-    object qryOrcamentoItemqt_produto: TZIntegerField
-      FieldKind = fkData
-      FieldName = 'qt_produto'
-      Index = 3
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
+      Precision = 15
+      Currency = False
+      MaxValue = 0
+      MinValue = 0
+      Size = 2
     end
     object qryOrcamentoItemvl_unitario: TZBCDField
       FieldKind = fkData
       FieldName = 'vl_unitario'
-      Index = 4
+      Index = 3
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -292,7 +313,7 @@ inherited orcamentoF: TorcamentoF
     object qryOrcamentoItemvl_total: TZBCDField
       FieldKind = fkData
       FieldName = 'vl_total'
-      Index = 5
+      Index = 4
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -303,5 +324,10 @@ inherited orcamentoF: TorcamentoF
       MinValue = 0
       Size = 2
     end
+  end
+  object DataSource1: TDataSource[4]
+    DataSet = qryOrcamentoItem
+    Left = 680
+    Top = 88
   end
 end

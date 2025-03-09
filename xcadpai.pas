@@ -28,8 +28,8 @@ type
     TabSheet1: TTabSheet;
     TabSheet2: TTabSheet;
     procedure btnCancelarClick(Sender: TObject);
-    procedure btnExluirClick(Sender: TObject);
     procedure btnFecharClick(Sender: TObject);
+    procedure btnGravarClick(Sender: TObject);
     procedure btnNovoClick(Sender: TObject);
     procedure DBGrid1DblClick(Sender: TObject);
   private
@@ -43,7 +43,7 @@ implementation
 
 {$R *.lfm}
 
-  { TxCadPaiF }
+{ TxCadPaiF }
 
 procedure TxCadPaiF.btnNovoClick(Sender: TObject);
 begin
@@ -53,6 +53,7 @@ end;
 procedure TxCadPaiF.DBGrid1DblClick(Sender: TObject);
 begin
   dsCadModelo.DataSet.edit;
+  PageControl1.ActivePageIndex := 1;
 end;
 
 
@@ -62,15 +63,16 @@ begin
   PageControl1.ActivePageIndex := 0;
 end;
 
-procedure TxCadPaiF.btnExluirClick(Sender: TObject);
-begin
-
-end;
-
 procedure TxCadPaiF.btnFecharClick(Sender: TObject);
 begin
   Close;
 end;
+
+procedure TxCadPaiF.btnGravarClick(Sender: TObject);
+begin
+    PageControl1.ActivePageIndex := 0;
+end;
+
 
 end.
 

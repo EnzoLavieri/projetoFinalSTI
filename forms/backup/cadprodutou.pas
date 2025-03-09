@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, DBCtrls, StdCtrls,
-  LR_Class, ZDataset, ZSqlUpdate, ZAbstractRODataset, xCadPai, DB;
+  Buttons, LR_Class, ZDataset, ZSqlUpdate, ZAbstractRODataset, xCadPai, DB;
 
 type
 
