@@ -6,8 +6,8 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, DBCtrls,
-  Buttons, DBGrids, StdCtrls, ZDataset, ZAbstractRODataset, ZConnection,
-  xCadPai, SQLDB, DB, dataModule;
+  Buttons, DBGrids, StdCtrls, ZDataset, ZAbstractRODataset,
+  xCadPai, SQLDB, DB, orcamentoItemU;
 
 type
 
@@ -43,9 +43,12 @@ type
     qryOrcamentosdt_validade_orcamento: TZDateTimeField;
     qryOrcamentosorcamentoid: TZIntegerField;
     qryOrcamentosvl_total_orcamento: TZBCDField;
-    procedure AbreOrcItens(orcamentoid : Integer);
-    procedure DBGrid2DblClick(Sender: TObject);
+    procedure AbreOrcItens(orcamentoid: integer);
+    procedure BitBtn3Click(Sender: TObject);
+    procedure btnNovoClick(Sender: TObject);
+    procedure DBGrid1DblClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure PageControl1Change(Sender: TObject);
   private
 
   public
@@ -61,38 +64,52 @@ implementation
 
 { TorcamentoF }
 
-procedure TorcamentoF.AbreOrcItens(orcamentoid: Integer);
+procedure TorcamentoF.AbreOrcItens(orcamentoid: integer);
 begin
   if orcamentoid <> 0 then
   begin
     qryOrcamentoItem.Close;
     qryOrcamentoItem.SQL.Clear;
     qryOrcamentoItem.SQL.Add(
-                      'SELECT '+
-                      'ORCAMENTOITEMID, '+
-                      'ORCAMENTOID, '+
-                      'PRODUTOID, '+
-                      'produtodesc, '+
-                      'QT_PRODUTO, '+
-                      'VL_UNITARIO, '+
-                      'VL_TOTAL '+
-                      'FROM ORCAMENTO_ITEM ' +
-                      'WHERE ORCAMENTOID = '+ inttostr(orcamentoid) + ' ' +
-                      'ORDER BY ORCAMENTOID');
+      'SELECT ' + 'ORCAMENTOITEMID, ' +
+      'ORCAMENTOID, ' + 'PRODUTOID, ' +
+      //'produtodesc, '+
+      'QT_PRODUTO, ' + 'VL_UNITARIO, ' +
+      'VL_TOTAL ' + 'FROM ORCAMENTO_ITEM ' +
+      'WHERE ORCAMENTOID = ' + IntToStr(orcamentoid) +
+      ' ' + 'ORDER BY ORCAMENTOID');
     //ShowMessage(qryOrcamentoItem.SQL.Text);
     qryOrcamentoItem.Open;
   end;
 end;
 
-procedure TorcamentoF.DBGrid2DblClick(Sender: TObject);
+procedure TorcamentoF.BitBtn3Click(Sender: TObject);
 begin
+  orcamentoItemF := TorcamentoItemF.Create(Self);
+  orcamentoItemF.ShowModal;
+end;
+
+procedure TorcamentoF.btnNovoClick(Sender: TObject);
+begin
+  inherited;
+  qryOrcamentos.insert;
   AbreOrcItens(qryOrcamentosorcamentoid.AsInteger);
 end;
 
+procedure TorcamentoF.DBGrid1DblClick(Sender: TObject);
+begin
+  inherited;
+  AbreOrcItens(qryOrcamentosorcamentoid.AsInteger);
+end;
 
 procedure TorcamentoF.FormCreate(Sender: TObject);
 begin
   qryOrcamentos.Active := True;
+end;
+
+procedure TorcamentoF.PageControl1Change(Sender: TObject);
+begin
+  AbreOrcItens(qryOrcamentosorcamentoid.AsInteger);
 end;
 
 end.

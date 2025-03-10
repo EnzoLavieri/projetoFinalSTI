@@ -32,6 +32,7 @@ type
     procedure btnGravarClick(Sender: TObject);
     procedure btnNovoClick(Sender: TObject);
     procedure DBGrid1DblClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
   public
   end;
@@ -52,11 +53,13 @@ end;
 
 procedure TxCadPaiF.DBGrid1DblClick(Sender: TObject);
 begin
-  dsCadModelo.DataSet.edit;
   PageControl1.ActivePageIndex := 1;
 end;
 
-
+procedure TxCadPaiF.FormShow(Sender: TObject);
+begin
+  PageControl1.ActivePageIndex := 0;
+end;
 
 procedure TxCadPaiF.btnCancelarClick(Sender: TObject);
 begin

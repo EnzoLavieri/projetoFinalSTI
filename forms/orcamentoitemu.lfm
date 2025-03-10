@@ -1,7 +1,7 @@
 object orcamentoItemF: TorcamentoItemF
-  Left = 696
+  Left = 901
   Height = 322
-  Top = 238
+  Top = 281
   Width = 452
   Caption = 'orcamentoItemF'
   ClientHeight = 322
@@ -105,5 +105,14 @@ object orcamentoItemF: TorcamentoItemF
     Width = 24
     MaxLength = 0
     TabOrder = 7
+    OnChange = DBEdit6Change
+  end
+  object btnInserir1: TBitBtn
+    Left = 68
+    Height = 30
+    Top = 156
+    Width = 75
+    Caption = 'Inserir'
+    TabOrder = 8
   end
 end

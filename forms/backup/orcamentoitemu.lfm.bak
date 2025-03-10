@@ -1,8 +1,110 @@
 object orcamentoItemF: TorcamentoItemF
-  Left = 696
-  Height = 240
-  Top = 238
-  Width = 320
+  Left = 943
+  Height = 322
+  Top = 255
+  Width = 452
   Caption = 'orcamentoItemF'
+  ClientHeight = 322
+  ClientWidth = 452
   LCLVersion = '3.8.0.0'
+  object DBEdit1: TDBEdit
+    Left = 40
+    Height = 23
+    Top = 48
+    Width = 80
+    MaxLength = 0
+    TabOrder = 0
+  end
+  object DBEdit2: TDBEdit
+    Left = 168
+    Height = 23
+    Top = 48
+    Width = 160
+    MaxLength = 0
+    TabOrder = 1
+  end
+  object DBEdit3: TDBEdit
+    Left = 40
+    Height = 23
+    Top = 96
+    Width = 48
+    MaxLength = 0
+    TabOrder = 2
+  end
+  object DBEdit4: TDBEdit
+    Left = 104
+    Height = 23
+    Top = 96
+    Width = 88
+    MaxLength = 0
+    TabOrder = 3
+  end
+  object Label1: TLabel
+    Left = 40
+    Height = 15
+    Top = 32
+    Width = 43
+    Caption = 'Produto'
+  end
+  object Label2: TLabel
+    Left = 168
+    Height = 15
+    Top = 32
+    Width = 51
+    Caption = 'Descricao'
+  end
+  object Label3: TLabel
+    Left = 40
+    Height = 15
+    Top = 80
+    Width = 29
+    Caption = 'Qtde.'
+  end
+  object Label4: TLabel
+    Left = 104
+    Height = 15
+    Top = 80
+    Width = 53
+    Caption = 'Valor unit.'
+  end
+  object Label5: TLabel
+    Left = 208
+    Height = 15
+    Top = 80
+    Width = 53
+    Caption = 'Valor total'
+  end
+  object DBEdit5: TDBEdit
+    Left = 208
+    Height = 23
+    Top = 96
+    Width = 120
+    MaxLength = 0
+    TabOrder = 4
+  end
+  object btnInserir: TBitBtn
+    Left = 40
+    Height = 30
+    Top = 128
+    Width = 75
+    Caption = 'Inserir'
+    TabOrder = 5
+  end
+  object btnCancelar: TBitBtn
+    Left = 253
+    Height = 30
+    Top = 128
+    Width = 75
+    Caption = 'Cancelar'
+    TabOrder = 6
+  end
+  object DBEdit6: TDBEdit
+    Left = 128
+    Height = 23
+    Top = 48
+    Width = 24
+    MaxLength = 0
+    TabOrder = 7
+    OnChange = DBEdit6Change
+  end
 end

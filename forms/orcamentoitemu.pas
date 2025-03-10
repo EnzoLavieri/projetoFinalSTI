@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, DBCtrls, StdCtrls,
-  Buttons;
+  Buttons, cadProdutoU;
 
 type
 
@@ -15,6 +15,7 @@ type
   TorcamentoItemF = class(TForm)
     btnInserir: TBitBtn;
     btnCancelar: TBitBtn;
+    btnInserir1: TBitBtn;
     DBEdit1: TDBEdit;
     DBEdit2: TDBEdit;
     DBEdit3: TDBEdit;
@@ -26,6 +27,7 @@ type
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
+    procedure DBEdit6Change(Sender: TObject);
   private
 
   public
@@ -38,6 +40,14 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TorcamentoItemF }
+
+procedure TorcamentoItemF.DBEdit6Change(Sender: TObject);
+begin
+    cadProdutosF := TcadProdutosF.Create(Self);
+  cadProdutosF.ShowModal;
+end;
 
 end.
 

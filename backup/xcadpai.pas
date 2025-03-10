@@ -52,11 +52,8 @@ end;
 
 procedure TxCadPaiF.DBGrid1DblClick(Sender: TObject);
 begin
-  dsCadModelo.DataSet.edit;
   PageControl1.ActivePageIndex := 1;
 end;
-
-
 
 procedure TxCadPaiF.btnCancelarClick(Sender: TObject);
 begin

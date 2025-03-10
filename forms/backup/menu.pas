@@ -72,7 +72,8 @@ end;
 
 procedure TmenuF.menuCadOrcamentosClick(Sender: TObject);
 begin
-
+     orcamentoF := TorcamentoF.Create(Self);
+  orcamentoF.ShowModal;
 end;
 
 procedure TmenuF.menuCadProdutosClick(Sender: TObject);

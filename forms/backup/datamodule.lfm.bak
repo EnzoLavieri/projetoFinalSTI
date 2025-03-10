@@ -9,7 +9,6 @@ object DataModule1: TDataModule1
     Properties.Strings = (
       'RawStringEncoding=DB_CP'
     )
-    Connected = True
     DisableSavepoints = False
     HostName = 'localhost'
     Port = 5432
