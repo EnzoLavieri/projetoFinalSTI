@@ -11,6 +11,8 @@ inherited cadUsuariosF: TcadUsuariosF
   inherited PageControl1: TPageControl
     Height = 588
     Width = 960
+    ActivePage = TabSheet1
+    TabIndex = 0
     inherited TabSheet1: TTabSheet
       ClientHeight = 560
       ClientWidth = 952
@@ -568,7 +570,7 @@ inherited cadUsuariosF: TcadUsuariosF
     Left = 440
     Top = 40
   end
-  object ZUpdateSQL1: TZUpdateSQL[2]
+  object updtUsuarios: TZUpdateSQL[2]
     DeleteSQL.Strings = (
       'DELETE FROM usuarios WHERE id = + edtIdUsuario.Text  ;'
     )
@@ -597,7 +599,6 @@ inherited cadUsuariosF: TcadUsuariosF
   end
   object qryUsuarios: TZQuery[3]
     Connection = DataModule1.ZConnection1
-    Active = True
     SQL.Strings = (
       'select id as "ID", usuario as "Nome do usuario", nome_completo as "Nome completo", senha as "Senha" from USUARIOS;'
     )

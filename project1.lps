@@ -11,7 +11,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5"/>
         <CursorPos X="31" Y="23"/>
-        <UsageCount Value="64"/>
+        <UsageCount Value="75"/>
       </Unit>
       <Unit>
         <Filename Value="xcadpai.pas"/>
@@ -21,9 +21,9 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="xCadPai"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="51"/>
-        <CursorPos X="5" Y="73"/>
-        <UsageCount Value="64"/>
+        <TopLine Value="21"/>
+        <CursorPos X="15" Y="34"/>
+        <UsageCount Value="75"/>
       </Unit>
       <Unit>
         <Filename Value="forms\menu.pas"/>
@@ -34,7 +34,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="61"/>
         <CursorPos X="31" Y="75"/>
-        <UsageCount Value="64"/>
+        <UsageCount Value="75"/>
       </Unit>
       <Unit>
         <Filename Value="forms\usuariosu.pas"/>
@@ -43,10 +43,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="usuariosU"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="4"/>
         <TopLine Value="55"/>
         <CursorPos X="17" Y="74"/>
-        <UsageCount Value="62"/>
+        <UsageCount Value="73"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="forms\clientesu.pas"/>
@@ -55,11 +56,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="clientesU"/>
-        <TopLine Value="45"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="44"/>
         <CursorPos X="47" Y="26"/>
-        <UsageCount Value="62"/>
+        <UsageCount Value="73"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="forms\categoriaprodutou.pas"/>
@@ -68,12 +69,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="categoriaProdutoU"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="1"/>
         <TopLine Value="9"/>
         <CursorPos X="47" Y="22"/>
-        <UsageCount Value="62"/>
+        <UsageCount Value="73"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="forms\cadprodutou.pas"/>
@@ -82,13 +82,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="cadProdutoU"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="3"/>
         <TopLine Value="28"/>
         <CursorPos X="43" Y="40"/>
-        <UsageCount Value="62"/>
+        <UsageCount Value="73"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="forms\datamodule.pas"/>
@@ -98,7 +96,7 @@
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dataModule"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="58"/>
+        <UsageCount Value="69"/>
       </Unit>
       <Unit>
         <Filename Value="relatoriodeclientesu.pas"/>
@@ -107,10 +105,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="relatorioDeClientesU"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="6"/>
         <TopLine Value="15"/>
         <CursorPos X="3" Y="28"/>
-        <UsageCount Value="47"/>
+        <UsageCount Value="58"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="forms\reldeprodutosu.pas"/>
@@ -119,10 +118,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="relDeProdutosU"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="7"/>
         <TopLine Value="22"/>
         <CursorPos Y="44"/>
-        <UsageCount Value="44"/>
+        <UsageCount Value="55"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="forms\relorcamentosu.pas"/>
@@ -131,9 +131,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="relOrcamentosU"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="8"/>
         <CursorPos Y="39"/>
-        <UsageCount Value="42"/>
+        <UsageCount Value="53"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="forms\sobreu.pas"/>
@@ -142,8 +143,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="sobreU"/>
-        <EditorIndex Value="-1"/>
-        <UsageCount Value="41"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="9"/>
+        <UsageCount Value="52"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="forms\relcategoriau.pas"/>
@@ -152,10 +156,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="relCategoriaU"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="5"/>
         <TopLine Value="14"/>
         <CursorPos X="53" Y="38"/>
-        <UsageCount Value="40"/>
+        <UsageCount Value="51"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="forms\orcamentoitemu.pas"/>
@@ -165,7 +170,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="orcamentoItemU"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="38"/>
+        <UsageCount Value="49"/>
       </Unit>
       <Unit>
         <Filename Value="forms\orcamentou.pas"/>
@@ -174,10 +179,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="orcamentoU"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="86"/>
-        <CursorPos X="37" Y="72"/>
-        <UsageCount Value="37"/>
+        <TopLine Value="35"/>
+        <CursorPos X="27" Y="49"/>
+        <UsageCount Value="48"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="forms\cadusuariosu.pas"/>
@@ -187,7 +192,7 @@
         <UnitName Value="cadUsuariosU"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="24" Y="30"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="19"/>
       </Unit>
       <Unit>
         <Filename Value="forms\cadclienteu.pas"/>
@@ -196,25 +201,25 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="cadClienteU"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="19"/>
       </Unit>
       <Unit>
         <Filename Value="forms\cadusuariosu.lfm"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
         <Filename Value="forms\cadclienteu.lfm"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
         <Filename Value="C:\lazarus\lcl\menus.pp"/>
         <UnitName Value="Menus"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\lazarus\lcl\forms.pp"/>
@@ -222,14 +227,14 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="881"/>
         <CursorPos X="14" Y="897"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-db\src\base\db.pas"/>
         <UnitName Value="DB"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="244"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\Softwares\lazarus\fpc\3.2.2\source\packages\fcl-db\src\base\db.pas"/>
@@ -237,7 +242,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="1921"/>
         <CursorPos X="14" Y="1933"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\Softwares\lazarus\components\lazreport\source\lr_class.pas"/>
@@ -245,14 +250,14 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="10412"/>
         <CursorPos X="39" Y="10427"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="D:\Downloads\zeosdb\src\component\ZDataset.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="75"/>
         <CursorPos X="52" Y="76"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="10"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -260,7 +265,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="250"/>
         <CursorPos Y="262"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -268,7 +273,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="1016"/>
         <CursorPos Y="1030"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="11"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -276,7 +281,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="651"/>
         <CursorPos Y="670"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="14"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -284,25 +289,25 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="8023"/>
         <CursorPos Y="8036"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
         <Filename Value="forms\cadprodutou.lfm"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
         <Filename Value="forms\clientesu.lfm"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="10"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
         <Filename Value="forms\categoriaprodutou.lfm"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="10"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
@@ -310,54 +315,78 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="393"/>
         <CursorPos Y="406"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="10">
+    <JumpHistory HistoryIndex="16">
       <Position>
-        <Filename Value="forms\cadprodutou.pas"/>
-        <Caret Line="32" Column="47" TopLine="20"/>
+        <Filename Value="forms\orcamentou.pas"/>
+        <Caret Line="64" Column="22" TopLine="50"/>
       </Position>
       <Position>
-        <Filename Value="forms\cadprodutou.pas"/>
-        <Caret Line="39" Column="47" TopLine="20"/>
+        <Filename Value="forms\orcamentou.pas"/>
+        <Caret Line="91" Column="30" TopLine="81"/>
       </Position>
       <Position>
-        <Filename Value="forms\cadprodutou.pas"/>
-        <Caret Line="38" Column="47" TopLine="20"/>
+        <Filename Value="forms\orcamentou.pas"/>
+        <Caret Line="93" Column="3" TopLine="81"/>
       </Position>
       <Position>
-        <Filename Value="forms\cadprodutou.pas"/>
-        <Caret Line="37" Column="47" TopLine="20"/>
+        <Filename Value="forms\orcamentou.pas"/>
+        <Caret Line="86" Column="35" TopLine="77"/>
       </Position>
       <Position>
-        <Filename Value="forms\cadprodutou.pas"/>
-        <Caret Line="36" Column="47" TopLine="20"/>
+        <Filename Value="forms\orcamentou.pas"/>
+        <Caret Line="83" Column="21" TopLine="67"/>
       </Position>
       <Position>
-        <Filename Value="forms\cadprodutou.pas"/>
-        <Caret Line="35" Column="47" TopLine="20"/>
+        <Filename Value="forms\orcamentou.pas"/>
+        <Caret Line="87" Column="30" TopLine="73"/>
       </Position>
       <Position>
-        <Filename Value="forms\cadprodutou.pas"/>
-        <Caret Line="34" Column="47" TopLine="20"/>
+        <Filename Value="forms\orcamentou.pas"/>
+        <Caret Line="69" Column="21" TopLine="64"/>
       </Position>
       <Position>
-        <Filename Value="forms\cadprodutou.pas"/>
-        <Caret Line="33" Column="47" TopLine="20"/>
+        <Filename Value="forms\orcamentou.pas"/>
+        <Caret Line="84" Column="55" TopLine="67"/>
       </Position>
       <Position>
-        <Filename Value="forms\cadprodutou.pas"/>
-        <Caret Line="32" Column="47" TopLine="20"/>
+        <Filename Value="forms\orcamentou.pas"/>
+        <Caret Line="83" Column="55" TopLine="66"/>
       </Position>
       <Position>
-        <Filename Value="forms\cadprodutou.pas"/>
-        <Caret Line="39" Column="47" TopLine="20"/>
+        <Filename Value="forms\orcamentou.pas"/>
+        <Caret Line="82" Column="55" TopLine="65"/>
       </Position>
       <Position>
-        <Filename Value="forms\cadprodutou.pas"/>
-        <Caret Line="62" Column="5" TopLine="59"/>
+        <Filename Value="forms\orcamentou.pas"/>
+        <Caret Line="81" Column="55" TopLine="64"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\orcamentou.pas"/>
+        <Caret Line="80" Column="55" TopLine="63"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\orcamentou.pas"/>
+        <Caret Line="79" Column="55" TopLine="62"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\orcamentou.pas"/>
+        <Caret Line="78" Column="55" TopLine="61"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\orcamentou.pas"/>
+        <Caret Line="90" Column="22" TopLine="63"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\orcamentou.pas"/>
+        <Caret Line="97" Column="5" TopLine="34"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\clientesu.pas"/>
+        <Caret Line="26" Column="47" TopLine="44"/>
       </Position>
     </JumpHistory>
     <RunParams>

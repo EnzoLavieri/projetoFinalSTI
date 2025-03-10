@@ -1,7 +1,7 @@
 inherited cadCategProdutosF: TcadCategProdutosF
-  Left = 316
+  Left = 320
   Height = 511
-  Top = 136
+  Top = 227
   Width = 1101
   Caption = 'Categoria dos produtos'
   ClientHeight = 511
@@ -11,6 +11,8 @@ inherited cadCategProdutosF: TcadCategProdutosF
   inherited PageControl1: TPageControl
     Height = 511
     Width = 1101
+    ActivePage = TabSheet1
+    TabIndex = 0
     inherited TabSheet1: TTabSheet
       ClientHeight = 483
       ClientWidth = 1093
@@ -509,7 +511,7 @@ inherited cadCategProdutosF: TcadCategProdutosF
     Left = 400
     Top = 49
   end
-  object ZUpdateSQL1: TZUpdateSQL[3]
+  object updtCategProdutos: TZUpdateSQL[3]
     DeleteSQL.Strings = (
       'delete * from categoria_produto where + edtIDCatProdutos.text'
       ''
@@ -520,8 +522,8 @@ inherited cadCategProdutosF: TcadCategProdutosF
       'WHERE CATEGORIAPRODUTOID = :OLD_CATEGORIAPRODUTOID;'
     )
     UseSequenceFieldForRefreshSQL = False
-    Left = 480
-    Top = 49
+    Left = 504
+    Top = 48
     ParamData = <    
       item
         Name = 'DS_CATEGORIA_PRODUTO'

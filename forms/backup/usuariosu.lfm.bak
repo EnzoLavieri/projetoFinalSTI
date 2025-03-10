@@ -226,6 +226,7 @@ inherited cadUsuariosF: TcadUsuariosF
             FieldName = 'Senha'
           end>
         DataSource = dsCadModelo
+        ParentBiDiMode = False
         OnDblClick = DBGrid1DblClick
       end
     end

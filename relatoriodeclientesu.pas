@@ -16,7 +16,7 @@ type
     btnRelClientes: TBitBtn;
     frDBDSClientes: TfrDBDataSet;
     frClientes: TfrReport;
-    qryClientes: TZQuery;
+    qryRelClientes: TZQuery;
     procedure btnRelClientesClick(Sender: TObject);
   private
 

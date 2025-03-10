@@ -11,6 +11,8 @@ inherited cadClientesF: TcadClientesF
   inherited PageControl1: TPageControl
     Height = 455
     Width = 1024
+    ActivePage = TabSheet1
+    TabIndex = 0
     inherited TabSheet1: TTabSheet
       ClientHeight = 427
       ClientWidth = 1016
@@ -539,7 +541,6 @@ inherited cadClientesF: TcadClientesF
   end
   object qryClientes: TZQuery[2]
     Connection = DataModule1.ZConnection1
-    Active = True
     SQL.Strings = (
       'select CLIENTEID as "ID", TIPO_CLIENTE as "Tipo do cliente", CPF_CNPJ_CLIENTE as "CPF | CNPJ", NOME_CLIENTE as "Nome"from cliente'
     )
@@ -547,7 +548,7 @@ inherited cadClientesF: TcadClientesF
     Left = 520
     Top = 40
   end
-  object ZUpdateSQL1: TZUpdateSQL[3]
+  object updtClientes: TZUpdateSQL[3]
     DeleteSQL.Strings = (
       #10'DELETE FROM CLIENTE '#10'WHERE CLIENTEID = :OLD_CLIENTEID;'
     )

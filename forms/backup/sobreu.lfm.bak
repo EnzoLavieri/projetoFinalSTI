@@ -15,28 +15,26 @@ object sobreF: TsobreF
     Width = 426
     Align = alClient
     Lines.Strings = (
-      'Nome do Software: SGGB (Sistema Gerenciador Geral Basico)'
+      'Nome do Software: SGGB (Sistema Gerenciador Geral Básico)'
       'Versão: 1.1.14'
       'Plataforma: Windows e Linux'
       'Desenvolvedor: Enzo D Andrey Lavieri Yarid'
       ''
-      ''
-      'Descrição: Esse software foi desenvolvido para que seja possivel realizar o rastreio mais efetivo dos dados mais importantes '
-      'di seu comercio.'
+      'Descrição:'
+      'Este software foi desenvolvido para possibilitar o rastreio mais eficiente dos dados mais importantes do seu comércio, facilitando a gestão e organização das informações.'
       ''
       'Principais Funcionalidades:'
-      '- Cadastro de produtos, clientes, orcamentos, itens, categorias dos produtos;'
-      '- Criacao de reletorios'
+      '- Cadastro de produtos, clientes, orçamentos, itens e categorias de produtos;'
+      '- Criação de relatórios;'
       ''
       'Requisitos do Sistema:'
-      'Requisitos mínimos: Windows 10, 2GB de RAM, 1GB de espaço em disco'
+      'Requisitos mínimos: Windows 10, 2GB de RAM, 1GB de espaço em disco.'
       ''
       'Licença:'
-      'Software opensource.'
+      'Software open source.'
       ''
       'Contato:'
       'devenzolavieri@gmail.com | (44) 99159-9057'
-      '                                                                                                                                                                                      =)'
     )
     TabOrder = 0
   end

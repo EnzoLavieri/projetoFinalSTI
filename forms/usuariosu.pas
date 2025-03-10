@@ -27,7 +27,7 @@ type
     qryUsuariosNomecompleto: TZRawStringField;
     qryUsuariosNomedousuario: TZRawStringField;
     qryUsuariosSenha: TZRawStringField;
-    ZUpdateSQL1: TZUpdateSQL;
+    updtUsuarios: TZUpdateSQL;
     procedure btnExluirClick(Sender: TObject);
     procedure btnGravarClick(Sender: TObject);
 

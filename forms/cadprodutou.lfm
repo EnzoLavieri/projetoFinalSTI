@@ -587,12 +587,11 @@ inherited cadProdutosF: TcadProdutosF
     end
   end
   inherited dsCadModelo: TDataSource
-    DataSet = ZQuery1
+    DataSet = updtProdutos
     Left = 472
   end
-  object ZQuery1: TZQuery[2]
+  object updtProdutos: TZQuery[2]
     Connection = DataModule1.ZConnection1
-    Active = True
     SQL.Strings = (
       'select PRODUTOID as "ID", '
       'DS_PRODUTO as "Descicao", '
@@ -604,9 +603,9 @@ inherited cadProdutosF: TcadProdutosF
       'from produto '
     )
     Params = <>
-    Left = 544
+    Left = 560
     Top = 48
-    object ZQuery1ID: TZIntegerField
+    object updtProdutosID: TZIntegerField
       FieldKind = fkData
       FieldName = 'ID'
       Index = 0
@@ -615,7 +614,7 @@ inherited cadProdutosF: TcadProdutosF
       ReadOnly = False
       Required = True
     end
-    object ZQuery1Descicao: TZRawStringField
+    object updtProdutosDescicao: TZRawStringField
       FieldKind = fkData
       FieldName = 'Descicao'
       Index = 1
@@ -625,7 +624,7 @@ inherited cadProdutosF: TcadProdutosF
       Required = True
       Size = 50
     end
-    object ZQuery1Observacao: TZRawStringField
+    object updtProdutosObservacao: TZRawStringField
       FieldKind = fkData
       FieldName = 'Observacao'
       Index = 2
@@ -644,7 +643,7 @@ inherited cadProdutosF: TcadProdutosF
       ReadOnly = False
       Required = True
     end
-    object ZQuery1Preco: TZBCDField
+    object updtProdutosPreco: TZBCDField
       FieldKind = fkData
       FieldName = 'Preco'
       Index = 4
@@ -667,7 +666,7 @@ inherited cadProdutosF: TcadProdutosF
       ReadOnly = False
       Required = True
     end
-    object ZQuery1Status: TZRawStringField
+    object updtProdutosStatus: TZRawStringField
       FieldKind = fkData
       FieldName = 'Status'
       Index = 6
@@ -693,7 +692,7 @@ inherited cadProdutosF: TcadProdutosF
       'WHERE PRODUTOID = :PRODUTOID;'
     )
     UseSequenceFieldForRefreshSQL = False
-    Left = 608
+    Left = 648
     Top = 48
     ParamData = <    
       item

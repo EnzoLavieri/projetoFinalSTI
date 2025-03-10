@@ -22,7 +22,7 @@ type
     Label4: TLabel;
     Label5: TLabel;
     qryClientes: TZQuery;
-    ZUpdateSQL1: TZUpdateSQL;
+    updtClientes: TZUpdateSQL;
     procedure btnExluirClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);

@@ -27,14 +27,14 @@ type
     Label6: TLabel;
     Label7: TLabel;
     Label8: TLabel;
-    ZQuery1: TZQuery;
+    updtProdutos: TZQuery;
     ZQuery1Datadecadastro: TZDateTimeField;
-    ZQuery1Descicao: TZRawStringField;
-    ZQuery1ID: TZIntegerField;
+    updtProdutosDescicao: TZRawStringField;
+    updtProdutosID: TZIntegerField;
     ZQuery1IDdacategoria: TZIntegerField;
-    ZQuery1Observacao: TZRawStringField;
-    ZQuery1Preco: TZBCDField;
-    ZQuery1Status: TZRawStringField;
+    updtProdutosObservacao: TZRawStringField;
+    updtProdutosPreco: TZBCDField;
+    updtProdutosStatus: TZRawStringField;
     ZUpdateSQL1: TZUpdateSQL;
     procedure btnExluirClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -57,17 +57,17 @@ implementation
 
 procedure TcadProdutosF.FormCreate(Sender: TObject);
 begin
-  ZQuery1.Active := True;
+  updtProdutos.Active := True;
 end;
 
 procedure TcadProdutosF.SpeedButton1Click(Sender: TObject);
 begin
-  ZQuery1.Close;
+  updtProdutos.Close;
   if Edit1.Text <> '' then
-    ZQuery1.SQL.Text := 'SELECT * FROM produto WHERE PRODUTOID = ' + Edit1.Text
+    updtProdutos.SQL.Text := 'SELECT * FROM produto WHERE PRODUTOID = ' + Edit1.Text
   else
-    ZQuery1.SQL.Text := 'SELECT * FROM produto';
-  ZQuery1.Open;
+    updtProdutos.SQL.Text := 'SELECT * FROM produto';
+  updtProdutos.Open;
 end;
 
 procedure TcadProdutosF.btnExluirClick(Sender: TObject);

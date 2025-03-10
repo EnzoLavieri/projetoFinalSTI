@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, DBCtrls, xCadPai, DB,
-  StdCtrls, Buttons, DBGrids, ZDataset, ZSqlUpdate, ZAbstractRODataset;
+  SQLDB, StdCtrls, Buttons, DBGrids, ZDataset, ZSqlUpdate, ZAbstractRODataset;
 
 type
 
@@ -18,7 +18,7 @@ type
     Label2: TLabel;
     Label3: TLabel;
     qryCetegProdutos: TZQuery;
-    ZUpdateSQL1: TZUpdateSQL;
+    updtCategProdutos: TZUpdateSQL;
     procedure btnExluirClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
