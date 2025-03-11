@@ -1,22 +1,22 @@
 object pesProdutoF: TpesProdutoF
-  Left = 926
+  Left = 1177
   Height = 357
-  Top = 261
-  Width = 492
+  Top = 385
+  Width = 730
   Caption = 'pesProdutoF'
   ClientHeight = 357
-  ClientWidth = 492
+  ClientWidth = 730
   Position = poScreenCenter
   LCLVersion = '3.8.0.0'
   object Panel1: TPanel
     Left = 0
     Height = 66
     Top = 0
-    Width = 492
+    Width = 730
     Align = alTop
     Caption = 'Panel1'
     ClientHeight = 66
-    ClientWidth = 492
+    ClientWidth = 730
     TabOrder = 0
     object edtPesquisa: TEdit
       Left = 48
@@ -24,46 +24,53 @@ object pesProdutoF: TpesProdutoF
       Top = 24
       Width = 80
       TabOrder = 0
-      Text = 'edtPesquisa'
     end
   end
   object DBGrid1: TDBGrid
     Left = 0
     Height = 291
     Top = 66
-    Width = 492
+    Width = 730
     Align = alClient
+    AutoFillColumns = True
     Color = clWindow
     Columns = <    
       item
-        Title.Caption = 'ID'
-        FieldName = 'ID'
+        Title.Caption = 'produtoid'
+        Width = 100
+        FieldName = 'produtoid'
       end    
       item
-        Title.Caption = 'Descicao'
-        FieldName = 'Descicao'
+        Title.Caption = 'categoriaprodutoid'
+        Width = 100
+        FieldName = 'categoriaprodutoid'
       end    
       item
-        Title.Caption = 'Observacao'
-        FieldName = 'Observacao'
+        Title.Caption = 'ds_produto'
+        Width = 100
+        FieldName = 'ds_produto'
       end    
       item
-        Title.Caption = 'ID da categoria'
-        FieldName = 'ID da categoria'
+        Title.Caption = 'obs_produto'
+        Width = 100
+        FieldName = 'obs_produto'
       end    
       item
-        Title.Caption = 'Preco'
-        FieldName = 'Preco'
+        Title.Caption = 'vl_venda_produto'
+        Width = 99
+        FieldName = 'vl_venda_produto'
       end    
       item
-        Title.Caption = 'Data de cadastro'
-        FieldName = 'Data de cadastro'
+        Title.Caption = 'dt_cadastro_produto'
+        Width = 99
+        FieldName = 'dt_cadastro_produto'
       end    
       item
-        Title.Caption = 'Status'
-        FieldName = 'Status'
+        Title.Caption = 'status_produto'
+        Width = 99
+        FieldName = 'status_produto'
       end>
-    DataSource = cadProdutosF.dsCadModelo
+    DataSource = dsCadProduto
     TabOrder = 1
     OnDblClick = DBGrid1DblClick
   end
@@ -75,5 +82,38 @@ object pesProdutoF: TpesProdutoF
     Caption = 'btnPesquisa'
     OnClick = btnPesquisaClick
     TabOrder = 2
+  end
+  object dsCadProduto: TDataSource
+    DataSet = cadProdutosF.qryProdutos
+    Left = 424
+    Top = 16
+  end
+  object qryPesqProdutos: TZQuery
+    Connection = DataModule1.ZConnection1
+    SQL.Strings = (
+      'select * from categoria_produto'
+    )
+    Params = <>
+    Left = 544
+    Top = 16
+    object qryPesqProdutoscategoriaprodutoid: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'categoriaprodutoid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryPesqProdutosds_categoria_produto: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'ds_categoria_produto'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
   end
 end

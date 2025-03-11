@@ -1,7 +1,7 @@
 object xCadPaiF: TxCadPaiF
-  Left = 461
+  Left = 523
   Height = 598
-  Top = 239
+  Top = 251
   Width = 994
   Caption = 'xCadPai'
   ClientHeight = 598

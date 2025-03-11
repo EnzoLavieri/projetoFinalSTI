@@ -1,7 +1,7 @@
 object orcamentoItemF: TorcamentoItemF
-  Left = 936
+  Left = 1441
   Height = 322
-  Top = 362
+  Top = 120
   Width = 452
   Caption = 'orcamentoItemF'
   ClientHeight = 322
@@ -17,7 +17,7 @@ object orcamentoItemF: TorcamentoItemF
     TabOrder = 0
   end
   object DBEdit2: TDBEdit
-    Left = 168
+    Left = 160
     Height = 23
     Top = 48
     Width = 160
@@ -48,7 +48,7 @@ object orcamentoItemF: TorcamentoItemF
     Caption = 'Produto'
   end
   object Label2: TLabel
-    Left = 168
+    Left = 160
     Height = 15
     Top = 32
     Width = 51
@@ -101,10 +101,10 @@ object orcamentoItemF: TorcamentoItemF
   end
   object btnInserir1: TBitBtn
     Left = 128
-    Height = 30
-    Top = 40
-    Width = 32
-    Caption = 'Inserir'
+    Height = 22
+    Top = 49
+    Width = 24
+    Caption = '...'
     OnClick = btnInserir1Click
     TabOrder = 7
   end

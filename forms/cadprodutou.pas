@@ -13,6 +13,7 @@ type
   { TcadProdutosF }
 
   TcadProdutosF = class(TxCadPaiF)
+    BitBtn1: TBitBtn;
     edtIdProduto: TDBEdit;
     edtCategoria: TDBEdit;
     edtDescricao: TDBEdit;
@@ -28,14 +29,15 @@ type
     Label7: TLabel;
     Label8: TLabel;
     qryProdutos: TZQuery;
-    ZQuery1Datadecadastro: TZDateTimeField;
-    qryProdutosDescicao: TZRawStringField;
-    qryProdutosID: TZIntegerField;
-    ZQuery1IDdacategoria: TZIntegerField;
-    qryProdutosObservacao: TZRawStringField;
-    qryProdutosPreco: TZBCDField;
-    qryProdutosStatus: TZRawStringField;
+    qryProdutoscategoriaprodutoid: TZIntegerField;
+    qryProdutosds_produto: TZRawStringField;
+    qryProdutosdt_cadastro_produto: TZDateTimeField;
+    qryProdutosobs_produto: TZRawStringField;
+    qryProdutosprodutoid: TZIntegerField;
+    qryProdutosstatus_produto: TZRawStringField;
+    qryProdutosvl_venda_produto: TZBCDField;
     ZUpdateSQL1: TZUpdateSQL;
+    procedure BitBtn1Click(Sender: TObject);
     procedure btnExluirClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
@@ -50,6 +52,8 @@ var
   cadProdutosF: TcadProdutosF;
 
 implementation
+
+uses pesProdutoU;
 
 {$R *.lfm}
 
@@ -78,6 +82,12 @@ begin
   begin
     dsCadModelo.DataSet.Delete;
   end;
+end;
+
+procedure TcadProdutosF.BitBtn1Click(Sender: TObject);
+begin
+      pesProdutoF := TpesProdutoF.create(Self);
+     pesProdutoF.ShowModal;
 end;
 
 

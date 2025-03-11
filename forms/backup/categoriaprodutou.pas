@@ -18,7 +18,10 @@ type
     Label2: TLabel;
     Label3: TLabel;
     qryCetegProdutos: TZQuery;
+    qryCetegProdutoscategoriaprodutoid: TZIntegerField;
+    qryCetegProdutosds_categoria_produto: TZRawStringField;
     updtCategProdutos: TZUpdateSQL;
+    procedure BitBtn1Click(Sender: TObject);
     procedure btnExluirClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
@@ -63,6 +66,11 @@ begin
     dsCadModelo.DataSet.Delete;
 
   end;
+end;
+
+procedure TcadCategProdutosF.BitBtn1Click(Sender: TObject);
+begin
+
 end;
 
 end.
