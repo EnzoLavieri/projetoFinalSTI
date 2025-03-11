@@ -13,7 +13,7 @@ uses
   Forms, zcomponent, anchordockpkg, xCadPai, menu, usuariosU, clientesU,
   categoriaProdutoU, cadProdutoU, dataModule, relatorioDeClientesU, 
 relDeProdutosU, relOrcamentosU, sobreU, relCategoriaU, 
-orcamentoItemU, orcamentoU;
+orcamentoItemU, orcamentoU, pesProdutoU;
 
 {$R *.res}
 
@@ -35,6 +35,7 @@ begin
   Application.CreateForm(TrelCategoriaF, relCategoriaF);
   Application.CreateForm(TorcamentoItemF, orcamentoItemF);
   Application.CreateForm(TorcamentoF, orcamentoF);
+  Application.CreateForm(TpesProdutoF, pesProdutoF);
   Application.Run;
 end.
 

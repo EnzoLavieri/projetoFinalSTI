@@ -9,6 +9,7 @@ object DataModule1: TDataModule1
     Properties.Strings = (
       'RawStringEncoding=DB_CP'
     )
+    Connected = True
     DisableSavepoints = False
     HostName = 'localhost'
     Port = 5432
@@ -16,7 +17,7 @@ object DataModule1: TDataModule1
     User = 'postgres'
     Password = '12345'
     Protocol = 'postgresql'
-    LibraryLocation = 'C:\Softwares\PostgreSQL\bin\libpq.dll'
+    LibraryLocation = 'C:\Program Files (x86)\PostgreSQL\10\bin\libpq.dll'
     Left = 220
     Top = 184
   end

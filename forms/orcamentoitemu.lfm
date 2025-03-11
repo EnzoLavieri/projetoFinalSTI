@@ -1,11 +1,12 @@
 object orcamentoItemF: TorcamentoItemF
-  Left = 901
+  Left = 1065
   Height = 322
-  Top = 281
+  Top = 447
   Width = 452
   Caption = 'orcamentoItemF'
   ClientHeight = 322
   ClientWidth = 452
+  Position = poScreenCenter
   LCLVersion = '3.8.0.0'
   object DBEdit1: TDBEdit
     Left = 40
@@ -98,21 +99,13 @@ object orcamentoItemF: TorcamentoItemF
     Caption = 'Cancelar'
     TabOrder = 6
   end
-  object DBEdit6: TDBEdit
-    Left = 128
-    Height = 23
-    Top = 48
-    Width = 24
-    MaxLength = 0
-    TabOrder = 7
-    OnChange = DBEdit6Change
-  end
   object btnInserir1: TBitBtn
-    Left = 68
+    Left = 128
     Height = 30
-    Top = 156
-    Width = 75
+    Top = 40
+    Width = 32
     Caption = 'Inserir'
-    TabOrder = 8
+    OnClick = btnInserir1Click
+    TabOrder = 7
   end
 end

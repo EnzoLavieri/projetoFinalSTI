@@ -17,7 +17,7 @@ object DataModule1: TDataModule1
     User = 'postgres'
     Password = '12345'
     Protocol = 'postgresql'
-    LibraryLocation = 'C:\Program Files (x86)\PostgreSQL\10\bin\libpq.dll'
+    LibraryLocation = 'C:\Softwares\PostgreSQL\bin\libpq.dll'
     Left = 220
     Top = 184
   end

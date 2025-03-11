@@ -1,35 +1,35 @@
 inherited orcamentoF: TorcamentoF
-  Left = 445
+  Left = 857
   Height = 485
-  Top = 183
-  Width = 1188
+  Top = 172
+  Width = 582
   Caption = 'Orcamentos'
   ClientHeight = 485
-  ClientWidth = 1188
+  ClientWidth = 582
   OnCreate = FormCreate
   OnShow = nil
   WindowState = wsMaximized
   inherited PageControl1: TPageControl
     Height = 485
-    Width = 1188
+    Width = 582
     ActivePage = TabSheet2
     TabIndex = 1
     OnChange = PageControl1Change
     inherited TabSheet1: TTabSheet
       ClientHeight = 457
-      ClientWidth = 1180
+      ClientWidth = 574
       inherited Panel1: TPanel
-        Width = 1180
-        ClientWidth = 1180
+        Width = 574
+        ClientWidth = 574
         Color = clScrollBar
         DockSite = False
       end
       inherited Panel2: TPanel
         Height = 70
         Top = 387
-        Width = 1180
+        Width = 574
         ClientHeight = 70
-        ClientWidth = 1180
+        ClientWidth = 574
         Color = clScrollBar
         DockSite = False
         inherited btnNovo: TBitBtn
@@ -200,37 +200,37 @@ inherited orcamentoF: TorcamentoF
       end
       inherited DBGrid1: TDBGrid
         Height = 317
-        Width = 1180
+        Width = 574
         AutoFillColumns = True
         Columns = <        
           item
             PickList.Strings = (            )
             Title.Caption = 'orcamentoid'
-            Width = 230
+            Width = 109
             FieldName = 'orcamentoid'
           end        
           item
             PickList.Strings = (            )
             Title.Caption = 'clienteid'
-            Width = 230
+            Width = 108
             FieldName = 'clienteid'
           end        
           item
             PickList.Strings = (            )
             Title.Caption = 'dt_orcamento'
-            Width = 229
+            Width = 108
             FieldName = 'dt_orcamento'
           end        
           item
             PickList.Strings = (            )
             Title.Caption = 'dt_validade_orcamento'
-            Width = 229
+            Width = 108
             FieldName = 'dt_validade_orcamento'
           end        
           item
             PickList.Strings = (            )
             Title.Caption = 'vl_total_orcamento'
-            Width = 229
+            Width = 108
             FieldName = 'vl_total_orcamento'
           end>
         DataSource = dsCadModelo
@@ -239,12 +239,12 @@ inherited orcamentoF: TorcamentoF
     end
     inherited TabSheet2: TTabSheet
       ClientHeight = 457
-      ClientWidth = 1180
+      ClientWidth = 574
       inherited Panel4: TPanel
         Top = 387
-        Width = 1180
+        Width = 574
         BevelColor = clScrollBar
-        ClientWidth = 1180
+        ClientWidth = 574
         Color = clScrollBar
         DockSite = False
         inherited btnGravar: TBitBtn
@@ -495,10 +495,10 @@ inherited orcamentoF: TorcamentoF
         Left = 0
         Height = 128
         Top = 0
-        Width = 1180
+        Width = 574
         Align = alTop
         ClientHeight = 128
-        ClientWidth = 1180
+        ClientWidth = 574
         TabOrder = 1
         object DBEdit2: TDBEdit
           Left = 24
@@ -602,7 +602,7 @@ inherited orcamentoF: TorcamentoF
           Height = 22
           Top = 25
           Width = 32
-          Caption = 'BitBtn3'
+          Caption = '+'
           OnClick = BitBtn3Click
           TabOrder = 6
         end
@@ -623,7 +623,7 @@ inherited orcamentoF: TorcamentoF
         Left = 0
         Height = 259
         Top = 128
-        Width = 1180
+        Width = 574
         Align = alClient
         Color = clWindow
         Columns = <        
@@ -664,7 +664,6 @@ inherited orcamentoF: TorcamentoF
   end
   object qryOrcamentos: TZQuery[2]
     Connection = DataModule1.ZConnection1
-    Active = True
     SQL.Strings = (
       'select * from orcamento'
     )
@@ -724,7 +723,6 @@ inherited orcamentoF: TorcamentoF
   end
   object qryOrcamentoItem: TZQuery[3]
     Connection = DataModule1.ZConnection1
-    Active = True
     SQL.Strings = (
       #9' select * from ORCAMENTO_ITEM'
     )

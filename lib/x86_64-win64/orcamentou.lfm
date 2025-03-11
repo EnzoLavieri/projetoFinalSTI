@@ -1,33 +1,35 @@
 inherited orcamentoF: TorcamentoF
-  Left = 381
+  Left = 330
   Height = 485
-  Top = 215
-  Width = 1057
+  Top = 153
+  Width = 1125
   Caption = 'Orcamentos'
   ClientHeight = 485
-  ClientWidth = 1057
+  ClientWidth = 1125
   OnCreate = FormCreate
+  OnShow = nil
   WindowState = wsMaximized
   inherited PageControl1: TPageControl
     Height = 485
-    Width = 1057
-    ActivePage = TabSheet1
-    TabIndex = 0
+    Width = 1125
+    ActivePage = TabSheet2
+    TabIndex = 1
+    OnChange = PageControl1Change
     inherited TabSheet1: TTabSheet
       ClientHeight = 457
-      ClientWidth = 1049
+      ClientWidth = 1117
       inherited Panel1: TPanel
-        Width = 1049
-        ClientWidth = 1049
+        Width = 1117
+        ClientWidth = 1117
         Color = clScrollBar
         DockSite = False
       end
       inherited Panel2: TPanel
         Height = 70
         Top = 387
-        Width = 1049
+        Width = 1117
         ClientHeight = 70
-        ClientWidth = 1049
+        ClientWidth = 1117
         Color = clScrollBar
         DockSite = False
         inherited btnNovo: TBitBtn
@@ -111,6 +113,7 @@ inherited orcamentoF: TorcamentoF
             43B85CB043D85CB043F45CB043F45CB043D85BB043B85CB1426C58B0461D0000
             0000000000000000000000000000000000000000000000000000
           }
+          OnClick = btnNovoClick
         end
         inherited btnFechar: TBitBtn
           Left = 848
@@ -197,20 +200,51 @@ inherited orcamentoF: TorcamentoF
       end
       inherited DBGrid1: TDBGrid
         Height = 317
-        Width = 1049
+        Width = 1117
         AutoFillColumns = True
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'orcamentoid'
+            Width = 217
+            FieldName = 'orcamentoid'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'clienteid'
+            Width = 217
+            FieldName = 'clienteid'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'dt_orcamento'
+            Width = 217
+            FieldName = 'dt_orcamento'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'dt_validade_orcamento'
+            Width = 217
+            FieldName = 'dt_validade_orcamento'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'vl_total_orcamento'
+            Width = 216
+            FieldName = 'vl_total_orcamento'
+          end>
         DataSource = dsCadModelo
         OnDblClick = DBGrid1DblClick
       end
     end
     inherited TabSheet2: TTabSheet
       ClientHeight = 457
-      ClientWidth = 1049
+      ClientWidth = 1117
       inherited Panel4: TPanel
         Top = 387
-        Width = 1049
+        Width = 1117
         BevelColor = clScrollBar
-        ClientWidth = 1049
+        ClientWidth = 1117
         Color = clScrollBar
         DockSite = False
         inherited btnGravar: TBitBtn
@@ -461,10 +495,10 @@ inherited orcamentoF: TorcamentoF
         Left = 0
         Height = 128
         Top = 0
-        Width = 1049
+        Width = 1117
         Align = alTop
         ClientHeight = 128
-        ClientWidth = 1049
+        ClientWidth = 1117
         TabOrder = 1
         object DBEdit2: TDBEdit
           Left = 24
@@ -525,6 +559,7 @@ inherited orcamentoF: TorcamentoF
           Height = 23
           Top = 56
           Width = 173
+          DataSource = dsOrcamentoItem
           MaxLength = 0
           TabOrder = 4
         end
@@ -563,11 +598,12 @@ inherited orcamentoF: TorcamentoF
           ParentFont = False
         end
         object BitBtn3: TBitBtn
-          Left = 248
+          Left = 232
           Height = 22
-          Top = 73
+          Top = 25
           Width = 32
-          Caption = 'BitBtn3'
+          Caption = '+'
+          OnClick = BitBtn3Click
           TabOrder = 6
         end
       end
@@ -587,21 +623,44 @@ inherited orcamentoF: TorcamentoF
         Left = 0
         Height = 259
         Top = 128
-        Width = 1049
+        Width = 1117
         Align = alClient
-        AutoFillColumns = True
         Color = clWindow
-        Columns = <>
+        Columns = <        
+          item
+            Title.Caption = 'Id'
+            FieldName = 'orcamentoitemid'
+          end        
+          item
+            Title.Caption = 'Id Orçamento'
+            Width = 80
+            FieldName = 'orcamentoid'
+          end        
+          item
+            Title.Caption = 'Id Produto'
+            FieldName = 'produtoid'
+          end        
+          item
+            Title.Caption = 'Qtde.'
+            FieldName = 'qt_produto'
+          end        
+          item
+            Title.Caption = 'Vlr. Unit.'
+            FieldName = 'vl_unitario'
+          end        
+          item
+            Title.Caption = 'vl_total'
+            FieldName = 'vl_total'
+          end>
         DataSource = dsOrcamentoItem
         TabOrder = 3
-        OnDblClick = DBGrid2DblClick
       end
     end
   end
   inherited dsCadModelo: TDataSource
     DataSet = qryOrcamentos
-    Left = 536
-    Top = 40
+    Left = 688
+    Top = 72
   end
   object qryOrcamentos: TZQuery[2]
     Connection = DataModule1.ZConnection1
@@ -609,8 +668,8 @@ inherited orcamentoF: TorcamentoF
       'select * from orcamento'
     )
     Params = <>
-    Left = 632
-    Top = 40
+    Left = 784
+    Top = 72
     object qryOrcamentosorcamentoid: TZIntegerField
       FieldKind = fkData
       FieldName = 'orcamentoid'
@@ -668,8 +727,8 @@ inherited orcamentoF: TorcamentoF
       #9' select * from ORCAMENTO_ITEM'
     )
     Params = <>
-    Left = 904
-    Top = 40
+    Left = 1056
+    Top = 72
     object qryOrcamentoItemorcamentoitemid: TZIntegerField
       FieldKind = fkData
       FieldName = 'orcamentoitemid'
@@ -742,7 +801,7 @@ inherited orcamentoF: TorcamentoF
   end
   object dsOrcamentoItem: TDataSource[4]
     DataSet = qryOrcamentoItem
-    Left = 800
-    Top = 40
+    Left = 952
+    Top = 72
   end
 end

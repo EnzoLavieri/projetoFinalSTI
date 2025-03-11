@@ -1,0 +1,79 @@
+object pesProdutoF: TpesProdutoF
+  Left = 926
+  Height = 357
+  Top = 261
+  Width = 492
+  Caption = 'pesProdutoF'
+  ClientHeight = 357
+  ClientWidth = 492
+  Position = poScreenCenter
+  LCLVersion = '3.8.0.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 66
+    Top = 0
+    Width = 492
+    Align = alTop
+    Caption = 'Panel1'
+    ClientHeight = 66
+    ClientWidth = 492
+    TabOrder = 0
+    object edtPesquisa: TEdit
+      Left = 48
+      Height = 23
+      Top = 24
+      Width = 80
+      TabOrder = 0
+      Text = 'edtPesquisa'
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 291
+    Top = 66
+    Width = 492
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'ID'
+        FieldName = 'ID'
+      end    
+      item
+        Title.Caption = 'Descicao'
+        FieldName = 'Descicao'
+      end    
+      item
+        Title.Caption = 'Observacao'
+        FieldName = 'Observacao'
+      end    
+      item
+        Title.Caption = 'ID da categoria'
+        FieldName = 'ID da categoria'
+      end    
+      item
+        Title.Caption = 'Preco'
+        FieldName = 'Preco'
+      end    
+      item
+        Title.Caption = 'Data de cadastro'
+        FieldName = 'Data de cadastro'
+      end    
+      item
+        Title.Caption = 'Status'
+        FieldName = 'Status'
+      end>
+    DataSource = cadProdutosF.dsCadModelo
+    TabOrder = 1
+    OnDblClick = DBGrid1DblClick
+  end
+  object btnPesquisa: TBitBtn
+    Left = 136
+    Height = 30
+    Top = 24
+    Width = 75
+    Caption = 'btnPesquisa'
+    OnClick = btnPesquisaClick
+    TabOrder = 2
+  end
+end

@@ -1,22 +1,22 @@
 object sobreF: TsobreF
   Left = 844
-  Height = 376
+  Height = 343
   Top = 272
   Width = 426
-  Caption = 'sobreF'
-  ClientHeight = 376
+  Caption = 'Sobre o sistema'
+  ClientHeight = 343
   ClientWidth = 426
   Position = poScreenCenter
   LCLVersion = '3.8.0.0'
   object Memo1: TMemo
     Left = 0
-    Height = 376
+    Height = 343
     Top = 0
     Width = 426
     Align = alClient
     Lines.Strings = (
       'Nome do Software: SGGB (Sistema Gerenciador Geral Básico)'
-      'Versão: 1.1.14'
+      'Versão: 1.1.17'
       'Plataforma: Windows e Linux'
       'Desenvolvedor: Enzo D Andrey Lavieri Yarid'
       ''
@@ -31,7 +31,7 @@ object sobreF: TsobreF
       'Requisitos mínimos: Windows 10, 2GB de RAM, 1GB de espaço em disco.'
       ''
       'Licença:'
-      'Software open source.'
+      'Software e sistema open source =)'
       ''
       'Contato:'
       'devenzolavieri@gmail.com | (44) 99159-9057'
