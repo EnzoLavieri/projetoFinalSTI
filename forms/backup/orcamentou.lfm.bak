@@ -1,4 +1,5 @@
 inherited orcamentoF: TorcamentoF
+<<<<<<< HEAD
   Left = 351
   Height = 485
   Top = 187
@@ -6,10 +7,20 @@ inherited orcamentoF: TorcamentoF
   Caption = 'Orcamentos'
   ClientHeight = 485
   ClientWidth = 1202
+=======
+  Left = 761
+  Height = 535
+  Top = 222
+  Width = 1078
+  Caption = 'Orcamentos'
+  ClientHeight = 535
+  ClientWidth = 1078
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
   OnCreate = FormCreate
   OnShow = nil
   WindowState = wsMaximized
   inherited PageControl1: TPageControl
+<<<<<<< HEAD
     Height = 485
     Width = 1202
     ActivePage = TabSheet2
@@ -21,15 +32,34 @@ inherited orcamentoF: TorcamentoF
       inherited Panel1: TPanel
         Width = 1194
         ClientWidth = 1194
+=======
+    Height = 535
+    Width = 1078
+    OnChange = PageControl1Change
+    inherited TabSheet1: TTabSheet
+      ClientHeight = 507
+      ClientWidth = 1070
+      inherited Panel1: TPanel
+        Width = 1070
+        ClientWidth = 1070
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
         Color = clScrollBar
         DockSite = False
       end
       inherited Panel2: TPanel
+<<<<<<< HEAD
         Height = 100
         Top = 357
         Width = 1194
         ClientHeight = 100
         ClientWidth = 1194
+=======
+        Height = 70
+        Top = 437
+        Width = 1070
+        ClientHeight = 70
+        ClientWidth = 1070
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
         Color = clScrollBar
         DockSite = False
         inherited btnNovo: TBitBtn
@@ -201,6 +231,7 @@ inherited orcamentoF: TorcamentoF
         end
       end
       inherited DBGrid1: TDBGrid
+<<<<<<< HEAD
         Height = 287
         Width = 1194
         Columns = <        
@@ -208,30 +239,60 @@ inherited orcamentoF: TorcamentoF
             PickList.Strings = (            )
             Title.Caption = 'ID'
             Width = 50
+=======
+        Height = 367
+        Width = 1070
+        AutoFillColumns = True
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'orcamentoid'
+            Width = 208
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
             FieldName = 'orcamentoid'
           end        
           item
             PickList.Strings = (            )
+<<<<<<< HEAD
             Title.Caption = 'ID cliente'
             Width = 60
+=======
+            Title.Caption = 'clienteid'
+            Width = 208
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
             FieldName = 'clienteid'
           end        
           item
             PickList.Strings = (            )
+<<<<<<< HEAD
             Title.Caption = 'Data do orcamento'
             Width = 110
+=======
+            Title.Caption = 'dt_orcamento'
+            Width = 207
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
             FieldName = 'dt_orcamento'
           end        
           item
             PickList.Strings = (            )
+<<<<<<< HEAD
             Title.Caption = 'Data de validade'
             Width = 110
+=======
+            Title.Caption = 'dt_validade_orcamento'
+            Width = 207
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
             FieldName = 'dt_validade_orcamento'
           end        
           item
             PickList.Strings = (            )
+<<<<<<< HEAD
             Title.Caption = 'Valor total'
             Width = 70
+=======
+            Title.Caption = 'vl_total_orcamento'
+            Width = 207
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
             FieldName = 'vl_total_orcamento'
           end>
         DataSource = dsCadModelo
@@ -239,6 +300,7 @@ inherited orcamentoF: TorcamentoF
       end
     end
     inherited TabSheet2: TTabSheet
+<<<<<<< HEAD
       ClientHeight = 457
       ClientWidth = 1194
       inherited Panel4: TPanel
@@ -248,6 +310,15 @@ inherited orcamentoF: TorcamentoF
         BevelColor = clScrollBar
         ClientHeight = 100
         ClientWidth = 1194
+=======
+      ClientHeight = 507
+      ClientWidth = 1070
+      inherited Panel4: TPanel
+        Top = 437
+        Width = 1070
+        BevelColor = clScrollBar
+        ClientWidth = 1070
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
         Color = clScrollBar
         DockSite = False
         inherited btnGravar: TBitBtn
@@ -501,10 +572,17 @@ inherited orcamentoF: TorcamentoF
         Left = 0
         Height = 128
         Top = 0
+<<<<<<< HEAD
         Width = 1194
         Align = alTop
         ClientHeight = 128
         ClientWidth = 1194
+=======
+        Width = 1070
+        Align = alTop
+        ClientHeight = 128
+        ClientWidth = 1070
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
         TabOrder = 1
         object DBEdit2: TDBEdit
           Left = 24
@@ -628,9 +706,15 @@ inherited orcamentoF: TorcamentoF
       end
       object DBGrid2: TDBGrid[3]
         Left = 0
+<<<<<<< HEAD
         Height = 229
         Top = 128
         Width = 1194
+=======
+        Height = 309
+        Top = 128
+        Width = 1070
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
         Align = alClient
         Color = clWindow
         Columns = <        

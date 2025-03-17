@@ -13,6 +13,7 @@ type
   { TcadProdutosF }
 
   TcadProdutosF = class(TxCadPaiF)
+    BitBtn1: TBitBtn;
     edtIdProduto: TDBEdit;
     edtCategoria: TDBEdit;
     edtDescricao: TDBEdit;
@@ -36,6 +37,7 @@ type
     qryProdutosstatus_produto: TZRawStringField;
     qryProdutosvl_venda_produto: TZBCDField;
     ZUpdateSQL1: TZUpdateSQL;
+    procedure BitBtn1Click(Sender: TObject);
     procedure btnExluirClick(Sender: TObject);
     procedure btnGravarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -51,6 +53,8 @@ var
   cadProdutosF: TcadProdutosF;
 
 implementation
+
+uses pesProdutoU;
 
 {$R *.lfm}
 
@@ -81,6 +85,7 @@ begin
   end;
 end;
 
+<<<<<<< HEAD
 procedure TcadProdutosF.btnGravarClick(Sender: TObject);
 begin
   inherited;
@@ -91,5 +96,13 @@ begin
 end;
 
 
+=======
+procedure TcadProdutosF.BitBtn1Click(Sender: TObject);
+begin
+      pesProdutoF := TpesProdutoF.create(Self);
+     pesProdutoF.ShowModal;
+end;
+
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
 
 end.

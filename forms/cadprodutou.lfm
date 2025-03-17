@@ -1,8 +1,15 @@
 inherited cadProdutosF: TcadProdutosF
+<<<<<<< HEAD
   Left = 253
   Height = 436
   Top = 126
   Width = 1055
+=======
+  Left = 744
+  Height = 436
+  Top = 314
+  Width = 830
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
   Caption = 'Produtos'
   ClientHeight = 436
   ClientWidth = 1055
@@ -23,6 +30,15 @@ inherited cadProdutosF: TcadProdutosF
         DockSite = False
         inherited SpeedButton1: TSpeedButton
           OnClick = SpeedButton1Click
+        end
+        object BitBtn1: TBitBtn[3]
+          Left = 248
+          Height = 30
+          Top = 17
+          Width = 75
+          Caption = 'BitBtn1'
+          OnClick = BitBtn1Click
+          TabOrder = 1
         end
       end
       inherited Panel2: TPanel
@@ -201,6 +217,7 @@ inherited cadProdutosF: TcadProdutosF
         end
       end
       inherited DBGrid1: TDBGrid
+<<<<<<< HEAD
         Height = 228
         Top = 80
         Width = 1047
@@ -209,42 +226,82 @@ inherited cadProdutosF: TcadProdutosF
             PickList.Strings = (            )
             Title.Caption = 'ID'
             Width = 50
+=======
+        Height = 268
+        Width = 822
+        AutoFillColumns = True
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'produtoid'
+            Width = 113
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
             FieldName = 'produtoid'
           end        
           item
             PickList.Strings = (            )
+<<<<<<< HEAD
             Title.Caption = 'Categoria'
             Width = 60
+=======
+            Title.Caption = 'categoriaprodutoid'
+            Width = 113
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
             FieldName = 'categoriaprodutoid'
           end        
           item
             PickList.Strings = (            )
+<<<<<<< HEAD
             Title.Caption = 'Descrição'
             Width = 120
+=======
+            Title.Caption = 'ds_produto'
+            Width = 113
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
             FieldName = 'ds_produto'
           end        
           item
             PickList.Strings = (            )
+<<<<<<< HEAD
             Title.Caption = 'Observação'
             Width = 120
+=======
+            Title.Caption = 'obs_produto'
+            Width = 113
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
             FieldName = 'obs_produto'
           end        
           item
             PickList.Strings = (            )
+<<<<<<< HEAD
             Title.Caption = 'Valor'
             Width = 60
+=======
+            Title.Caption = 'vl_venda_produto'
+            Width = 113
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
             FieldName = 'vl_venda_produto'
           end        
           item
             PickList.Strings = (            )
+<<<<<<< HEAD
             Title.Caption = 'Data de cadastro'
             Width = 100
+=======
+            Title.Caption = 'dt_cadastro_produto'
+            Width = 112
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
             FieldName = 'dt_cadastro_produto'
           end        
           item
             PickList.Strings = (            )
+<<<<<<< HEAD
             Title.Caption = 'Status'
             Width = 60
+=======
+            Title.Caption = 'status_produto'
+            Width = 112
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
             FieldName = 'status_produto'
           end>
         DataSource = dsCadModelo
@@ -519,7 +576,10 @@ inherited cadProdutosF: TcadProdutosF
         Height = 23
         Top = 48
         Width = 24
+<<<<<<< HEAD
         DataField = 'produtoid'
+=======
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
         DataSource = dsCadModelo
         Alignment = taRightJustify
         MaxLength = 0
@@ -537,7 +597,10 @@ inherited cadProdutosF: TcadProdutosF
         Height = 23
         Top = 144
         Width = 64
+<<<<<<< HEAD
         DataField = 'categoriaprodutoid'
+=======
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
         DataSource = dsCadModelo
         Alignment = taRightJustify
         MaxLength = 0
@@ -548,7 +611,10 @@ inherited cadProdutosF: TcadProdutosF
         Height = 23
         Top = 208
         Width = 120
+<<<<<<< HEAD
         DataField = 'ds_produto'
+=======
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
         DataSource = dsCadModelo
         MaxLength = 50
         TabOrder = 3
@@ -558,7 +624,10 @@ inherited cadProdutosF: TcadProdutosF
         Height = 23
         Top = 240
         Width = 120
+<<<<<<< HEAD
         DataField = 'obs_produto'
+=======
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
         DataSource = dsCadModelo
         MaxLength = 300
         TabOrder = 4
@@ -568,7 +637,10 @@ inherited cadProdutosF: TcadProdutosF
         Height = 23
         Top = 80
         Width = 48
+<<<<<<< HEAD
         DataField = 'vl_venda_produto'
+=======
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
         DataSource = dsCadModelo
         Alignment = taRightJustify
         MaxLength = 0
@@ -579,7 +651,10 @@ inherited cadProdutosF: TcadProdutosF
         Height = 23
         Top = 176
         Width = 72
+<<<<<<< HEAD
         DataField = 'dt_cadastro_produto'
+=======
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
         DataSource = dsCadModelo
         MaxLength = 0
         TabOrder = 6
@@ -589,9 +664,12 @@ inherited cadProdutosF: TcadProdutosF
         Height = 23
         Top = 112
         Width = 56
+<<<<<<< HEAD
         DataField = 'status_produto'
+=======
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
         DataSource = dsCadModelo
-        MaxLength = 10
+        MaxLength = 0
         TabOrder = 7
       end
       object Label3: TLabel[9]
@@ -644,6 +722,7 @@ inherited cadProdutosF: TcadProdutosF
   end
   object qryProdutos: TZQuery[2]
     Connection = DataModule1.ZConnection1
+    Active = True
     SQL.Strings = (
       'select * from produto '
     )

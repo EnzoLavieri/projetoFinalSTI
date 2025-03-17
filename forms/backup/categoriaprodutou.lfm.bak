@@ -1,8 +1,15 @@
 inherited cadCategProdutosF: TcadCategProdutosF
+<<<<<<< HEAD
   Left = 502
   Height = 493
   Top = 360
   Width = 863
+=======
+  Left = 483
+  Height = 511
+  Top = 214
+  Width = 1101
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
   Caption = 'Categoria dos produtos'
   ClientHeight = 493
   ClientWidth = 863
@@ -202,6 +209,7 @@ inherited cadCategProdutosF: TcadCategProdutosF
         end
       end
       inherited DBGrid1: TDBGrid
+<<<<<<< HEAD
         Height = 285
         Top = 80
         Width = 855
@@ -210,12 +218,27 @@ inherited cadCategProdutosF: TcadCategProdutosF
             PickList.Strings = (            )
             Title.Caption = 'ID'
             Width = 50
+=======
+        Height = 343
+        Width = 1093
+        AutoFillColumns = True
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'categoriaprodutoid'
+            Width = 530
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
             FieldName = 'categoriaprodutoid'
           end        
           item
             PickList.Strings = (            )
+<<<<<<< HEAD
             Title.Caption = 'Descrição'#13#10#13#10#13#10
             Width = 150
+=======
+            Title.Caption = 'ds_categoria_produto'
+            Width = 530
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
             FieldName = 'ds_categoria_produto'
           end>
         DataSource = dsCadModelo
@@ -487,7 +510,10 @@ inherited cadCategProdutosF: TcadCategProdutosF
         Height = 23
         Top = 64
         Width = 40
+<<<<<<< HEAD
         DataField = 'categoriaprodutoid'
+=======
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
         DataSource = dsCadModelo
         Alignment = taRightJustify
         MaxLength = 0
@@ -498,9 +524,12 @@ inherited cadCategProdutosF: TcadCategProdutosF
         Height = 23
         Top = 96
         Width = 80
+<<<<<<< HEAD
         DataField = 'ds_categoria_produto'
+=======
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
         DataSource = dsCadModelo
-        MaxLength = 50
+        MaxLength = 0
         TabOrder = 2
       end
       object Label2: TLabel[3]
@@ -521,15 +550,16 @@ inherited cadCategProdutosF: TcadCategProdutosF
   end
   inherited dsCadModelo: TDataSource
     DataSet = qryCetegProdutos
-    Left = 304
+    Left = 352
   end
   object qryCetegProdutos: TZQuery[2]
     Connection = DataModule1.ZConnection1
+    Active = True
     SQL.Strings = (
       'select * from categoria_produto '
     )
     Params = <>
-    Left = 400
+    Left = 448
     Top = 49
     object qryCetegProdutoscategoriaprodutoid: TZIntegerField
       FieldKind = fkData
@@ -562,8 +592,8 @@ inherited cadCategProdutosF: TcadCategProdutosF
       'WHERE CATEGORIAPRODUTOID = :OLD_CATEGORIAPRODUTOID;'
     )
     UseSequenceFieldForRefreshSQL = False
-    Left = 504
-    Top = 48
+    Left = 552
+    Top = 49
     ParamData = <    
       item
         Name = 'DS_CATEGORIA_PRODUTO'

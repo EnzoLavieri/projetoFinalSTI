@@ -11,7 +11,11 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5"/>
         <CursorPos X="31" Y="23"/>
+<<<<<<< HEAD
         <UsageCount Value="96"/>
+=======
+        <UsageCount Value="87"/>
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
       </Unit>
       <Unit>
         <Filename Value="xcadpai.pas"/>
@@ -20,11 +24,18 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="xCadPai"/>
+<<<<<<< HEAD
         <EditorIndex Value="9"/>
         <TopLine Value="54"/>
         <CursorPos X="33" Y="74"/>
         <UsageCount Value="96"/>
         <Loaded Value="True"/>
+=======
+        <EditorIndex Value="-1"/>
+        <TopLine Value="45"/>
+        <CursorPos X="3" Y="56"/>
+        <UsageCount Value="87"/>
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
       </Unit>
       <Unit>
         <Filename Value="forms\menu.pas"/>
@@ -32,11 +43,18 @@
         <ComponentName Value="menuF"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+<<<<<<< HEAD
         <EditorIndex Value="5"/>
         <TopLine Value="38"/>
         <CursorPos X="3" Y="52"/>
         <UsageCount Value="96"/>
         <Loaded Value="True"/>
+=======
+        <EditorIndex Value="-1"/>
+        <TopLine Value="61"/>
+        <CursorPos Y="68"/>
+        <UsageCount Value="87"/>
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
       </Unit>
       <Unit>
         <Filename Value="forms\usuariosu.pas"/>
@@ -45,12 +63,18 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="usuariosU"/>
+<<<<<<< HEAD
         <EditorIndex Value="3"/>
         <TopLine Value="73"/>
         <CursorPos X="19" Y="82"/>
         <UsageCount Value="94"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
+=======
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="69"/>
+        <UsageCount Value="85"/>
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
       </Unit>
       <Unit>
         <Filename Value="forms\clientesu.pas"/>
@@ -59,12 +83,19 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="clientesU"/>
+<<<<<<< HEAD
         <EditorIndex Value="1"/>
         <TopLine Value="58"/>
         <CursorPos X="19" Y="69"/>
         <UsageCount Value="94"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
+=======
+        <EditorIndex Value="-1"/>
+        <TopLine Value="42"/>
+        <CursorPos X="47" Y="26"/>
+        <UsageCount Value="85"/>
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
       </Unit>
       <Unit>
         <Filename Value="forms\categoriaprodutou.pas"/>
@@ -73,9 +104,16 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="categoriaProdutoU"/>
+<<<<<<< HEAD
         <TopLine Value="50"/>
         <CursorPos X="21" Y="64"/>
         <UsageCount Value="94"/>
+=======
+        <EditorIndex Value="2"/>
+        <TopLine Value="30"/>
+        <CursorPos X="3" Y="36"/>
+        <UsageCount Value="85"/>
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -86,10 +124,17 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="cadProdutoU"/>
+<<<<<<< HEAD
         <EditorIndex Value="2"/>
         <TopLine Value="67"/>
         <CursorPos X="17" Y="78"/>
         <UsageCount Value="94"/>
+=======
+        <EditorIndex Value="4"/>
+        <TopLine Value="68"/>
+        <CursorPos X="35" Y="62"/>
+        <UsageCount Value="85"/>
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -100,7 +145,12 @@
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dataModule"/>
         <EditorIndex Value="-1"/>
+<<<<<<< HEAD
         <UsageCount Value="90"/>
+=======
+        <CursorPos X="66"/>
+        <UsageCount Value="81"/>
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
       </Unit>
       <Unit>
         <Filename Value="relatoriodeclientesu.pas"/>
@@ -112,7 +162,11 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="15"/>
         <CursorPos X="3" Y="28"/>
+<<<<<<< HEAD
         <UsageCount Value="79"/>
+=======
+        <UsageCount Value="70"/>
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
       </Unit>
       <Unit>
         <Filename Value="forms\reldeprodutosu.pas"/>
@@ -124,7 +178,11 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="20"/>
         <CursorPos Y="44"/>
+<<<<<<< HEAD
         <UsageCount Value="76"/>
+=======
+        <UsageCount Value="67"/>
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
       </Unit>
       <Unit>
         <Filename Value="forms\relorcamentosu.pas"/>
@@ -135,7 +193,11 @@
         <UnitName Value="relOrcamentosU"/>
         <EditorIndex Value="-1"/>
         <CursorPos Y="39"/>
+<<<<<<< HEAD
         <UsageCount Value="74"/>
+=======
+        <UsageCount Value="65"/>
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
       </Unit>
       <Unit>
         <Filename Value="forms\sobreu.pas"/>
@@ -145,7 +207,11 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="sobreU"/>
         <EditorIndex Value="-1"/>
+<<<<<<< HEAD
         <UsageCount Value="73"/>
+=======
+        <UsageCount Value="64"/>
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
       </Unit>
       <Unit>
         <Filename Value="forms\relcategoriau.pas"/>
@@ -155,9 +221,13 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="relCategoriaU"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="14"/>
+        <TopLine Value="18"/>
         <CursorPos X="53" Y="38"/>
+<<<<<<< HEAD
         <UsageCount Value="72"/>
+=======
+        <UsageCount Value="63"/>
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
       </Unit>
       <Unit>
         <Filename Value="forms\orcamentoitemu.pas"/>
@@ -166,10 +236,19 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="orcamentoItemU"/>
+<<<<<<< HEAD
         <EditorIndex Value="-1"/>
         <TopLine Value="64"/>
         <CursorPos X="9" Y="67"/>
         <UsageCount Value="70"/>
+=======
+        <EditorIndex Value="3"/>
+        <TopLine Value="16"/>
+        <CursorPos X="29" Y="44"/>
+        <UsageCount Value="61"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
       </Unit>
       <Unit>
         <Filename Value="forms\orcamentou.pas"/>
@@ -178,11 +257,33 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="orcamentoU"/>
+<<<<<<< HEAD
         <EditorIndex Value="8"/>
         <TopLine Value="90"/>
         <CursorPos X="33" Y="95"/>
         <UsageCount Value="69"/>
+=======
+        <TopLine Value="78"/>
+        <CursorPos X="15" Y="112"/>
+        <UsageCount Value="60"/>
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="pesProdutoF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="pesProdutoU"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="45"/>
+        <CursorPos X="83" Y="66"/>
+        <UsageCount Value="30"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="forms\pesprodutou.pas"/>
@@ -322,6 +423,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="393"/>
         <CursorPos Y="406"/>
+<<<<<<< HEAD
         <UsageCount Value="8"/>
       </Unit>
       <Unit>
@@ -335,6 +437,22 @@
       <Unit>
         <Filename Value="C:\Users\enzol\AppData\Local\lazarus\onlinepackagemanager\packages\zeosdbo\src\component\ZAbstractRODataset.pas"/>
         <EditorIndex Value="7"/>
+=======
+        <UsageCount Value="9"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\..\enzol\AppData\Local\lazarus\onlinepackagemanager\packages\zeosdbo\src\dbc\ZDbcPostgreSql.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="657"/>
+        <CursorPos Y="670"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\..\enzol\AppData\Local\lazarus\onlinepackagemanager\packages\zeosdbo\src\component\ZAbstractRODataset.pas"/>
+        <EditorIndex Value="-1"/>
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
         <TopLine Value="2060"/>
         <CursorPos Y="2073"/>
         <UsageCount Value="11"/>
@@ -386,9 +504,24 @@
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-db\src\base\fields.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="885"/>
+        <CursorPos X="18" Y="895"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="5129"/>
+        <CursorPos X="20" Y="5142"/>
+        <UsageCount Value="10"/>
+      </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
       <Position>
+<<<<<<< HEAD
         <Filename Value="forms\clientesu.pas"/>
         <Caret Line="82" Column="30" TopLine="51"/>
       </Position>
@@ -507,6 +640,126 @@
       <Position>
         <Filename Value="forms\loginu.pas"/>
         <Caret Line="56" Column="20" TopLine="35"/>
+=======
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="25" Column="48" TopLine="13"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\orcamentou.pas"/>
+        <Caret Line="82" Column="26" TopLine="63"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="65" Column="73" TopLine="47"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="57" Column="39" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="66" Column="65" TopLine="47"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="61" Column="18" TopLine="48"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="21" Column="30" TopLine="21"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="23" Column="59" TopLine="23"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="58" Column="53" TopLine="48"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="66" Column="63" TopLine="47"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="71" Column="19" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="76" Column="69" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="78" Column="5" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="75" Column="22" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="64" Column="23" TopLine="48"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="70" Column="34" TopLine="47"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="60" Column="33" TopLine="39"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\cadprodutou.pas"/>
+        <Caret Line="62" Column="35" TopLine="68"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="74" TopLine="48"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="67" TopLine="48"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="66" Column="90" TopLine="48"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="62" Column="74" TopLine="51"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="67" Column="4" TopLine="51"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="72" Column="5" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="68" Column="9" TopLine="47"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="67" Column="81" TopLine="48"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="68" Column="8" TopLine="48"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="72" Column="72" TopLine="48"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="67" Column="31" TopLine="48"/>
+      </Position>
+      <Position>
+        <Filename Value="forms\pesprodutou.pas"/>
+        <Caret Line="66" Column="82" TopLine="45"/>
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
       </Position>
     </JumpHistory>
     <RunParams>

@@ -21,6 +21,7 @@ type
     qryCetegProdutoscategoriaprodutoid: TZIntegerField;
     qryCetegProdutosds_categoria_produto: TZRawStringField;
     updtCategProdutos: TZUpdateSQL;
+    procedure BitBtn1Click(Sender: TObject);
     procedure btnExluirClick(Sender: TObject);
     procedure btnGravarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -68,6 +69,7 @@ begin
   end;
 end;
 
+<<<<<<< HEAD
 procedure TcadCategProdutosF.btnGravarClick(Sender: TObject);
 begin
   inherited;
@@ -75,6 +77,11 @@ begin
   if not (dsCadModelo.DataSet.State in [dsEdit, dsInsert]) then
     dsCadModelo.DataSet.Edit;
   dsCadModelo.DataSet.Post;
+=======
+procedure TcadCategProdutosF.BitBtn1Click(Sender: TObject);
+begin
+
+>>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
 end;
 
 end.

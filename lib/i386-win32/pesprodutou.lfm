@@ -1,13 +1,4 @@
 object pesProdutoF: TpesProdutoF
-<<<<<<< HEAD
-  Left = 751
-  Height = 357
-  Top = 334
-  Width = 667
-  Caption = 'pesProdutoF'
-  ClientHeight = 357
-  ClientWidth = 667
-=======
   Left = 1177
   Height = 357
   Top = 385
@@ -15,25 +6,17 @@ object pesProdutoF: TpesProdutoF
   Caption = 'pesProdutoF'
   ClientHeight = 357
   ClientWidth = 730
->>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
   Position = poScreenCenter
   LCLVersion = '3.8.0.0'
   object Panel1: TPanel
     Left = 0
     Height = 66
     Top = 0
-<<<<<<< HEAD
-    Width = 667
-=======
     Width = 730
->>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
     Align = alTop
+    Caption = 'Panel1'
     ClientHeight = 66
-<<<<<<< HEAD
-    ClientWidth = 667
-=======
     ClientWidth = 730
->>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
     TabOrder = 0
     object edtPesquisa: TEdit
       Left = 48
@@ -47,31 +30,12 @@ object pesProdutoF: TpesProdutoF
     Left = 0
     Height = 291
     Top = 66
-<<<<<<< HEAD
-    Width = 667
-=======
     Width = 730
->>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
     Align = alClient
     AutoFillColumns = True
     Color = clWindow
     Columns = <    
       item
-<<<<<<< HEAD
-        Title.Caption = 'ID'
-        Width = 40
-        FieldName = 'produtoid'
-      end    
-      item
-        Title.Caption = 'ID categoria'
-        Width = 70
-        FieldName = 'categoriaprodutoid'
-      end    
-      item
-        Title.Caption = 'Descrição'
-        Width = 120
-        FieldName = 'ds_produto'
-=======
         Title.Caption = 'produtoid'
         Width = 100
         FieldName = 'produtoid'
@@ -105,7 +69,6 @@ object pesProdutoF: TpesProdutoF
         Title.Caption = 'status_produto'
         Width = 99
         FieldName = 'status_produto'
->>>>>>> 47db0885b5910963ca5074b76465a8e4af654f2a
       end>
     DataSource = dsCadProduto
     TabOrder = 1
@@ -116,7 +79,7 @@ object pesProdutoF: TpesProdutoF
     Height = 30
     Top = 24
     Width = 75
-    Caption = 'Pesquisar'
+    Caption = 'btnPesquisa'
     OnClick = btnPesquisaClick
     TabOrder = 2
   end
