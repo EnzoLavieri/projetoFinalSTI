@@ -1,0 +1,124 @@
+object loginF: TloginF
+  Left = 693
+  Height = 240
+  Top = 164
+  Width = 291
+  Caption = 'loginF'
+  ClientHeight = 240
+  ClientWidth = 291
+  Color = clScrollBar
+  LCLVersion = '3.8.0.0'
+  object ButtonLogin: TButton
+    Left = 97
+    Height = 25
+    Top = 176
+    Width = 75
+    Caption = 'Entrar'
+    TabOrder = 0
+    OnClick = ButtonLoginClick
+  end
+  object EditUsername: TEdit
+    Left = 64
+    Height = 23
+    Top = 96
+    Width = 140
+    TabOrder = 1
+  end
+  object EditPassword: TEdit
+    Left = 64
+    Height = 23
+    Top = 144
+    Width = 140
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 2
+  end
+  object Label1: TLabel
+    Left = 64
+    Height = 15
+    Top = 80
+    Width = 94
+    Caption = 'Nome de usuario:'
+  end
+  object Label2: TLabel
+    Left = 64
+    Height = 15
+    Top = 128
+    Width = 35
+    Caption = 'Senha:'
+  end
+  object Label3: TLabel
+    Left = 64
+    Height = 59
+    Top = 8
+    Width = 140
+    Caption = 'SGGB'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -48
+    Font.Name = 'Verdana'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object ZQueryLogin: TZQuery
+    Connection = DataModule1.ZConnection1
+    SQL.Strings = (
+      'SELECT * FROM usuarios WHERE usuario= :usuario  AND senha= :senha'
+    )
+    Params = <    
+      item
+        Name = 'usuario'
+      end    
+      item
+        Name = 'senha'
+      end>
+    Left = 240
+    Top = 16
+    ParamData = <    
+      item
+        Name = 'usuario'
+      end    
+      item
+        Name = 'senha'
+      end>
+    object ZQueryLoginid: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'id'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ZQueryLoginusuario: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'usuario'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object ZQueryLoginnome_completo: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'nome_completo'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object ZQueryLoginsenha: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'senha'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+  end
+end

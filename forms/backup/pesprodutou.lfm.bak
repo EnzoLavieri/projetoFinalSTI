@@ -1,22 +1,21 @@
 object pesProdutoF: TpesProdutoF
-  Left = 926
+  Left = 447
   Height = 357
-  Top = 261
-  Width = 492
+  Top = 244
+  Width = 667
   Caption = 'pesProdutoF'
   ClientHeight = 357
-  ClientWidth = 492
+  ClientWidth = 667
   Position = poScreenCenter
   LCLVersion = '3.8.0.0'
   object Panel1: TPanel
     Left = 0
     Height = 66
     Top = 0
-    Width = 492
+    Width = 667
     Align = alTop
-    Caption = 'Panel1'
     ClientHeight = 66
-    ClientWidth = 492
+    ClientWidth = 667
     TabOrder = 0
     object edtPesquisa: TEdit
       Left = 48
@@ -24,44 +23,30 @@ object pesProdutoF: TpesProdutoF
       Top = 24
       Width = 80
       TabOrder = 0
-      Text = 'edtPesquisa'
     end
   end
   object DBGrid1: TDBGrid
     Left = 0
     Height = 291
     Top = 66
-    Width = 492
+    Width = 667
     Align = alClient
     Color = clWindow
     Columns = <    
       item
         Title.Caption = 'ID'
-        FieldName = 'ID'
+        Width = 40
+        FieldName = 'produtoid'
       end    
       item
-        Title.Caption = 'Descicao'
-        FieldName = 'Descicao'
+        Title.Caption = 'ID categoria'
+        Width = 70
+        FieldName = 'categoriaprodutoid'
       end    
       item
-        Title.Caption = 'Observacao'
-        FieldName = 'Observacao'
-      end    
-      item
-        Title.Caption = 'ID da categoria'
-        FieldName = 'ID da categoria'
-      end    
-      item
-        Title.Caption = 'Preco'
-        FieldName = 'Preco'
-      end    
-      item
-        Title.Caption = 'Data de cadastro'
-        FieldName = 'Data de cadastro'
-      end    
-      item
-        Title.Caption = 'Status'
-        FieldName = 'Status'
+        Title.Caption = 'Descrição'
+        Width = 120
+        FieldName = 'ds_produto'
       end>
     DataSource = cadProdutosF.dsCadModelo
     TabOrder = 1
@@ -72,94 +57,8 @@ object pesProdutoF: TpesProdutoF
     Height = 30
     Top = 24
     Width = 75
-    Caption = 'btnPesquisa'
+    Caption = 'Pesquisar'
     OnClick = btnPesquisaClick
     TabOrder = 2
-  end
-  object qryPesqProduto: TZQuery
-    Connection = DataModule1.ZConnection1
-    Active = True
-    SQL.Strings = (
-      #9' select * from produto'
-    )
-    Params = <>
-    Left = 302
-    Top = 152
-    object qryPesqProdutoprodutoid: TZIntegerField
-      FieldKind = fkData
-      FieldName = 'produtoid'
-      Index = 0
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-    end
-    object qryPesqProdutocategoriaprodutoid: TZIntegerField
-      FieldKind = fkData
-      FieldName = 'categoriaprodutoid'
-      Index = 1
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-    end
-    object qryPesqProdutods_produto: TZRawStringField
-      FieldKind = fkData
-      FieldName = 'ds_produto'
-      Index = 2
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Size = 50
-    end
-    object qryPesqProdutoobs_produto: TZRawStringField
-      FieldKind = fkData
-      FieldName = 'obs_produto'
-      Index = 3
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      Size = 300
-    end
-    object qryPesqProdutovl_venda_produto: TZBCDField
-      FieldKind = fkData
-      FieldName = 'vl_venda_produto'
-      Index = 4
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Precision = 15
-      Currency = False
-      MaxValue = 0
-      MinValue = 0
-      Size = 2
-    end
-    object qryPesqProdutodt_cadastro_produto: TZDateTimeField
-      FieldKind = fkData
-      FieldName = 'dt_cadastro_produto'
-      Index = 5
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-    end
-    object qryPesqProdutostatus_produto: TZRawStringField
-      FieldKind = fkData
-      FieldName = 'status_produto'
-      Index = 6
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Size = 10
-    end
-  end
-  object dsPesProdutos: TDataSource
-    DataSet = qryPesqProduto
-    Left = 192
-    Top = 154
   end
 end

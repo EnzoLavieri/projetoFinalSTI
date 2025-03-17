@@ -16,7 +16,7 @@ object sobreF: TsobreF
     Align = alClient
     Lines.Strings = (
       'Nome do Software: SGGB (Sistema Gerenciador Geral Básico)'
-      'Versão: 1.1.17'
+      'Versão: 1.1.25'
       'Plataforma: Windows e Linux'
       'Desenvolvedor: Enzo D Andrey Lavieri Yarid'
       ''

@@ -44,6 +44,7 @@ type
     qryOrcamentosorcamentoid: TZIntegerField;
     qryOrcamentosvl_total_orcamento: TZBCDField;
     procedure AbreOrcItens(orcamentoid: integer);
+    procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn3Click(Sender: TObject);
     procedure btnNovoClick(Sender: TObject);
     procedure DBGrid1DblClick(Sender: TObject);
@@ -83,6 +84,17 @@ begin
   end;
 end;
 
+
+procedure TorcamentoF.FormCreate(Sender: TObject);
+begin
+  qryOrcamentos.Active := True;
+end;
+
+procedure TorcamentoF.BitBtn1Click(Sender: TObject);
+begin
+   dsOrcamentoItem.DataSet.Post;
+end;
+
 procedure TorcamentoF.BitBtn3Click(Sender: TObject);
 begin
   orcamentoItemF := TorcamentoItemF.Create(Self);
@@ -102,15 +114,9 @@ begin
   AbreOrcItens(qryOrcamentosorcamentoid.AsInteger);
 end;
 
-procedure TorcamentoF.FormCreate(Sender: TObject);
-begin
-  qryOrcamentos.Active := True;
-end;
-
 procedure TorcamentoF.PageControl1Change(Sender: TObject);
 begin
   AbreOrcItens(qryOrcamentosorcamentoid.AsInteger);
 end;
 
 end.
-

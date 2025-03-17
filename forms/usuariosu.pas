@@ -23,20 +23,17 @@ type
     Label4: TLabel;
     Label5: TLabel;
     qryUsuarios: TZQuery;
-    qryUsuariosID: TZIntegerField;
-    qryUsuariosNomecompleto: TZRawStringField;
-    qryUsuariosNomedousuario: TZRawStringField;
-    qryUsuariosSenha: TZRawStringField;
+    qryUsuariosid: TZIntegerField;
+    qryUsuariosnome_completo: TZRawStringField;
+    qryUsuariossenha: TZRawStringField;
+    qryUsuariosusuario: TZRawStringField;
     updtUsuarios: TZUpdateSQL;
     procedure btnExluirClick(Sender: TObject);
     procedure btnGravarClick(Sender: TObject);
-
-
+    procedure DBGrid1DblClick(Sender: TObject);
     procedure edtPesqClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
-    procedure TabSheet2ContextPopup(Sender: TObject; MousePos: TPoint;
-      var Handled: Boolean);
   private
 
   public
@@ -71,7 +68,7 @@ end;
 
 procedure TcadUsuariosF.SpeedButton1Click(Sender: TObject);
 begin
-     qryUsuarios.Close;
+  qryUsuarios.Close;
   if Edit1.Text <> '' then
     qryUsuarios.SQL.Text := 'SELECT * FROM usuarios WHERE id = ' + Edit1.Text
   else
@@ -79,16 +76,10 @@ begin
   qryUsuarios.Open;
 end;
 
-procedure TcadUsuariosF.TabSheet2ContextPopup(Sender: TObject;
-  MousePos: TPoint; var Handled: Boolean);
-begin
-
-end;
-
 procedure TcadUsuariosF.btnExluirClick(Sender: TObject);
 begin
-  if MessageDlg('Voce tem certeza que deseja excluir o usuario ' + edtIdUsuario.Text +'?',
-  mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+  if MessageDlg('Voce tem certeza que deseja excluir o usuario ' +
+    edtNomeUsuario.Text + '?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
   begin
     dsCadModelo.DataSet.Delete;
   end;
@@ -96,7 +87,20 @@ end;
 
 procedure TcadUsuariosF.btnGravarClick(Sender: TObject);
 begin
-  PageControl1.ActivePageIndex := 0;
+  inherited;
+    //gambiarra pra funcionar
+    if not (dsCadModelo.DataSet.State in [dsEdit, dsInsert]) then
+    dsCadModelo.DataSet.Edit;
+  dsCadModelo.DataSet.Post;
+end;
+
+procedure TcadUsuariosF.DBGrid1DblClick(Sender: TObject);
+begin
+  inherited;
+      if not (dsCadModelo.DataSet.State in [dsEdit, dsInsert]) then
+    dsCadModelo.DataSet.Edit;
+      dsCadModelo.DataSet.Post;
+
 end;
 
 end.

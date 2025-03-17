@@ -167,8 +167,16 @@
         <Filename Value="forms\pesprodutou.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="pesProdutoF"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="pesProdutoU"/>
+      </Unit>
+      <Unit>
+        <Filename Value="forms\loginu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="loginF"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="loginU"/>
       </Unit>
     </Units>
   </ProjectOptions>

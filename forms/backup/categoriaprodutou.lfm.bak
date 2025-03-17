@@ -1,22 +1,24 @@
 inherited cadCategProdutosF: TcadCategProdutosF
-  Left = 320
-  Height = 511
-  Top = 227
-  Width = 1101
+  Left = 502
+  Height = 493
+  Top = 360
+  Width = 863
   Caption = 'Categoria dos produtos'
-  ClientHeight = 511
-  ClientWidth = 1101
+  ClientHeight = 493
+  ClientWidth = 863
   OnCreate = FormCreate
   WindowState = wsMaximized
   inherited PageControl1: TPageControl
-    Height = 511
-    Width = 1101
+    Height = 493
+    Width = 863
     inherited TabSheet1: TTabSheet
-      ClientHeight = 483
-      ClientWidth = 1093
+      ClientHeight = 465
+      ClientWidth = 855
       inherited Panel1: TPanel
-        Width = 1093
-        ClientWidth = 1093
+        Height = 80
+        Width = 855
+        ClientHeight = 80
+        ClientWidth = 855
         Color = clScrollBar
         DockSite = False
         inherited SpeedButton1: TSpeedButton
@@ -24,17 +26,18 @@ inherited cadCategProdutosF: TcadCategProdutosF
         end
       end
       inherited Panel2: TPanel
-        Height = 70
-        Top = 413
-        Width = 1093
-        ClientHeight = 70
-        ClientWidth = 1093
+        Height = 100
+        Top = 365
+        Width = 855
+        ClientHeight = 100
+        ClientWidth = 855
         Color = clScrollBar
         DockSite = False
         inherited btnNovo: TBitBtn
-          Left = 656
-          Height = 40
-          Width = 88
+          Left = 632
+          Height = 50
+          Top = 24
+          Width = 120
           Caption = ' Novo'
           Color = clLime
           Glyph.Data = {
@@ -116,8 +119,9 @@ inherited cadCategProdutosF: TcadCategProdutosF
         end
         inherited btnFechar: TBitBtn
           Left = 848
-          Height = 40
-          Width = 88
+          Height = 50
+          Top = 24
+          Width = 120
           Caption = ' Fechar'
           Glyph.Data = {
             36090000424D3609000000000000360000002800000018000000180000000100
@@ -198,26 +202,42 @@ inherited cadCategProdutosF: TcadCategProdutosF
         end
       end
       inherited DBGrid1: TDBGrid
-        Height = 343
-        Width = 1093
-        AutoFillColumns = True
+        Height = 285
+        Top = 80
+        Width = 855
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'ID'
+            Width = 50
+            FieldName = 'categoriaprodutoid'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Descrição'#13#10#13#10#13#10
+            Width = 150
+            FieldName = 'ds_categoria_produto'
+          end>
         DataSource = dsCadModelo
       end
     end
     inherited TabSheet2: TTabSheet
-      ClientHeight = 483
-      ClientWidth = 1093
+      ClientHeight = 465
+      ClientWidth = 855
       inherited Panel4: TPanel
-        Top = 413
-        Width = 1093
+        Height = 100
+        Top = 365
+        Width = 855
         BevelColor = clScrollBar
-        ClientWidth = 1093
+        ClientHeight = 100
+        ClientWidth = 855
         Color = clScrollBar
         DockSite = False
         inherited btnGravar: TBitBtn
           Left = 88
-          Height = 40
-          Width = 88
+          Height = 50
+          Top = 24
+          Width = 120
           Glyph.Data = {
             36090000424D3609000000000000360000002800000018000000180000000100
             2000000000000009000064000000640000000000000000000000000000000000
@@ -294,11 +314,13 @@ inherited cadCategProdutosF: TcadCategProdutosF
             19C3D174172C0000000000000000000000000000000000000000000000000000
             0000000000000000000000000000000000000000000000000000
           }
+          OnClick = btnGravarClick
         end
         inherited btnCancelar: TBitBtn
           Left = 848
-          Height = 40
-          Width = 88
+          Height = 50
+          Top = 24
+          Width = 120
           Glyph.Data = {
             36090000424D3609000000000000360000002800000018000000180000000100
             20000000000000090000640000006400000000000000000000000000000A0404
@@ -378,8 +400,9 @@ inherited cadCategProdutosF: TcadCategProdutosF
         end
         inherited btnExluir: TBitBtn
           Left = 272
-          Height = 40
-          Width = 88
+          Height = 50
+          Top = 24
+          Width = 120
           Glyph.Data = {
             36090000424D3609000000000000360000002800000018000000180000000100
             2000000000000009000064000000640000000000000000000000000000000000
@@ -464,7 +487,7 @@ inherited cadCategProdutosF: TcadCategProdutosF
         Height = 23
         Top = 64
         Width = 40
-        DataField = 'Id da Categoria do Produto'
+        DataField = 'categoriaprodutoid'
         DataSource = dsCadModelo
         Alignment = taRightJustify
         MaxLength = 0
@@ -475,7 +498,7 @@ inherited cadCategProdutosF: TcadCategProdutosF
         Height = 23
         Top = 96
         Width = 80
-        DataField = 'Categoria'
+        DataField = 'ds_categoria_produto'
         DataSource = dsCadModelo
         MaxLength = 50
         TabOrder = 2
@@ -503,11 +526,30 @@ inherited cadCategProdutosF: TcadCategProdutosF
   object qryCetegProdutos: TZQuery[2]
     Connection = DataModule1.ZConnection1
     SQL.Strings = (
-      'select CATEGORIAPRODUTOID as "Id da Categoria do Produto", DS_CATEGORIA_PRODUTO as "Categoria" from categoria_produto '
+      'select * from categoria_produto '
     )
     Params = <>
     Left = 400
     Top = 49
+    object qryCetegProdutoscategoriaprodutoid: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'categoriaprodutoid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryCetegProdutosds_categoria_produto: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'ds_categoria_produto'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
   end
   object updtCategProdutos: TZUpdateSQL[3]
     DeleteSQL.Strings = (

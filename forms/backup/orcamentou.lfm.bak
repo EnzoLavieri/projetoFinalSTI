@@ -1,41 +1,42 @@
 inherited orcamentoF: TorcamentoF
-  Left = 857
+  Left = 351
   Height = 485
-  Top = 172
-  Width = 582
+  Top = 187
+  Width = 1202
   Caption = 'Orcamentos'
   ClientHeight = 485
-  ClientWidth = 582
+  ClientWidth = 1202
   OnCreate = FormCreate
   OnShow = nil
   WindowState = wsMaximized
   inherited PageControl1: TPageControl
     Height = 485
-    Width = 582
+    Width = 1202
     ActivePage = TabSheet2
     TabIndex = 1
     OnChange = PageControl1Change
     inherited TabSheet1: TTabSheet
       ClientHeight = 457
-      ClientWidth = 574
+      ClientWidth = 1194
       inherited Panel1: TPanel
-        Width = 574
-        ClientWidth = 574
+        Width = 1194
+        ClientWidth = 1194
         Color = clScrollBar
         DockSite = False
       end
       inherited Panel2: TPanel
-        Height = 70
-        Top = 387
-        Width = 574
-        ClientHeight = 70
-        ClientWidth = 574
+        Height = 100
+        Top = 357
+        Width = 1194
+        ClientHeight = 100
+        ClientWidth = 1194
         Color = clScrollBar
         DockSite = False
         inherited btnNovo: TBitBtn
-          Left = 656
-          Height = 40
-          Width = 88
+          Left = 632
+          Height = 50
+          Top = 24
+          Width = 120
           Caption = ' Novo'
           Glyph.Data = {
             36090000424D3609000000000000360000002800000018000000180000000100
@@ -117,8 +118,9 @@ inherited orcamentoF: TorcamentoF
         end
         inherited btnFechar: TBitBtn
           Left = 848
-          Height = 40
-          Width = 88
+          Height = 50
+          Top = 24
+          Width = 120
           Caption = ' Fechar'
           Glyph.Data = {
             36090000424D3609000000000000360000002800000018000000180000000100
@@ -199,38 +201,37 @@ inherited orcamentoF: TorcamentoF
         end
       end
       inherited DBGrid1: TDBGrid
-        Height = 317
-        Width = 574
-        AutoFillColumns = True
+        Height = 287
+        Width = 1194
         Columns = <        
           item
             PickList.Strings = (            )
-            Title.Caption = 'orcamentoid'
-            Width = 109
+            Title.Caption = 'ID'
+            Width = 50
             FieldName = 'orcamentoid'
           end        
           item
             PickList.Strings = (            )
-            Title.Caption = 'clienteid'
-            Width = 108
+            Title.Caption = 'ID cliente'
+            Width = 60
             FieldName = 'clienteid'
           end        
           item
             PickList.Strings = (            )
-            Title.Caption = 'dt_orcamento'
-            Width = 108
+            Title.Caption = 'Data do orcamento'
+            Width = 110
             FieldName = 'dt_orcamento'
           end        
           item
             PickList.Strings = (            )
-            Title.Caption = 'dt_validade_orcamento'
-            Width = 108
+            Title.Caption = 'Data de validade'
+            Width = 110
             FieldName = 'dt_validade_orcamento'
           end        
           item
             PickList.Strings = (            )
-            Title.Caption = 'vl_total_orcamento'
-            Width = 108
+            Title.Caption = 'Valor total'
+            Width = 70
             FieldName = 'vl_total_orcamento'
           end>
         DataSource = dsCadModelo
@@ -239,18 +240,21 @@ inherited orcamentoF: TorcamentoF
     end
     inherited TabSheet2: TTabSheet
       ClientHeight = 457
-      ClientWidth = 574
+      ClientWidth = 1194
       inherited Panel4: TPanel
-        Top = 387
-        Width = 574
+        Height = 100
+        Top = 357
+        Width = 1194
         BevelColor = clScrollBar
-        ClientWidth = 574
+        ClientHeight = 100
+        ClientWidth = 1194
         Color = clScrollBar
         DockSite = False
         inherited btnGravar: TBitBtn
           Left = 88
-          Height = 40
-          Width = 88
+          Height = 50
+          Top = 24
+          Width = 120
           Glyph.Data = {
             36090000424D3609000000000000360000002800000018000000180000000100
             2000000000000009000064000000640000000000000000000000000000000000
@@ -330,8 +334,9 @@ inherited orcamentoF: TorcamentoF
         end
         inherited btnCancelar: TBitBtn
           Left = 848
-          Height = 40
-          Width = 88
+          Height = 50
+          Top = 24
+          Width = 120
           Glyph.Data = {
             36090000424D3609000000000000360000002800000018000000180000000100
             20000000000000090000640000006400000000000000000000000000000A0404
@@ -411,8 +416,9 @@ inherited orcamentoF: TorcamentoF
         end
         inherited btnExluir: TBitBtn
           Left = 272
-          Height = 40
-          Width = 88
+          Height = 50
+          Top = 24
+          Width = 120
           Glyph.Data = {
             36090000424D3609000000000000360000002800000018000000180000000100
             2000000000000009000064000000640000000000000000000000000000000000
@@ -495,10 +501,10 @@ inherited orcamentoF: TorcamentoF
         Left = 0
         Height = 128
         Top = 0
-        Width = 574
+        Width = 1194
         Align = alTop
         ClientHeight = 128
-        ClientWidth = 574
+        ClientWidth = 1194
         TabOrder = 1
         object DBEdit2: TDBEdit
           Left = 24
@@ -566,9 +572,10 @@ inherited orcamentoF: TorcamentoF
         object BitBtn1: TBitBtn
           Left = 536
           Height = 30
-          Top = 24
+          Top = 25
           Width = 107
           Caption = 'Adicionar item'
+          OnClick = BitBtn1Click
           TabOrder = 5
         end
         object Label4: TLabel
@@ -621,35 +628,35 @@ inherited orcamentoF: TorcamentoF
       end
       object DBGrid2: TDBGrid[3]
         Left = 0
-        Height = 259
+        Height = 229
         Top = 128
-        Width = 574
+        Width = 1194
         Align = alClient
         Color = clWindow
         Columns = <        
           item
-            Title.Caption = 'Id'
+            Title.Caption = 'ID'
+            Width = 50
             FieldName = 'orcamentoitemid'
           end        
           item
-            Title.Caption = 'Id Orçamento'
-            Width = 80
-            FieldName = 'orcamentoid'
-          end        
-          item
-            Title.Caption = 'Id Produto'
+            Title.Caption = 'ID do produto'
+            Width = 90
             FieldName = 'produtoid'
           end        
           item
             Title.Caption = 'Qtde.'
+            Width = 50
             FieldName = 'qt_produto'
           end        
           item
             Title.Caption = 'Vlr. Unit.'
+            Width = 60
             FieldName = 'vl_unitario'
           end        
           item
-            Title.Caption = 'vl_total'
+            Title.Caption = 'Valor total'
+            Width = 70
             FieldName = 'vl_total'
           end>
         DataSource = dsOrcamentoItem

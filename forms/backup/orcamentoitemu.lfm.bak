@@ -1,11 +1,11 @@
 object orcamentoItemF: TorcamentoItemF
-  Left = 936
-  Height = 322
-  Top = 362
-  Width = 452
+  Left = 595
+  Height = 200
+  Top = 287
+  Width = 313
   Caption = 'orcamentoItemF'
-  ClientHeight = 322
-  ClientWidth = 452
+  ClientHeight = 200
+  ClientWidth = 313
   Position = poScreenCenter
   LCLVersion = '3.8.0.0'
   object DBEdit1: TDBEdit
@@ -13,6 +13,8 @@ object orcamentoItemF: TorcamentoItemF
     Height = 23
     Top = 48
     Width = 80
+    DataField = 'produtoid'
+    DataSource = cadProdutosF.dsCadModelo
     MaxLength = 0
     TabOrder = 0
   end
@@ -20,25 +22,21 @@ object orcamentoItemF: TorcamentoItemF
     Left = 168
     Height = 23
     Top = 48
-    Width = 160
+    Width = 104
+    DataField = 'ds_produto'
+    DataSource = cadProdutosF.dsCadModelo
     MaxLength = 0
     TabOrder = 1
   end
-  object DBEdit3: TDBEdit
-    Left = 40
-    Height = 23
-    Top = 96
-    Width = 48
-    MaxLength = 0
-    TabOrder = 2
-  end
-  object DBEdit4: TDBEdit
+  object dbEdtVlUnit: TDBEdit
     Left = 104
     Height = 23
     Top = 96
     Width = 88
+    DataField = 'vl_venda_produto'
+    DataSource = cadProdutosF.dsCadModelo
     MaxLength = 0
-    TabOrder = 3
+    TabOrder = 2
   end
   object Label1: TLabel
     Left = 40
@@ -75,37 +73,45 @@ object orcamentoItemF: TorcamentoItemF
     Width = 53
     Caption = 'Valor total'
   end
-  object DBEdit5: TDBEdit
-    Left = 208
-    Height = 23
-    Top = 96
-    Width = 120
-    MaxLength = 0
-    TabOrder = 4
-  end
   object btnInserir: TBitBtn
     Left = 40
     Height = 30
     Top = 128
     Width = 75
     Caption = 'Inserir'
-    TabOrder = 5
+    OnClick = btnInserirClick
+    TabOrder = 3
   end
   object btnCancelar: TBitBtn
-    Left = 253
+    Left = 200
     Height = 30
     Top = 128
     Width = 75
     Caption = 'Cancelar'
-    TabOrder = 6
+    TabOrder = 4
   end
   object btnInserir1: TBitBtn
     Left = 128
-    Height = 30
-    Top = 40
+    Height = 22
+    Top = 48
     Width = 32
-    Caption = 'Inserir'
+    Caption = '...'
     OnClick = btnInserir1Click
+    TabOrder = 5
+  end
+  object edtQtde: TEdit
+    Left = 40
+    Height = 23
+    Top = 96
+    Width = 56
+    TabOrder = 6
+    OnChange = edtQtdeChange
+  end
+  object edtVlTotal: TEdit
+    Left = 208
+    Height = 23
+    Top = 96
+    Width = 64
     TabOrder = 7
   end
 end

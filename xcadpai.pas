@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, ExtCtrls, Buttons,
-  StdCtrls, ComCtrls, DBGrids;  // Remover menu da seção uses
+  StdCtrls, ComCtrls, DBGrids;
 
 type
   { TxCadPaiF }
@@ -74,6 +74,7 @@ end;
 procedure TxCadPaiF.btnGravarClick(Sender: TObject);
 begin
     PageControl1.ActivePageIndex := 0;
+
 end;
 
 

@@ -47,9 +47,14 @@ begin
 
   cadProdutosF.qryProdutos.Close;
   cadProdutosF.qryProdutos.SQL.Text :=
-    'select p.produtoid, ' + 'p.categoriaprodutoid, ' + 'cp.ds categoria produto, ' +
-    'p.ds produto, ' + 'p.obs produto, ' + 'p.vi_venda_produto, ' +
-    'p.dt_cadastro_produno, ' + 'p.status produto, ' +
+    'select p.produtoid, ' +
+    'p.categoriaprodutoid, ' +
+    'cp.ds categoria produto, ' +
+    'p.ds produto, ' +
+    'p.obs produto, ' +
+    'p.vi_venda_produto, ' +
+    'p.dt_cadastro_produno, ' +
+    'p.status produto, ' +
     'from produto p, categoria_produto cp, ' +
     'where p.categoriaprodutoid cp.categoriaprodutoid  , ' + AuxWhere;
   cadProdutosF.qryProdutos.Open;
@@ -57,12 +62,15 @@ end;
 
 procedure TpesProdutoF.DBGrid1DblClick(Sender: TObject);
 begin
-  orcamentoF.qryOrcamentoItemprodutoid.AsFloat := cadProdutosF.qryProdutosID.AsInteger;
-  //DataModule1.qryOrcamentoItemprodutodesc.AsString := DataModule1.qryProdutosds_produto.AsString;
-  orcamentoF.qryOrcamentoItemvl_unitario.AsFloat := cadProdutosF.qryProdutosPreco.AsFloat;
+  orcamentoF.qryOrcamentoItem.Insert;
+  orcamentoF.qryOrcamentoItemorcamentoid.AsInteger := orcamentoF.qryOrcamentosorcamentoid.AsInteger;
+  orcamentoF.qryOrcamentoItemprodutoid.AsFloat := cadProdutosF.qryProdutosprodutoid.AsInteger;
+  orcamentoF.qryOrcamentoItemvl_unitario.AsFloat := cadProdutosF.qryProdutosvl_venda_produto.AsFloat;
   Close;
-  orcamentoItemF.DBEdit3.SetFocus;
+  orcamentoItemF.DBEdit2.SetFocus;
 end;
+
+
 
 
 end.

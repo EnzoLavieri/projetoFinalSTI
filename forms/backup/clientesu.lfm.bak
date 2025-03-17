@@ -1,24 +1,26 @@
 inherited cadClientesF: TcadClientesF
-  Left = 392
+  Left = 255
   Height = 455
-  Top = 197
-  Width = 1024
+  Top = 125
+  Width = 449
   Caption = 'Clientes'
   ClientHeight = 455
-  ClientWidth = 1024
+  ClientWidth = 449
   OnCreate = FormCreate
   WindowState = wsMaximized
   inherited PageControl1: TPageControl
     Height = 455
-    Width = 1024
-    ActivePage = TabSheet1
-    TabIndex = 0
+    Width = 449
+    ActivePage = TabSheet2
+    TabIndex = 1
     inherited TabSheet1: TTabSheet
       ClientHeight = 427
-      ClientWidth = 1016
+      ClientWidth = 441
       inherited Panel1: TPanel
-        Width = 1016
-        ClientWidth = 1016
+        Height = 80
+        Width = 441
+        ClientHeight = 80
+        ClientWidth = 441
         Color = clScrollBar
         DockSite = False
         inherited SpeedButton1: TSpeedButton
@@ -26,17 +28,18 @@ inherited cadClientesF: TcadClientesF
         end
       end
       inherited Panel2: TPanel
-        Height = 70
-        Top = 357
-        Width = 1016
-        ClientHeight = 70
-        ClientWidth = 1016
+        Height = 100
+        Top = 327
+        Width = 441
+        ClientHeight = 100
+        ClientWidth = 441
         Color = clScrollBar
         DockSite = False
         inherited btnNovo: TBitBtn
           Left = 656
-          Height = 40
-          Width = 88
+          Height = 50
+          Top = 24
+          Width = 120
           Caption = ' Novo'
           Glyph.Data = {
             36090000424D3609000000000000360000002800000018000000180000000100
@@ -117,8 +120,9 @@ inherited cadClientesF: TcadClientesF
         end
         inherited btnFechar: TBitBtn
           Left = 848
-          Height = 40
-          Width = 88
+          Height = 50
+          Top = 24
+          Width = 120
           Caption = ' Fechar'
           Glyph.Data = {
             36090000424D3609000000000000360000002800000018000000180000000100
@@ -199,26 +203,54 @@ inherited cadClientesF: TcadClientesF
         end
       end
       inherited DBGrid1: TDBGrid
-        Height = 287
-        Width = 1016
-        AutoFillColumns = True
+        Height = 247
+        Top = 80
+        Width = 441
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'ID'
+            Width = 50
+            FieldName = 'clienteid'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Tipo'
+            Width = 30
+            FieldName = 'tipo_cliente'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'CPF | CNPJ'
+            Width = 100
+            FieldName = 'cpf_cnpj_cliente'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Nome do cliente'
+            Width = 300
+            FieldName = 'nome_cliente'
+          end>
         DataSource = dsCadModelo
       end
     end
     inherited TabSheet2: TTabSheet
       ClientHeight = 427
-      ClientWidth = 1016
+      ClientWidth = 441
       inherited Panel4: TPanel
-        Top = 357
-        Width = 1016
+        Height = 100
+        Top = 327
+        Width = 441
         BevelColor = clScrollBar
-        ClientWidth = 1016
+        ClientHeight = 100
+        ClientWidth = 441
         Color = clScrollBar
         DockSite = False
         inherited btnGravar: TBitBtn
           Left = 88
-          Height = 40
-          Width = 88
+          Height = 50
+          Top = 24
+          Width = 120
           Caption = ' Gravar'
           Glyph.Data = {
             36090000424D3609000000000000360000002800000018000000180000000100
@@ -296,11 +328,13 @@ inherited cadClientesF: TcadClientesF
             19C3D174172C0000000000000000000000000000000000000000000000000000
             0000000000000000000000000000000000000000000000000000
           }
+          OnClick = btnGravarClick
         end
         inherited btnCancelar: TBitBtn
           Left = 848
-          Height = 40
-          Width = 88
+          Height = 50
+          Top = 24
+          Width = 120
           Caption = ' Cancelar'
           Glyph.Data = {
             36090000424D3609000000000000360000002800000018000000180000000100
@@ -381,8 +415,9 @@ inherited cadClientesF: TcadClientesF
         end
         inherited btnExluir: TBitBtn
           Left = 272
-          Height = 40
-          Width = 88
+          Height = 50
+          Top = 24
+          Width = 120
           Caption = ' Excluir'
           Glyph.Data = {
             36090000424D3609000000000000360000002800000018000000180000000100
@@ -468,7 +503,7 @@ inherited cadClientesF: TcadClientesF
         Height = 23
         Top = 80
         Width = 32
-        DataField = 'ID'
+        DataField = 'clienteid'
         DataSource = dsCadModelo
         Alignment = taRightJustify
         MaxLength = 0
@@ -479,7 +514,7 @@ inherited cadClientesF: TcadClientesF
         Height = 23
         Top = 112
         Width = 88
-        DataField = 'CPF | CNPJ'
+        DataField = 'cpf_cnpj_cliente'
         DataSource = dsCadModelo
         MaxLength = 18
         TabOrder = 2
@@ -489,7 +524,7 @@ inherited cadClientesF: TcadClientesF
         Height = 23
         Top = 144
         Width = 144
-        DataField = 'Nome'
+        DataField = 'nome_cliente'
         DataSource = dsCadModelo
         MaxLength = 100
         TabOrder = 3
@@ -499,7 +534,7 @@ inherited cadClientesF: TcadClientesF
         Height = 23
         Top = 48
         Width = 16
-        DataField = 'Tipo do cliente'
+        DataField = 'tipo_cliente'
         DataSource = dsCadModelo
         MaxLength = 1
         TabOrder = 4
@@ -542,13 +577,52 @@ inherited cadClientesF: TcadClientesF
   object qryClientes: TZQuery[2]
     Connection = DataModule1.ZConnection1
     SQL.Strings = (
-      'select CLIENTEID as "ID", TIPO_CLIENTE as "Tipo do cliente", CPF_CNPJ_CLIENTE as "CPF | CNPJ", NOME_CLIENTE as "Nome"from cliente'
+      'select * from cliente'
     )
     Params = <>
     Left = 520
     Top = 40
+    object qryClientesclienteid: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'clienteid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryClientestipo_cliente: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'tipo_cliente'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryClientescpf_cnpj_cliente: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'cpf_cnpj_cliente'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 18
+    end
+    object qryClientesnome_cliente: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'nome_cliente'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 100
+    end
   end
-  object ZUpdateSQL1: TZUpdateSQL[3]
+  object updtClientes: TZUpdateSQL[3]
     DeleteSQL.Strings = (
       #10'DELETE FROM CLIENTE '#10'WHERE CLIENTEID = :OLD_CLIENTEID;'
     )

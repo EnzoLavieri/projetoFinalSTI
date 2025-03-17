@@ -28,15 +28,16 @@ type
     Label7: TLabel;
     Label8: TLabel;
     qryProdutos: TZQuery;
-    ZQuery1Datadecadastro: TZDateTimeField;
-    qryProdutosDescicao: TZRawStringField;
-    qryProdutosID: TZIntegerField;
-    ZQuery1IDdacategoria: TZIntegerField;
-    qryProdutosObservacao: TZRawStringField;
-    qryProdutosPreco: TZBCDField;
-    qryProdutosStatus: TZRawStringField;
+    qryProdutoscategoriaprodutoid: TZIntegerField;
+    qryProdutosds_produto: TZRawStringField;
+    qryProdutosdt_cadastro_produto: TZDateTimeField;
+    qryProdutosobs_produto: TZRawStringField;
+    qryProdutosprodutoid: TZIntegerField;
+    qryProdutosstatus_produto: TZRawStringField;
+    qryProdutosvl_venda_produto: TZBCDField;
     ZUpdateSQL1: TZUpdateSQL;
     procedure btnExluirClick(Sender: TObject);
+    procedure btnGravarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
 
@@ -79,6 +80,16 @@ begin
     dsCadModelo.DataSet.Delete;
   end;
 end;
+
+procedure TcadProdutosF.btnGravarClick(Sender: TObject);
+begin
+  inherited;
+  //gambiarra pra funcionar
+  if not (dsCadModelo.DataSet.State in [dsEdit, dsInsert]) then
+    dsCadModelo.DataSet.Edit;
+  dsCadModelo.DataSet.Post;
+end;
+
 
 
 end.

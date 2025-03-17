@@ -1,23 +1,22 @@
 inherited cadUsuariosF: TcadUsuariosF
-  Left = 445
+  Left = 707
   Height = 588
-  Top = 133
+  Top = 116
   Width = 960
   Caption = 'Usuarios'
   ClientHeight = 588
   ClientWidth = 960
-  OnCreate = FormCreate
   WindowState = wsMaximized
   inherited PageControl1: TPageControl
     Height = 588
     Width = 960
-    ActivePage = TabSheet1
-    TabIndex = 0
     inherited TabSheet1: TTabSheet
       ClientHeight = 560
       ClientWidth = 952
       inherited Panel1: TPanel
+        Height = 80
         Width = 952
+        ClientHeight = 80
         ClientWidth = 952
         Color = clScrollBar
         DockSite = False
@@ -26,17 +25,18 @@ inherited cadUsuariosF: TcadUsuariosF
         end
       end
       inherited Panel2: TPanel
-        Height = 70
-        Top = 490
+        Height = 100
+        Top = 460
         Width = 952
-        ClientHeight = 70
+        ClientHeight = 100
         ClientWidth = 952
         Color = clScrollBar
         DockSite = False
         inherited btnNovo: TBitBtn
-          Left = 656
-          Height = 40
-          Width = 88
+          Left = 632
+          Height = 50
+          Top = 24
+          Width = 120
           Caption = ' Novo'
           Glyph.Data = {
             36090000424D3609000000000000360000002800000018000000180000000100
@@ -117,8 +117,9 @@ inherited cadUsuariosF: TcadUsuariosF
         end
         inherited btnFechar: TBitBtn
           Left = 848
-          Height = 40
-          Width = 88
+          Height = 50
+          Top = 24
+          Width = 120
           Caption = ' Fechar'
           Glyph.Data = {
             36090000424D3609000000000000360000002800000018000000180000000100
@@ -199,54 +200,55 @@ inherited cadUsuariosF: TcadUsuariosF
         end
       end
       inherited DBGrid1: TDBGrid
-        Height = 420
+        Height = 380
+        Top = 80
         Width = 952
-        AutoFillColumns = True
         Columns = <        
           item
             PickList.Strings = (            )
             Title.Caption = 'ID'
-            Width = 230
-            FieldName = 'ID'
+            Width = 50
+            FieldName = 'id'
           end        
           item
             PickList.Strings = (            )
             Title.Caption = 'Nome do usuario'
-            Width = 230
-            FieldName = 'Nome do usuario'
+            Width = 120
+            FieldName = 'usuario'
           end        
           item
             PickList.Strings = (            )
             Title.Caption = 'Nome completo'
-            Width = 230
-            FieldName = 'Nome completo'
+            Width = 300
+            FieldName = 'nome_completo'
           end        
           item
             PickList.Strings = (            )
             Title.Caption = 'Senha'
-            Width = 229
-            FieldName = 'Senha'
+            Width = 120
+            FieldName = 'senha'
           end>
         DataSource = dsCadModelo
-        ParentBiDiMode = False
         OnDblClick = DBGrid1DblClick
       end
     end
     inherited TabSheet2: TTabSheet
       ClientHeight = 560
       ClientWidth = 952
-      OnContextPopup = TabSheet2ContextPopup
       inherited Panel4: TPanel
-        Top = 490
+        Height = 100
+        Top = 460
         Width = 952
         BevelColor = clScrollBar
+        ClientHeight = 100
         ClientWidth = 952
         Color = clScrollBar
         DockSite = False
         inherited btnGravar: TBitBtn
           Left = 88
-          Height = 40
-          Width = 88
+          Height = 50
+          Top = 24
+          Width = 120
           Caption = ' Gravar'
           Glyph.Data = {
             36090000424D3609000000000000360000002800000018000000180000000100
@@ -328,8 +330,9 @@ inherited cadUsuariosF: TcadUsuariosF
         end
         inherited btnCancelar: TBitBtn
           Left = 848
-          Height = 40
-          Width = 88
+          Height = 50
+          Top = 24
+          Width = 120
           Caption = ' Cancelar'
           Glyph.Data = {
             36090000424D3609000000000000360000002800000018000000180000000100
@@ -410,8 +413,9 @@ inherited cadUsuariosF: TcadUsuariosF
         end
         inherited btnExluir: TBitBtn
           Left = 272
-          Height = 40
-          Width = 88
+          Height = 50
+          Top = 24
+          Width = 120
           Caption = ' Excluir'
           Glyph.Data = {
             36090000424D3609000000000000360000002800000018000000180000000100
@@ -525,8 +529,7 @@ inherited cadUsuariosF: TcadUsuariosF
         Height = 23
         Top = 48
         Width = 48
-        CustomEditMask = True
-        DataField = 'ID'
+        DataField = 'id'
         DataSource = dsCadModelo
         Alignment = taRightJustify
         MaxLength = 0
@@ -537,7 +540,7 @@ inherited cadUsuariosF: TcadUsuariosF
         Height = 23
         Top = 80
         Width = 80
-        DataField = 'Nome do usuario'
+        DataField = 'usuario'
         DataSource = dsCadModelo
         MaxLength = 30
         TabOrder = 2
@@ -547,7 +550,7 @@ inherited cadUsuariosF: TcadUsuariosF
         Height = 23
         Top = 144
         Width = 200
-        DataField = 'Nome completo'
+        DataField = 'nome_completo'
         DataSource = dsCadModelo
         MaxLength = 60
         TabOrder = 3
@@ -557,7 +560,7 @@ inherited cadUsuariosF: TcadUsuariosF
         Height = 23
         Top = 112
         Width = 136
-        DataField = 'Senha'
+        DataField = 'senha'
         DataSource = dsCadModelo
         MaxLength = 50
         TabOrder = 4
@@ -599,24 +602,25 @@ inherited cadUsuariosF: TcadUsuariosF
   end
   object qryUsuarios: TZQuery[3]
     Connection = DataModule1.ZConnection1
+    Active = True
     SQL.Strings = (
-      'select id as "ID", usuario as "Nome do usuario", nome_completo as "Nome completo", senha as "Senha" from USUARIOS;'
+      'select * from USUARIOS;'
     )
     Params = <>
     Left = 536
     Top = 40
-    object qryUsuariosID: TZIntegerField
+    object qryUsuariosid: TZIntegerField
       FieldKind = fkData
-      FieldName = 'ID'
+      FieldName = 'id'
       Index = 0
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
     end
-    object qryUsuariosNomedousuario: TZRawStringField
+    object qryUsuariosusuario: TZRawStringField
       FieldKind = fkData
-      FieldName = 'Nome do usuario'
+      FieldName = 'usuario'
       Index = 1
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
@@ -624,9 +628,9 @@ inherited cadUsuariosF: TcadUsuariosF
       Required = False
       Size = 30
     end
-    object qryUsuariosNomecompleto: TZRawStringField
+    object qryUsuariosnome_completo: TZRawStringField
       FieldKind = fkData
-      FieldName = 'Nome completo'
+      FieldName = 'nome_completo'
       Index = 2
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
@@ -634,9 +638,9 @@ inherited cadUsuariosF: TcadUsuariosF
       Required = False
       Size = 60
     end
-    object qryUsuariosSenha: TZRawStringField
+    object qryUsuariossenha: TZRawStringField
       FieldKind = fkData
-      FieldName = 'Senha'
+      FieldName = 'senha'
       Index = 3
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
